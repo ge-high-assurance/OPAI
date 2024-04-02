@@ -1,0 +1,243 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fha="http://sadl.org/FHA.sadl#"
+    xmlns:rd="http://sadl.org/DESIGN.sadl#"
+    xmlns:Ag="http://arcos.rack/AGENTS#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:CONFIDENCE="http://arcos.rack/CONFIDENCE#"
+    xmlns:Sec="http://arcos.rack/SECURITY#"
+    xmlns:Pr="http://arcos.rack/PROCESS#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:Rv="http://arcos.rack/REVIEW#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:Rq="http://arcos.rack/REQUIREMENTS#"
+    xmlns:H="http://arcos.rack/HAZARD#"
+    xmlns:sw="http://arcos.rack/SOFTWARE#"
+    xmlns:provs="http://arcos.rack/PROV-S#"
+    xmlns:sys="http://arcos.rack/SYSTEM#"
+    xmlns:An="http://arcos.rack/ANALYSIS#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:hw="http://arcos.rack/HARDWARE#"
+    xmlns:op="http://sadl.org/OP.sadl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:tst="http://arcos.rack/TESTING#">
+  <owl:Ontology rdf:about="http://sadl.org/DESIGN.sadl">
+    <owl:imports rdf:resource="http://arcos.rack/TESTING"/>
+    <owl:imports rdf:resource="http://arcos.rack/SECURITY"/>
+    <owl:imports rdf:resource="http://sadl.org/FHA.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'DESIGN.sadl' and should not be directly edited.</rdfs:comment>
+    <owl:imports rdf:resource="http://arcos.rack/ANALYSIS"/>
+    <owl:imports rdf:resource="http://arcos.rack/HAZARD"/>
+    <owl:imports rdf:resource="http://arcos.rack/AGENTS"/>
+    <owl:imports rdf:resource="http://arcos.rack/SOFTWARE"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <owl:imports rdf:resource="http://arcos.rack/HARDWARE"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROCESS"/>
+    <owl:imports rdf:resource="http://sadl.org/OP.sadl"/>
+    <owl:imports rdf:resource="http://arcos.rack/CONFIDENCE"/>
+    <owl:imports rdf:resource="http://arcos.rack/REVIEW"/>
+    <owl:imports rdf:resource="http://arcos.rack/REQUIREMENTS"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROV-S"/>
+    <owl:imports rdf:resource="http://arcos.rack/SYSTEM"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#CertificationReference">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#TSO-C124c">
+            <rdfs:comment xml:lang="en">For Flight Data Recorder Equipment</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#TSO-C155b">
+            <rdfs:comment xml:lang="en">For Recorder Independent Power Supply</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#ARINC-777-2">
+            <rdfs:comment xml:lang="en">For Recorder Independent Power Supply</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#ED-112A">
+            <rdfs:comment xml:lang="en">For Minimum Operational Performance Specification For Crash Protected Airborne Recorder Systems</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#DO-160G">
+            <rdfs:comment xml:lang="en">For Environmental Conditions and Test Procedures for Airborne Equipment</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#SAE-ARP-4761">
+            <rdfs:comment xml:lang="en">For Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne System and Equipment</rdfs:comment>
+          </rd:CertificationReference>
+          <rd:CertificationReference rdf:about="http://sadl.org/DESIGN.sadl#RTCA-DO178C">
+            <rdfs:comment xml:lang="en">For Software Considerations in Airborne Systems and Equipment Certification</rdfs:comment>
+          </rd:CertificationReference>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">Certification References used in a System Design</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#SoftwareHighLevelRequirement">
+    <rdfs:comment xml:lang="en">Software High Level Requirement</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://arcos.rack/REQUIREMENTS#REQUIREMENT">
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:onClass>
+              <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#RequirementType"/>
+            </owl:onClass>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#requirementType"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#RequirementType">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#designConstraint"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#safetyRequirement"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#performanceRequirement"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#usabilityRequirement"/>
+          <rd:RequirementType rdf:about="http://sadl.org/DESIGN.sadl#physicalRequirement"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The type of requirements</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#SystemLevelRequirement">
+    <rdfs:comment xml:lang="en">System Level Requirement</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#SoftwareLowLevelRequirement">
+    <rdfs:comment xml:lang="en">Software Low Level Requirement</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#Parameter">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#Value"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#parValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#MaintainanceRequired"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#MeasuredTemperature"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#LoadMeasurements"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#MeasuredCurrent"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#MeasuredVoltage"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#ChargeControllerComm"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#BHMComm"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#SwitchCommand"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#BatteryPower"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#ReportFault"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#BackupActive"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#BateryPower"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#SwitchCommand"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#SupplyPowerToRecorder"/>
+          <rd:Parameter rdf:about="http://sadl.org/DESIGN.sadl#ReceivePowerFromAircraft"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The input or output to a SYSTEM</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#Value">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#magnitude"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#probability"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The values that can be taken by parameters</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#Completeness">
+    <rdfs:comment xml:lang="en">Completeness of a REQUIREMENt (taken from Cameo Class Properties)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/DESIGN.sadl#Correctness">
+    <rdfs:comment xml:lang="en">Correctness of a REQUIREMENt (taken from Cameo Class Properties)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#parValue">
+    <rdfs:range rdf:resource="http://sadl.org/DESIGN.sadl#Value"/>
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#Parameter"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#input">
+    <rdfs:range rdf:resource="http://sadl.org/DESIGN.sadl#Parameter"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SYSTEM#SYSTEM"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#output">
+    <rdfs:range rdf:resource="http://sadl.org/DESIGN.sadl#Parameter"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SYSTEM#SYSTEM"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#architectureAllocation">
+    <rdfs:range rdf:resource="http://arcos.rack/PROV-S#THING"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#satisfiedBy">
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#SystemLevelRequirement"/>
+    <rdfs:range rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/DESIGN.sadl#requirementType">
+    <rdfs:range rdf:resource="http://sadl.org/DESIGN.sadl#RequirementType"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#source">
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#SystemLevelRequirement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#rationale">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#probability">
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#Value"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#derivedRequirement">
+    <rdfs:comment xml:lang="en">Using string to easily ingest cameo data</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#magnitude">
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#Value"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/DESIGN.sadl#derivedFrom">
+    <rdfs:domain rdf:resource="http://sadl.org/DESIGN.sadl#SystemLevelRequirement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>

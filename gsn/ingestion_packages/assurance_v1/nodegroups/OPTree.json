@@ -1,0 +1,783 @@
+{
+	"version": 3,
+	"sparqlConn": {
+		"name": "RACK",
+		"domain": "",
+		"enableOwlImports": false,
+		"model": [
+			{
+				"type": "fuseki",
+				"url": "http://localhost:3030/RACK",
+				"graph": "http://rack001/model"
+			}
+		],
+		"data": [
+			{
+				"type": "fuseki",
+				"url": "http://localhost:3030/RACK",
+				"graph": "http://rack001/data"
+			}
+		]
+	},
+	"sNodeGroup": {
+		"version": 20,
+		"limit": 0,
+		"offset": 0,
+		"sNodeList": [
+			{
+				"propList": [],
+				"nodeList": [],
+				"fullURIName": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"SparqlID": "?EvidenceActivity",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE",
+				"binding": "?EvidenceActivity_lv2",
+				"isBindingReturned": true
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?evidence_2",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?evidence_lv2",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#detail",
+						"Constraints": "",
+						"SparqlID": "?detail",
+						"isReturned": false,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?detail_lv2",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"boolean"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+						"UriRelationship": "http://sadl.org/OP.sadl#isSupportive",
+						"Constraints": "",
+						"SparqlID": "?Supportive_lv2",
+						"isReturned": true,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?EvidenceActivity"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#EvidenceActivity"
+						],
+						"ConnectBy": "confirmedBy",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#confirmedBy"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Evidence",
+				"SparqlID": "?Evidence_1",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [],
+				"nodeList": [],
+				"fullURIName": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"SparqlID": "?EvidenceActivity_0",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE",
+				"binding": "?EvidenceActivity_lv1",
+				"isBindingReturned": true
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?premise_2",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?premise_lv2",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#statement",
+						"Constraints": "",
+						"SparqlID": "?statement_premise_lvl0",
+						"isReturned": false,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?statement_premise_lv2",
+						"isBindingReturned": true
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?Evidence_1"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Evidence"
+						],
+						"ConnectBy": "evidence",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#evidence"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Premise",
+				"SparqlID": "?Premise_1",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?evidence_1",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?evidence_lv1",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#detail",
+						"Constraints": "",
+						"SparqlID": "?detail_0",
+						"isReturned": false,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?detail_lv1",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"boolean"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+						"UriRelationship": "http://sadl.org/OP.sadl#isSupportive",
+						"Constraints": "",
+						"SparqlID": "?Supportive_lv1",
+						"isReturned": true,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?EvidenceActivity_0"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#EvidenceActivity"
+						],
+						"ConnectBy": "confirmedBy",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#confirmedBy"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Evidence",
+				"SparqlID": "?Evidence_0",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [],
+				"nodeList": [],
+				"fullURIName": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"SparqlID": "?EvidenceActivity_2",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE",
+				"binding": "?EvidenceActivity_lv0",
+				"isBindingReturned": true
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?premise_1",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?premise_lv1",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#statement",
+						"Constraints": "",
+						"SparqlID": "?statement_premise_lv1",
+						"isReturned": true,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?Evidence_0"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Evidence"
+						],
+						"ConnectBy": "evidence",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#evidence"
+					},
+					{
+						"SnodeSparqlIDs": [
+							"?Premise_1"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Premise"
+						],
+						"ConnectBy": "subPremise",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#subPremise"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Premise",
+				"SparqlID": "?Premise_0",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?identifier_1",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?evidence_lv0",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#detail",
+						"Constraints": "",
+						"SparqlID": "?detail_2",
+						"isReturned": false,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?detail_lv0",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"boolean"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#boolean",
+						"UriRelationship": "http://sadl.org/OP.sadl#isSupportive",
+						"Constraints": "",
+						"SparqlID": "?Supportive_lv0",
+						"isReturned": true,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?EvidenceActivity_2"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#EvidenceActivity"
+						],
+						"ConnectBy": "confirmedBy",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#confirmedBy"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Evidence",
+				"SparqlID": "?Evidence",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?identifier_0",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?premise_lv0",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#statement",
+						"Constraints": "",
+						"SparqlID": "?statement_premise_lvl0_0",
+						"isReturned": false,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?statement_premise_lv0",
+						"isBindingReturned": true
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?Evidence"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Evidence"
+						],
+						"ConnectBy": "evidence",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#evidence"
+					},
+					{
+						"SnodeSparqlIDs": [
+							"?Premise_0"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Premise"
+						],
+						"ConnectBy": "subPremise",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#subPremise"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Premise",
+				"SparqlID": "?Premise",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [],
+				"nodeList": [],
+				"fullURIName": "http://sadl.org/OP.sadl#OverarchingProperty",
+				"SparqlID": "?OverarchingProperty",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE",
+				"binding": "?op",
+				"isBindingReturned": true
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?op_concerns",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?argument_concerns",
+						"isBindingReturned": true
+					}
+				],
+				"nodeList": [],
+				"fullURIName": "http://sadl.org/OP.sadl#NNSwComponent",
+				"SparqlID": "?NNSwComponent",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			},
+			{
+				"propList": [
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://arcos.rack/PROV-S#identifier",
+						"Constraints": "",
+						"SparqlID": "?identifier",
+						"isReturned": false,
+						"optMinus": 0,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false,
+						"binding": "?op_argument",
+						"isBindingReturned": true
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#conclusion",
+						"Constraints": "",
+						"SparqlID": "?argument_conclusion",
+						"isReturned": true,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					},
+					{
+						"valueTypes": [
+							"string"
+						],
+						"rangeURI": "http://www.w3.org/2001/XMLSchema#string",
+						"UriRelationship": "http://sadl.org/OP.sadl#justification",
+						"Constraints": "",
+						"SparqlID": "?justification",
+						"isReturned": true,
+						"optMinus": 1,
+						"isRuntimeConstrained": false,
+						"instanceValues": [],
+						"isMarkedForDeletion": false
+					}
+				],
+				"nodeList": [
+					{
+						"SnodeSparqlIDs": [
+							"?NNSwComponent"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://arcos.rack/SOFTWARE#SWCOMPONENT"
+						],
+						"ConnectBy": "concerns",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#concerns"
+					},
+					{
+						"SnodeSparqlIDs": [
+							"?OverarchingProperty"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#OverarchingProperty"
+						],
+						"ConnectBy": "op",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#op"
+					},
+					{
+						"SnodeSparqlIDs": [
+							"?Premise"
+						],
+						"OptionalMinus": [
+							1
+						],
+						"Qualifiers": [
+							""
+						],
+						"DeletionMarkers": [
+							false
+						],
+						"range": [
+							"http://sadl.org/OP.sadl#Premise"
+						],
+						"ConnectBy": "premise",
+						"Connected": true,
+						"UriConnectBy": "http://sadl.org/OP.sadl#premise"
+					}
+				],
+				"fullURIName": "http://sadl.org/OP.sadl#Argument",
+				"SparqlID": "?Argument",
+				"isReturned": false,
+				"isRuntimeConstrained": false,
+				"valueConstraint": "",
+				"instanceValue": null,
+				"deletionMode": "NO_DELETE"
+			}
+		],
+		"orderBy": [],
+		"groupBy": [],
+		"unionHash": {},
+		"columnOrder": []
+	},
+	"importSpec": {
+		"version": "1",
+		"baseURI": "",
+		"columns": [],
+		"dataValidator": [],
+		"texts": [],
+		"transforms": [],
+		"nodes": [
+			{
+				"sparqlID": "?Argument",
+				"type": "http://sadl.org/OP.sadl#Argument",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?NNSwComponent",
+				"type": "http://sadl.org/OP.sadl#NNSwComponent",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?OverarchingProperty",
+				"type": "http://sadl.org/OP.sadl#OverarchingProperty",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Premise",
+				"type": "http://sadl.org/OP.sadl#Premise",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Evidence",
+				"type": "http://sadl.org/OP.sadl#Evidence",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Premise_0",
+				"type": "http://sadl.org/OP.sadl#Premise",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?EvidenceActivity_2",
+				"type": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Evidence_0",
+				"type": "http://sadl.org/OP.sadl#Evidence",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Premise_1",
+				"type": "http://sadl.org/OP.sadl#Premise",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?EvidenceActivity_0",
+				"type": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?Evidence_1",
+				"type": "http://sadl.org/OP.sadl#Evidence",
+				"mapping": [],
+				"props": []
+			},
+			{
+				"sparqlID": "?EvidenceActivity",
+				"type": "http://sadl.org/OP.sadl#EvidenceActivity",
+				"mapping": [],
+				"props": []
+			}
+		]
+	},
+	"plotSpecs": []
+}

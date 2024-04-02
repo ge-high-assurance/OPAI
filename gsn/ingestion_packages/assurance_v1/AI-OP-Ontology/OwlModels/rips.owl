@@ -1,0 +1,142 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rd="http://sadl.org/DESIGN.sadl#"
+    xmlns:Ag="http://arcos.rack/AGENTS#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:CONFIDENCE="http://arcos.rack/CONFIDENCE#"
+    xmlns:Sec="http://arcos.rack/SECURITY#"
+    xmlns:Pr="http://arcos.rack/PROCESS#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:Rv="http://arcos.rack/REVIEW#"
+    xmlns:D="http://arcos.rack/DOCUMENT#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:Rq="http://arcos.rack/REQUIREMENTS#"
+    xmlns:H="http://arcos.rack/HAZARD#"
+    xmlns:sw="http://arcos.rack/SOFTWARE#"
+    xmlns:provs="http://arcos.rack/PROV-S#"
+    xmlns:sys="http://arcos.rack/SYSTEM#"
+    xmlns:An="http://arcos.rack/ANALYSIS#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rips="http://sadl.org/rips.sadl#"
+    xmlns:hw="http://arcos.rack/HARDWARE#"
+    xmlns:op="http://sadl.org/OP.sadl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:tst="http://arcos.rack/TESTING#">
+  <owl:Ontology rdf:about="http://sadl.org/rips.sadl">
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://arcos.rack/SOFTWARE"/>
+    <owl:imports rdf:resource="http://arcos.rack/SECURITY"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROCESS"/>
+    <owl:imports rdf:resource="http://arcos.rack/CONFIDENCE"/>
+    <owl:imports rdf:resource="http://arcos.rack/SYSTEM"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <owl:imports rdf:resource="http://arcos.rack/DOCUMENT"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://arcos.rack/HAZARD"/>
+    <owl:imports rdf:resource="http://arcos.rack/TESTING"/>
+    <owl:imports rdf:resource="http://sadl.org/DESIGN.sadl"/>
+    <owl:imports rdf:resource="http://arcos.rack/ANALYSIS"/>
+    <owl:imports rdf:resource="http://arcos.rack/REVIEW"/>
+    <owl:imports rdf:resource="http://sadl.org/OP.sadl"/>
+    <owl:imports rdf:resource="http://arcos.rack/HARDWARE"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROV-S"/>
+    <owl:imports rdf:resource="http://arcos.rack/AGENTS"/>
+    <owl:imports rdf:resource="http://arcos.rack/REQUIREMENTS"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'rips.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <op:NNFailureModeSet rdf:about="http://sadl.org/rips.sadl#soh-nn-FMS">
+    <provs:description>The identified failure modes of the State of Health NN Component of the RIPS BHM</provs:description>
+    <provs:identifier>soh-nn-FMS</provs:identifier>
+  </op:NNFailureModeSet>
+  <op:NNSwComponent rdf:about="http://sadl.org/rips.sadl#soh-nn-SW-COMP">
+    <op:qualDataNominal>
+      <op:DataSet rdf:about="http://sadl.org/rips.sadl#soh-nn-QUAL-DATA-N">
+        <provs:description>The nominal qualification data for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-QUAL-DATA-N</provs:identifier>
+        <rdfs:comment xml:lang="en">nominal qualification data</rdfs:comment>
+      </op:DataSet>
+    </op:qualDataNominal>
+    <op:nnRequirements>
+      <op:RequirementSet rdf:about="http://sadl.org/rips.sadl#soh-nn-REQS">
+        <provs:description>The requirements for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-REQS</provs:identifier>
+      </op:RequirementSet>
+    </op:nnRequirements>
+    <op:inputConditionerImplementation>
+      <op:InpCondImp rdf:about="http://sadl.org/rips.sadl#soh-nn-INPUT-COND-IMP">
+        <provs:description>The input conditioner implementation for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-INPUT-COND-IMP</provs:identifier>
+      </op:InpCondImp>
+    </op:inputConditionerImplementation>
+    <op:inputConditioner>
+      <op:InpCond rdf:about="http://sadl.org/rips.sadl#soh-nn-INPUT-COND">
+        <provs:description>The input conditioner for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-INPUT-COND</provs:identifier>
+      </op:InpCond>
+    </op:inputConditioner>
+    <provs:description>The State of Health NN Component of the RIPS BHM</provs:description>
+    <op:implementation>
+      <op:NNSwCompImp rdf:about="http://sadl.org/rips.sadl#soh-nn-IMP">
+        <provs:description>The simulink implementation of the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-IMP</provs:identifier>
+      </op:NNSwCompImp>
+    </op:implementation>
+    <provs:identifier>soh-nn-SW-COMP</provs:identifier>
+    <op:devData>
+      <op:DataSet rdf:about="http://sadl.org/rips.sadl#soh-nn-DEV-DATA">
+        <provs:description>The development data for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-DEV-DATA</provs:identifier>
+      </op:DataSet>
+    </op:devData>
+    <op:qualDataOffNominal>
+      <op:DataSet rdf:about="http://sadl.org/rips.sadl#soh-nn-QUAL-DATA-ON">
+        <provs:description>The off-nominal qualification data for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-QUAL-DATA-ON</provs:identifier>
+        <rdfs:comment xml:lang="en">off nominal qualification data</rdfs:comment>
+      </op:DataSet>
+    </op:qualDataOffNominal>
+    <op:model>
+      <op:NNModel rdf:about="http://sadl.org/rips.sadl#soh-nn-MODEL">
+        <provs:description>The neural network model for the State of Health NN Component of the RIPS BHM</provs:description>
+        <provs:identifier>soh-nn-MODEL</provs:identifier>
+      </op:NNModel>
+    </op:model>
+  </op:NNSwComponent>
+  <sys:SYSTEM rdf:about="http://sadl.org/rips.sadl#Flight-data-recorder">
+    <provs:identifier>Flight-data-recorder</provs:identifier>
+    <rdfs:comment xml:lang="en">The flight data recorder</rdfs:comment>
+  </sys:SYSTEM>
+  <sys:SYSTEM rdf:about="http://sadl.org/rips.sadl#Battery-Health-Monitor">
+    <sys:function>
+      <sys:FUNCTION rdf:about="http://sadl.org/rips.sadl#Maintenance-indication">
+        <provs:description>The BHM will indicate that maintenance is required when the state of health (SOH) of the battery is 70% or less</provs:description>
+        <provs:identifier>Maintenance-indication</provs:identifier>
+        <rdfs:comment xml:lang="en">Provide 'maintenance required' indication</rdfs:comment>
+      </sys:FUNCTION>
+    </sys:function>
+    <sys:function>
+      <sys:FUNCTION rdf:about="http://sadl.org/rips.sadl#Charge-command">
+        <provs:description>The BHM will estimate the state of charge of the battery and command a full recharge if the state of charge (SOC) of the battery has reached 30% or less of the nominal charge capacity</provs:description>
+        <provs:identifier>Charge-command</provs:identifier>
+        <rdfs:comment xml:lang="en">Provide 'full recharge' command</rdfs:comment>
+      </sys:FUNCTION>
+    </sys:function>
+    <provs:identifier>Battery-Health-Monitor</provs:identifier>
+    <rdfs:comment xml:lang="en">The Battery Health Monitor Component of the RIPS</rdfs:comment>
+  </sys:SYSTEM>
+  <op:NNSwComponent rdf:about="http://sadl.org/rips.sadl#soc-nn-SW-COMP">
+    <provs:identifier>soc-nn-SW-COMP</provs:identifier>
+  </op:NNSwComponent>
+  <sys:SYSTEM rdf:about="http://sadl.org/rips.sadl#Recorder-independent-power-supply">
+    <sys:function>
+      <sys:FUNCTION rdf:about="http://sadl.org/rips.sadl#Backup-power">
+        <provs:description>Provide backup power to the Flight Data Recorder</provs:description>
+        <provs:identifier>Backup-power</provs:identifier>
+        <rdfs:comment xml:lang="en">Provide backup power to the Flight Data Recorder</rdfs:comment>
+      </sys:FUNCTION>
+    </sys:function>
+    <provs:identifier>Recorder-independent-power-supply</provs:identifier>
+    <rdfs:comment xml:lang="en">Recorder independent power supply</rdfs:comment>
+  </sys:SYSTEM>
+</rdf:RDF>

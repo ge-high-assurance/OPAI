@@ -1,0 +1,654 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ripsfha="http://sadl.org/rips-fha.sadl#"
+    xmlns:rd="http://sadl.org/DESIGN.sadl#"
+    xmlns:j.0="http://arcos.rack/PROV-S#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ripsreqsv2="http://sadl.org/rips-requirements-v2.sadl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.1="http://arcos.rack/REQUIREMENTS#">
+  <owl:Ontology rdf:about="http://sadl.org/rips-requirements-v2.sadl">
+    <owl:imports rdf:resource="http://sadl.org/rips-fha.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/DESIGN.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'rips-requirements-v2.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-19">
+    <rd:source>ARINC 777-2 Section 3.3</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The RIPS shall supply output voltage between 19 Vdc and 32 Vdc when supplying power, where output voltage includes ripple voltage.</j.0:description>
+    <rd:name>RIPS-19 Output Power</rd:name>
+    <j.0:identifier>RIPS-19</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-07">
+    <rd:source>ARINC 777-2 Section 3.5.2</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Discrete interface required by ARINC 777-2.</rd:rationale>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+    <j.0:description>The RIPS shall have a No Fault Standard Discrete Output.</j.0:description>
+    <rd:name>RIPS-07 No Fault Discrete</rd:name>
+    <j.0:identifier>RIPS-07</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-25">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation discisions made to satisfy BHM-HLR-01.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor State-of-Health Neural Network shall be trained with a training data set that contains State-of-Health values from 0% to 100%.</j.0:description>
+    <rd:name>BHM-HLR-25 State-of-Health Training Range</rd:name>
+    <j.0:identifier>BHM-HLR-25</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-50">
+    <rd:source>TSO C155b Section 3.b(2)</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#safetyRequirement"/>
+    <j.0:description>Loss of ability for the RIPS to provide backup power to the Flight Data Recorder shall be considered a MINOR failure condition.</j.0:description>
+    <rd:name>RIPS-50 Loss of Backup Power</rd:name>
+    <j.0:identifier>RIPS-50</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-13">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation decisions made to satisfy BHM-HLR-01.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor shall implement a neural network to compute the State-of-Health.</j.0:description>
+    <rd:name>BHM-HLR-13 State-of-Health Neural Network</rd:name>
+    <j.0:identifier>BHM-HLR-13</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-37">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Time input data that contains at least one data point every 20 seconds for the entire range defined in BHM-HLR-09.</j.0:description>
+    <rd:name>BHM-HLR-37 Time Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-37</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-02">
+    <rd:source>ARINC 777-2 Section 3.2.3</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The tolerance on the time of 10 minutes output shall be +/-1 minute.</j.0:description>
+    <rd:name>RIPS-02 Backup Time Tolerance</rd:name>
+    <j.0:identifier>RIPS-02</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-14">
+    <rd:source>ARINC 777-2 Section 2.2</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Use the standard connectors suggested in ARINC 777-2.</rd:rationale>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#physicalRequirement"/>
+    <j.0:description>The RIPS shall use D38999/20JC35P connectors.</j.0:description>
+    <rd:name>RIPS-14 Connector Type</rd:name>
+    <j.0:identifier>RIPS-14</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-06">
+    <rd:source>ARINC 777-2 Section 3.5.1</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Discrete interface required by ARINC 777-2.</rd:rationale>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+    <j.0:description>The RIPS shall have a RIPS Active Standard Discrete Output.</j.0:description>
+    <rd:name>RIPS-06 RIPS Active Discrete</rd:name>
+    <j.0:identifier>RIPS-06</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-18">
+    <rd:source>DO-160G Section 5</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The RIPS shall operate in an environment with a maximum temperature rate of change of 2 degC per minute.</j.0:description>
+    <rd:name>RIPS-18 Operating Temperature Variation</rd:name>
+    <j.0:identifier>RIPS-18</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-29">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Battery Output Current input data that contains at least one data point every 0.1 Amps for the entire range defined in BHM-HLR-07.</j.0:description>
+    <rd:name>BHM-HLR-29 Battery Output Current Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-29</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-36">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Cycle Count input data that contains at least one data point every 1 integer count for the entire range defined in BHM-HLR-19.</j.0:description>
+    <rd:name>BHM-HLR-36 Cycle Count Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-36</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-13">
+    <rd:source>ARINC 777-2 Section 2.7</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Max weight specified in ARINC 777-2.</rd:rationale>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The RIPS shall weigh no more than 5 pounds.</j.0:description>
+    <rd:name>RIPS-13 Weight</rd:name>
+    <j.0:identifier>RIPS-13</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-01">
+    <rd:source>ARINC 777-2 Section 3.1</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>When aircraft power to the recorder drops below 18 Vdc, the RIPS shall make DC power available for 10 minutes.</j.0:description>
+    <rd:name>RIPS-01 Backup Power Time</rd:name>
+    <j.0:identifier>RIPS-01</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-40">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Battery Terminal Voltage input data that contains at least one data point every 0.1 Volt for the entire range defined in BHM-HLR-05.</j.0:description>
+    <rd:name>BHM-HLR-40 Battery Terminal Voltage Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-40</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-09">
+    <rd:source>ARINC 777-2 Section 3.5.1</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>The RIPS shall set the RIPS Active discrete in the ground state when the RIPS is supplying power to the recorder.</j.0:description>
+    <rd:name>RIPS-09 RIPS Active Discrete Behavior</rd:name>
+    <j.0:identifier>RIPS-09</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-17">
+    <rd:source>DO-160G Section 4</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The RIPS shall operate down to a minimum operating pressure of 57.18 kPa.</j.0:description>
+    <rd:name>RIPS-17 Minimum Operating Pressure</rd:name>
+    <j.0:identifier>RIPS-17</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-28">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation decisions made to satisfy BHM-HLR-11</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor State-of-Charge Neural Network shall be trained with a training data set that does not contain a gap in the State-of-Charge values greater than 2% for the range defined in BHM-HLR-27.</j.0:description>
+    <rd:name>BHM-HLR-28 State-of-Charge Training Gap Coverage</rd:name>
+    <j.0:identifier>BHM-HLR-28</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-27">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation discisions made to satisfy BHM-HLR-11.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor State-of-Charge Neural Network shall be trained with a training data set that contains State-of-Charge values from 0% to 100%.</j.0:description>
+    <rd:name>BHM-HLR-27 State-of-Charge Training Range</rd:name>
+    <j.0:identifier>BHM-HLR-27</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-12">
+    <rd:source>ARINC 777-2 Section 2.2</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Following the form factor defined in ARINC 777-2 allows the RIPS system to be installed in all aircraft locations compatible with this standard.</rd:rationale>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#physicalRequirement"/>
+    <j.0:description>The RIPS shall form factor shall match the dimensions defined in ARINC 777-2 Attachment 5 Figure 5-1.</j.0:description>
+    <rd:name>RIPS-12 RIPS Form Factor</rd:name>
+    <j.0:identifier>RIPS-12</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-04">
+    <rd:source></rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#usabilityRequirement"/>
+    <j.0:description>The RIPS shall have a replaceable battery</j.0:description>
+    <rd:name>RIPS-04 Battery Replacement</rd:name>
+    <j.0:identifier>RIPS-04</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-39">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Load Voltage input data that contains at least one data point every 0.1 Volt for the entire range defined in BHM-HLR-21.</j.0:description>
+    <rd:name>BHM-HLR-39 Load Voltage Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-39</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-14">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation decisions made to satisfy BHM-HLR-11.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor shall implement a neural network to compute the State-of-Charge.</j.0:description>
+    <rd:name>BHM-HLR-14 State-of-Charge Neural Network</rd:name>
+    <j.0:identifier>BHM-HLR-14</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-38">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Load Current input data that contains at least one data point every 0.1 Amps for the entire range defined in BHM-HLR-23.</j.0:description>
+    <rd:name>BHM-HLR-38 Load Current Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-38</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-26">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This requirement was derived from implementation decisions made to satisfy BHM-HLR-01</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Battery Health Monitor State-of-Health Neural Network shall be trained with a training data set that does not contain a gap in the State-of-Health values greater than 2% for the range defined in BHM-HLR-25.</j.0:description>
+    <rd:name>BHM-HLR-26 State-of-Health Training Gap Coverage</rd:name>
+    <j.0:identifier>BHM-HLR-26</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-34">
+    <rd:derivedRequirement>Derived Requirement</rd:derivedRequirement>
+    <rd:rationale>This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>The Batter Health Monitor State-of-Health Neural Network shall be qualified with Temperature input data that contains at least one data point every 1 degree for the entire range defined in BHM-HLR-03.</j.0:description>
+    <rd:name>BHM-HLR-34 Temperature Qualification Data</rd:name>
+    <j.0:identifier>BHM-HLR-34</j.0:identifier>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-03">
+    <rd:source>ARINC 777-2 Section 3.2.2</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#performanceRequirement"/>
+    <j.0:description>From the time aircraft power greater than 22 Vdc is available until the RIPS is capable of providing the full 10 minutes of power shall be no more than 15 minutes.</j.0:description>
+    <rd:name>RIPS-03 Recharge Timing</rd:name>
+    <j.0:identifier>RIPS-03</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-51">
+    <rd:source>TSO C155b Section 3.b(1)</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-B1"/>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#safetyRequirement"/>
+    <j.0:description>Backup power provided by the RIPS to the Flight Data Recorder shall be considered a MINOR failure condition.</j.0:description>
+    <rd:name>RIPS-51 Inadvertant Backup Power</rd:name>
+    <j.0:identifier>RIPS-51</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-15">
+    <rd:source></rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-11">
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-15"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:rationale>A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power.</rd:rationale>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <rd:name>BHM-HLR-11 Charge Command Behavior</rd:name>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.0:description>The Battery Health Monitor shall set the charge command output to the active state when the State-of-Charge is less than or equal to 30% with a tolerance of +/- 2%.</j.0:description>
+        <j.0:identifier>BHM-HLR-11</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-12">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-15"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.0:description>The Battery Health Monitor shall provide a charge command as an output.</j.0:description>
+        <rd:name>BHM-HLR-12 Charge Command Output</rd:name>
+        <j.0:identifier>BHM-HLR-12</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>When aircraft power is available, the RIPS shall initiate a recharge of the internal battery when estimated remaining charge is less than 30%.</j.0:description>
+    <rd:name>RIPS-15 Battery Recharge Initiation</rd:name>
+    <j.0:identifier>RIPS-15</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-10">
+    <j.0:identifier>RIPS-10</j.0:identifier>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-33">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a time is received outside of the range defined in BHM-HLR-09.</j.0:description>
+        <rd:name>BHM-HLR-33 Time Out of Range</rd:name>
+        <j.0:identifier>BHM-HLR-33</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:source>ARINC 777-2 Section 3.5.2</rd:source>
+    <rd:name>RIPS-10 No Fault Discrete Behavior</rd:name>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-35">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.0:description>The Battery Health Monitor shall filter input data that is outside of the ranges defined in BHM-HLR-03, BHM-HLR-05, BHM-HLR-07, BHM-HLR-09, BHM-HLR-19, BHM-HLR-21, and BHM-HLR-23.</j.0:description>
+        <rd:name>BHM-HLR-35 Input Filter</rd:name>
+        <j.0:identifier>BHM-HLR-35</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-30">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a cycle count is received outside of the range defined in BHM-HLR-19.</j.0:description>
+        <rd:name>BHM-HLR-30 Cycle Count Out of Range</rd:name>
+        <j.0:identifier>BHM-HLR-30</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-15">
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a voltage measurement is received outside of the range defined in BHM-HLR-05.</j.0:description>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.0:identifier>BHM-HLR-15</j.0:identifier>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:name>BHM-HLR-15 Battery Terminal Voltage Out of Range</rd:name>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-31">
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:identifier>BHM-HLR-31</j.0:identifier>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a load voltage is received outside of the range defined in BHM-HLR-21.</j.0:description>
+        <rd:name>BHM-HLR-31 Load Voltage Out of Range</rd:name>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-17">
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a current measurement is received outside of the range defined in BHM-HLR-07.</j.0:description>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <rd:name>BHM-HLR-17 Battery Output Current Out of Range</rd:name>
+        <j.0:identifier>BHM-HLR-17</j.0:identifier>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <j.0:description>The RIPS shall set the RIPS Active discrete in the ground state when the RIPS has determined that it is able to supply back-up power to the recorder for the duration specified in RIPS-01 and that it has detected no internal faults or external wiring faults.</j.0:description>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-16">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:name>BHM-HLR-16 Temperature Out of Range</rd:name>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a temperature measurement is received outside of the range defined in BHM-HLR-03.</j.0:description>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.0:identifier>BHM-HLR-16</j.0:identifier>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-32">
+        <j.0:description>The Battery Health Monitor shall indicate a failure if a load current is received outside of the range defined in BHM-HLR-23.</j.0:description>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-10"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.0:identifier>BHM-HLR-32</j.0:identifier>
+        <rd:name>BHM-HLR-32 Load Current Out of Range</rd:name>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-08">
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-22">
+        <rd:name>BHM-HLR-22 Load Current Input</rd:name>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.0:description>The Battery Health Monitor shall receive the current measurements at the load as an input.</j.0:description>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.0:identifier>BHM-HLR-22</j.0:identifier>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <rd:rationale>Load Current is used by the SoH Neural Network.</rd:rationale>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-18">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Cycle Count is used by the SoH Neural Network.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.0:description>The Battery Health Monitor shall receive a count of the charge-discharge cycles for the current battery.</j.0:description>
+        <rd:name>BHM-HLR-18 Cycle Count Input</rd:name>
+        <j.0:identifier>BHM-HLR-18</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-07">
+        <rd:name>BHM-HLR-07 Battery Output Current Range</rd:name>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <j.0:identifier>BHM-HLR-07</j.0:identifier>
+        <j.0:description>The Battery Health Monitor battery output current measurement input shall allow for current ranges from 0 A to 3 A.</j.0:description>
+        <rd:rationale>Current range specified in ED-112A.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-02">
+        <j.0:identifier>BHM-HLR-02</j.0:identifier>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <rd:rationale>Temperature is used by the SoH Neural Network.</rd:rationale>
+        <j.0:description>The Battery Health Monitor shall receive temperature as an input.</j.0:description>
+        <rd:name>BHM-HLR-02 Temperature Input</rd:name>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-05">
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:name>BHM-HLR-05 Battery Terminal Voltage Range</rd:name>
+        <j.0:description>The Battery Health Monitor battery terminal voltage measurement input shall allow for voltage measurements from 0 Vdc to positive 32 Vdc.</j.0:description>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.0:identifier>BHM-HLR-05</j.0:identifier>
+        <rd:rationale>Voltage range specified in ARINC 777-2 Section 3.3.</rd:rationale>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-06">
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.0:description>The Battery Health Monitor shall receive battery output current measurements as an input.</j.0:description>
+        <j.0:identifier>BHM-HLR-06</j.0:identifier>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Battery output current is used by the SoH Neural Network.</rd:rationale>
+        <rd:name>BHM-HLR-06 Battery Output Current Input</rd:name>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <j.0:identifier>RIPS-08</j.0:identifier>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <rd:source>ARINC 777-2 Section 3.5.3</rd:source>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-09">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Time Measurements should never be negative. ~3690 seconds was the highest recorded time during battery testing. An additional 15% factor was added to account for outliers.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+        <j.0:description>The Battery Health Monitor time measurement input shall allow for time measurements from 0 seconds up to 4.3e+3 seconds.</j.0:description>
+        <rd:name>BHM-HLR-09 Time Range</rd:name>
+        <j.0:identifier>BHM-HLR-09</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-04">
+        <j.0:description>The Battery Health Monitor shall receive battery terminal voltage measurements as an input.</j.0:description>
+        <j.0:identifier>BHM-HLR-04</j.0:identifier>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:rationale>Battery terminal voltage is used by the SoH Neural Network.</rd:rationale>
+        <rd:name>BHM-HLR-04 Battery Terminal Voltage Input</rd:name>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-21">
+        <rd:name>BHM-HLR-21 Load Voltage Input Range</rd:name>
+        <j.0:identifier>BHM-HLR-21</j.0:identifier>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>This range is derived from a parent requirement.</rd:rationale>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <j.0:description>The Battery Health Monitor load voltage measurement input shall allow for voltage measurements from 0 Vdc to positive 32 Vdc.</j.0:description>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-19">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Battery test data shows cycle counts up to 168. An additional 15% was added to account for outliers. Whole numbers are the only allowed values.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+        <j.0:description>The Battery Health Monitor cycle count input shall allow for values of whole cycles from 0 to 200 cycles.</j.0:description>
+        <rd:name>BHM-HLR-19 Cycle Count Input Range</rd:name>
+        <j.0:identifier>BHM-HLR-19</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-23">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+        <j.0:description>The Battery Health Monitor load current measurement input shall allow for current ranges from 0 A to 3 A.</j.0:description>
+        <rd:name>BHM-HLR-23 Load Current Input Range</rd:name>
+        <j.0:identifier>BHM-HLR-23</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-01">
+        <j.0:description>The Battery Health Monitor shall indicate battery maintenance is required when the State-of-Health is less than 70% with a tolerance of +/- 2%.</j.0:description>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.1:mitigates rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <rd:name>BHM-HLR-01 Monitor Battery</rd:name>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.0:identifier>BHM-HLR-01</j.0:identifier>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>65% is the (estimated) lowest remaining battery health where the battery can still supply 10 min of backup power, when needed. 70% - a 2% tolerance on the accuracy of estimation is used to allow for additional battery health deterioration accross the remainder of the flight before a maintenance action can be taken.</rd:rationale>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:name>RIPS-08 Maintenance Discrete Behavior</rd:name>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-08">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Operating time is used by the SoH Neural Network.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.0:description>The Battery Health Monitor shall receive operating time since last charge as an input.</j.0:description>
+        <rd:name>BHM-HLR-08 Time Input</rd:name>
+        <j.0:identifier>BHM-HLR-08</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-20">
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>Load Voltage is used by the SoH Neural Network.</rd:rationale>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-08"/>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.0:description>The Battery Health Monitor shall receive voltage measurements at the load as an input.</j.0:description>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <rd:name>BHM-HLR-20 Load Voltage Input</rd:name>
+        <j.0:identifier>BHM-HLR-20</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <j.0:description>The RIPS shall set the Maintenance Required discrete in the ground state when the RIPS has determined that the internal battery needs to be replaced.</j.0:description>
+  </rd:SystemLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-05">
+    <rd:source>ARINC 777-2 Section 3.5.3</rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:rationale>Discrete interface required by ARINC 777-2.</rd:rationale>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-10">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>A maintenance required signal is used to indicate when the battery needs to be replaced.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-05"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+        <j.0:description>The Battery Health Monitor shall provide Maintenance Required state as an output.</j.0:description>
+        <rd:name>BHM-HLR-10 Maintenance Required Output</rd:name>
+        <j.0:identifier>BHM-HLR-10</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#interfaceRequirement"/>
+    <j.0:description>The RIPS shall have a Maintenance Required Standard Discrete Output.</j.0:description>
+    <rd:name>RIPS-05 Maintenance Discrete</rd:name>
+    <j.0:identifier>RIPS-05</j.0:identifier>
+  </rd:SystemLevelRequirement>
+  <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-03">
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:name>BHM-HLR-03 Temperature Range</rd:name>
+    <j.0:description>The Battery Health Monitor shall estimate state-of-charge for batteries operating from -15 degC to 55 degC.</j.0:description>
+    <rd:rationale>Temperature range specified in ED-112A.</rd:rationale>
+    <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soh-nn-SW-COMP"/>
+    <j.0:identifier>BHM-HLR-03</j.0:identifier>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.1:satisfies>
+      <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-11">
+        <rd:source>DO-160G Section 4.5.2 and 4.5.4</rd:source>
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:satisfiedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-03"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+        <j.0:description>The RIPS shall operate from -15 degC to 55 degC.</j.0:description>
+        <rd:name>RIPS-11 Operating Temperature Range</rd:name>
+        <j.0:identifier>RIPS-11</j.0:identifier>
+      </rd:SystemLevelRequirement>
+    </j.1:satisfies>
+  </rd:SoftwareHighLevelRequirement>
+  <rd:SystemLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#RIPS-16">
+    <rd:source></rd:source>
+    <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+    <rd:satisfiedBy>
+      <rd:SoftwareHighLevelRequirement rdf:about="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-24">
+        <rd:derivedRequirement>Requirement</rd:derivedRequirement>
+        <rd:rationale>A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power. The charge command must be set to inactive in order to prevent unnecessary charging, which can reduce the battery health at a faster rate.</rd:rationale>
+        <rd:architectureAllocation rdf:resource="http://sadl.org/rips.sadl#soc-nn-SW-COMP"/>
+        <j.1:satisfies rdf:resource="http://sadl.org/rips-requirements-v2.sadl#RIPS-16"/>
+        <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+        <j.0:description>The Battery Health Monitor shall set the charge command output to the inactive state when the State-of-Charge is greater than or equal to 99% +/- 1%.</j.0:description>
+        <rd:name>BHM-HLR-24 Charge Command Complete</rd:name>
+        <j.0:identifier>BHM-HLR-24</j.0:identifier>
+      </rd:SoftwareHighLevelRequirement>
+    </rd:satisfiedBy>
+    <rd:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#designConstraint"/>
+    <j.0:description>After a battery recharge has been initiated and while aircraft power is available, the RIPS shall continue recharge the internal battery until the estimated remaining charge is above 99%.</j.0:description>
+    <rd:name>RIPS-16 Battery Recharge Completion</rd:name>
+    <j.0:identifier>RIPS-16</j.0:identifier>
+  </rd:SystemLevelRequirement>
+</rdf:RDF>

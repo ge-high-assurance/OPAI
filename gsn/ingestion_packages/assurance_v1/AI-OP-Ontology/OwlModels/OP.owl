@@ -1,0 +1,387 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fha="http://sadl.org/FHA.sadl#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:op="http://sadl.org/OP.sadl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://sadl.org/OP.sadl">
+    <owl:imports rdf:resource="http://sadl.org/FHA.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'OP.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#NNSwCompImp">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#NNModel">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#Argument">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#justification"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#conclusion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <rdf:Description rdf:about="http://arcos.rack/SOFTWARE#SWCOMPONENT">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</owl:qualifiedCardinality>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#innocuityOP"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</owl:qualifiedCardinality>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#correctnessOP"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</owl:qualifiedCardinality>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#intentOP"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</owl:qualifiedCardinality>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#satisfiesOPs"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+          </rdf:Description>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#concerns"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#OverarchingProperty"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#op"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#NNSwComponent">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#DataSet"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#qualDataOffNominal"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#DataSet"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#qualDataNominal"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#DataSet"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#devData"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#InpCondImp"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#inputConditionerImplementation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://sadl.org/OP.sadl#NNSwCompImp"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#implementation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#InpCond"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#inputConditioner"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://sadl.org/OP.sadl#NNModel"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#model"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#ModelDevelopmentActivity">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ACTIVITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#NNRequirement">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#InpCond">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#DataSet">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#RequirementSet">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#COLLECTION"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#Evidence">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://sadl.org/OP.sadl#EvidenceActivity"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#confirmedBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#isSupportive"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#InpCondImp">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#ModelQualificationActivity">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ACTIVITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#OverarchingProperty">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <op:OverarchingProperty rdf:about="http://sadl.org/OP.sadl#intent"/>
+          <op:OverarchingProperty rdf:about="http://sadl.org/OP.sadl#correctness"/>
+          <op:OverarchingProperty rdf:about="http://sadl.org/OP.sadl#innocuity"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#EvidenceActivity">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <op:EvidenceActivity rdf:about="http://sadl.org/OP.sadl#CameoReview"/>
+          <op:EvidenceActivity rdf:about="http://sadl.org/OP.sadl#MarabouAnalysis"/>
+          <op:EvidenceActivity rdf:about="http://sadl.org/OP.sadl#SimulinkAnalysis"/>
+          <op:EvidenceActivity rdf:about="http://sadl.org/OP.sadl#MatlabAnalysis"/>
+          <op:EvidenceActivity rdf:about="http://sadl.org/OP.sadl#PythonAnalysis"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#NNFailureModeSet">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#COLLECTION"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/OP.sadl#Premise">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#holds"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#requirement">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#RequirementSet"/>
+    <rdfs:range rdf:resource="http://arcos.rack/REQUIREMENTS#REQUIREMENT"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#evidence">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#Evidence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#implementation">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#NNSwCompImp"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#premise">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Argument"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#failureMode">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNFailureModeSet"/>
+    <rdfs:range rdf:resource="http://sadl.org/FHA.sadl#NNFailureMode"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#concerns">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Argument"/>
+    <rdfs:range rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#model">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#NNModel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#nnRequirements">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#RequirementSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#devData">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#confirmedBy">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Evidence"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#EvidenceActivity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#inputConditionerImplementation">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#InpCondImp"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#qualDataNominal">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#inputConditioner">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#InpCond"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#subPremise">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#qualDataOffNominal">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#NNSwComponent"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/OP.sadl#op">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Argument"/>
+    <rdfs:range rdf:resource="http://sadl.org/OP.sadl#OverarchingProperty"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#holds">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#detail">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Evidence"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#justification">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Argument"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#isSupportive">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Evidence"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#innocuityOP">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#conclusion">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Argument"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#statement">
+    <rdfs:domain rdf:resource="http://sadl.org/OP.sadl#Premise"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#correctnessOP">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#satisfiesOPs">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/OP.sadl#intentOP">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/SOFTWARE#SWCOMPONENT"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>

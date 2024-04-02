@@ -1,0 +1,565 @@
+ uri "http://sadl.org/rips-requirements-v2.sadl" alias ripsreqsv2.
+ 
+ 
+ import "http://sadl.org/DESIGN.sadl".
+ import "http://sadl.org/rips-fha.sadl".
+ 
+ 
+ 
+ //-- SYSTEM REQUIREMENTS
+RIPS-01 is a SystemLevelRequirement
+   with identifier "RIPS-01"
+   with rd:name "RIPS-01 Backup Power Time"
+   with description "When aircraft power to the recorder drops below 18 Vdc, the RIPS shall make DC power available for 10 minutes."
+   with requirementType functionalRequirement
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.1".
+RIPS-02 is a SystemLevelRequirement
+   with identifier "RIPS-02"
+   with rd:name "RIPS-02 Backup Time Tolerance"
+   with description "The tolerance on the time of 10 minutes output shall be +/-1 minute."
+   with requirementType designConstraint
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.2.3".
+RIPS-03 is a SystemLevelRequirement
+   with identifier "RIPS-03"
+   with rd:name "RIPS-03 Recharge Timing"
+   with description "From the time aircraft power greater than 22 Vdc is available until the RIPS is capable of providing the full 10 minutes of power shall be no more than 15 minutes."
+   with requirementType performanceRequirement
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.2.2".
+RIPS-04 is a SystemLevelRequirement
+   with identifier "RIPS-04"
+   with rd:name "RIPS-04 Battery Replacement"
+   with description "The RIPS shall have a replaceable battery"
+   with requirementType usabilityRequirement
+   with rd:derivedRequirement "Requirement"
+   with rd:source "".
+RIPS-05 is a SystemLevelRequirement
+   with identifier "RIPS-05"
+   with rd:name "RIPS-05 Maintenance Discrete"
+   with description "The RIPS shall have a Maintenance Required Standard Discrete Output."
+   with requirementType interfaceRequirement
+   with rd:satisfiedBy BHM-HLR-10
+   with rationale "Discrete interface required by ARINC 777-2."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.3".
+RIPS-06 is a SystemLevelRequirement
+   with identifier "RIPS-06"
+   with rd:name "RIPS-06 RIPS Active Discrete"
+   with description "The RIPS shall have a RIPS Active Standard Discrete Output."
+   with requirementType interfaceRequirement
+   with rationale "Discrete interface required by ARINC 777-2."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.1".
+RIPS-07 is a SystemLevelRequirement
+   with identifier "RIPS-07"
+   with rd:name "RIPS-07 No Fault Discrete"
+   with description "The RIPS shall have a No Fault Standard Discrete Output."
+   with requirementType interfaceRequirement
+   with rationale "Discrete interface required by ARINC 777-2."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.2".
+RIPS-08 is a SystemLevelRequirement
+   with identifier "RIPS-08"
+   with rd:name "RIPS-08 Maintenance Discrete Behavior"
+   with description "The RIPS shall set the Maintenance Required discrete in the ground state when the RIPS has determined that the internal battery needs to be replaced."
+   with requirementType functionalRequirement
+   with rd:satisfiedBy BHM-HLR-18
+   with rd:satisfiedBy BHM-HLR-01
+   with rd:satisfiedBy BHM-HLR-02
+   with rd:satisfiedBy BHM-HLR-04
+   with rd:satisfiedBy BHM-HLR-20
+   with rd:satisfiedBy BHM-HLR-22
+   with rd:satisfiedBy BHM-HLR-23
+   with rd:satisfiedBy BHM-HLR-05
+   with rd:satisfiedBy BHM-HLR-06
+   with rd:satisfiedBy BHM-HLR-07
+   with rd:satisfiedBy BHM-HLR-08
+   with rd:satisfiedBy BHM-HLR-09
+   with rd:satisfiedBy BHM-HLR-19
+   with rd:satisfiedBy BHM-HLR-21
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.3".
+RIPS-09 is a SystemLevelRequirement
+   with identifier "RIPS-09"
+   with rd:name "RIPS-09 RIPS Active Discrete Behavior"
+   with description "The RIPS shall set the RIPS Active discrete in the ground state when the RIPS is supplying power to the recorder."
+   with requirementType functionalRequirement
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.1".
+RIPS-10 is a SystemLevelRequirement
+   with identifier "RIPS-10"
+   with rd:name "RIPS-10 No Fault Discrete Behavior"
+   with description "The RIPS shall set the RIPS Active discrete in the ground state when the RIPS has determined that it is able to supply back-up power to the recorder for the duration specified in RIPS-01 and that it has detected no internal faults or external wiring faults."
+   with requirementType functionalRequirement
+   with rd:satisfiedBy BHM-HLR-15
+   with rd:satisfiedBy BHM-HLR-16
+   with rd:satisfiedBy BHM-HLR-17
+   with rd:satisfiedBy BHM-HLR-30
+   with rd:satisfiedBy BHM-HLR-31
+   with rd:satisfiedBy BHM-HLR-32
+   with rd:satisfiedBy BHM-HLR-33
+   with rd:satisfiedBy BHM-HLR-35
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.5.2".
+RIPS-11 is a SystemLevelRequirement
+   with identifier "RIPS-11"
+   with rd:name "RIPS-11 Operating Temperature Range"
+   with description "The RIPS shall operate from -15 degC to 55 degC."
+   with requirementType designConstraint
+   with rd:satisfiedBy BHM-HLR-03
+   with rd:derivedRequirement "Requirement"
+   with rd:source "DO-160G Section 4.5.2 and 4.5.4".
+RIPS-12 is a SystemLevelRequirement
+   with identifier "RIPS-12"
+   with rd:name "RIPS-12 RIPS Form Factor"
+   with description "The RIPS shall form factor shall match the dimensions defined in ARINC 777-2 Attachment 5 Figure 5-1."
+   with requirementType physicalRequirement
+   with rationale "Following the form factor defined in ARINC 777-2 allows the RIPS system to be installed in all aircraft locations compatible with this standard."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 2.2".
+RIPS-13 is a SystemLevelRequirement
+   with identifier "RIPS-13"
+   with rd:name "RIPS-13 Weight"
+   with description "The RIPS shall weigh no more than 5 pounds."
+   with requirementType designConstraint
+   with rationale "Max weight specified in ARINC 777-2."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 2.7".
+RIPS-14 is a SystemLevelRequirement
+   with identifier "RIPS-14"
+   with rd:name "RIPS-14 Connector Type"
+   with description "The RIPS shall use D38999/20JC35P connectors."
+   with requirementType physicalRequirement
+   with rationale "Use the standard connectors suggested in ARINC 777-2."
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 2.2".
+RIPS-15 is a SystemLevelRequirement
+   with identifier "RIPS-15"
+   with rd:name "RIPS-15 Battery Recharge Initiation"
+   with description "When aircraft power is available, the RIPS shall initiate a recharge of the internal battery when estimated remaining charge is less than 30%."
+   with requirementType designConstraint
+   with rd:satisfiedBy BHM-HLR-12
+   with rd:satisfiedBy BHM-HLR-11
+   with rd:derivedRequirement "Requirement"
+   with rd:source "".
+RIPS-16 is a SystemLevelRequirement
+   with identifier "RIPS-16"
+   with rd:name "RIPS-16 Battery Recharge Completion"
+   with description "After a battery recharge has been initiated and while aircraft power is available, the RIPS shall continue recharge the internal battery until the estimated remaining charge is above 99%."
+   with requirementType designConstraint
+   with rd:satisfiedBy BHM-HLR-24
+   with rd:derivedRequirement "Requirement"
+   with rd:source "".
+RIPS-17 is a SystemLevelRequirement
+   with identifier "RIPS-17"
+   with rd:name "RIPS-17 Minimum Operating Pressure"
+   with description "The RIPS shall operate down to a minimum operating pressure of 57.18 kPa."
+   with requirementType designConstraint
+   with rd:derivedRequirement "Requirement"
+   with rd:source "DO-160G Section 4".
+RIPS-18 is a SystemLevelRequirement
+   with identifier "RIPS-18"
+   with rd:name "RIPS-18 Operating Temperature Variation"
+   with description "The RIPS shall operate in an environment with a maximum temperature rate of change of 2 degC per minute."
+   with requirementType designConstraint
+   with rd:derivedRequirement "Requirement"
+   with rd:source "DO-160G Section 5".
+RIPS-19 is a SystemLevelRequirement
+   with identifier "RIPS-19"
+   with rd:name "RIPS-19 Output Power"
+   with description "The RIPS shall supply output voltage between 19 Vdc and 32 Vdc when supplying power, where output voltage includes ripple voltage."
+   with requirementType designConstraint
+   with rd:derivedRequirement "Requirement"
+   with rd:source "ARINC 777-2 Section 3.3".
+RIPS-50 is a SystemLevelRequirement
+   with identifier "RIPS-50"
+   with rd:name "RIPS-50 Loss of Backup Power"
+   with description "Loss of ability for the RIPS to provide backup power to the Flight Data Recorder shall be considered a MINOR failure condition."
+   with requirementType safetyRequirement
+   with Rq:mitigates Hzrd-A1
+   with rd:derivedRequirement "Requirement"
+   with rd:source "TSO C155b Section 3.b(2)".
+RIPS-51 is a SystemLevelRequirement
+   with identifier "RIPS-51"
+   with rd:name "RIPS-51 Inadvertant Backup Power"
+   with description "Backup power provided by the RIPS to the Flight Data Recorder shall be considered a MINOR failure condition."
+   with requirementType safetyRequirement
+   with Rq:mitigates Hzrd-B1
+   with rd:derivedRequirement "Requirement"
+   with rd:source "TSO C155b Section 3.b(1)".
+
+
+
+
+// //-- HIGH-LEVEL REQUIREMENTS
+BHM-HLR-01 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-01"
+   with rd:name "BHM-HLR-01 Monitor Battery"
+   with description "The Battery Health Monitor shall indicate battery maintenance is required when the State-of-Health is less than 70% with a tolerance of +/- 2%."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "65% is the (estimated) lowest remaining battery health where the battery can still supply 10 min of backup power, when needed. 70% - a 2% tolerance on the accuracy of estimation is used to allow for additional battery health deterioration accross the remainder of the flight before a maintenance action can be taken."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-11 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-11"
+   with rd:name "BHM-HLR-11 Charge Command Behavior"
+   with description "The Battery Health Monitor shall set the charge command output to the active state when the State-of-Charge is less than or equal to 30% with a tolerance of +/- 2%."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-15
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-13 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-13"
+   with rd:name "BHM-HLR-13 State-of-Health Neural Network"
+   with description "The Battery Health Monitor shall implement a neural network to compute the State-of-Health."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This requirement was derived from implementation decisions made to satisfy BHM-HLR-01."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-14 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-14"
+   with rd:name "BHM-HLR-14 State-of-Charge Neural Network"
+   with description "The Battery Health Monitor shall implement a neural network to compute the State-of-Charge."
+   with requirementType designConstraint
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "This requirement was derived from implementation decisions made to satisfy BHM-HLR-11."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-24 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-24"
+   with rd:name "BHM-HLR-24 Charge Command Complete"
+   with description "The Battery Health Monitor shall set the charge command output to the inactive state when the State-of-Charge is greater than or equal to 99% +/- 1%."
+   with requirementType functionalRequirement
+   with Rq:satisfies RIPS-16
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power. The charge command must be set to inactive in order to prevent unnecessary charging, which can reduce the battery health at a faster rate."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-25 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-25"
+   with rd:name "BHM-HLR-25 State-of-Health Training Range"
+   with description "The Battery Health Monitor State-of-Health Neural Network shall be trained with a training data set that contains State-of-Health values from 0% to 100%."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This requirement was derived from implementation discisions made to satisfy BHM-HLR-01."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-26 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-26"
+   with rd:name "BHM-HLR-26 State-of-Health Training Gap Coverage"
+   with description "The Battery Health Monitor State-of-Health Neural Network shall be trained with a training data set that does not contain a gap in the State-of-Health values greater than 2% for the range defined in BHM-HLR-25."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This requirement was derived from implementation decisions made to satisfy BHM-HLR-01"
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-27 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-27"
+   with rd:name "BHM-HLR-27 State-of-Charge Training Range"
+   with description "The Battery Health Monitor State-of-Charge Neural Network shall be trained with a training data set that contains State-of-Charge values from 0% to 100%."
+   with requirementType designConstraint
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "This requirement was derived from implementation discisions made to satisfy BHM-HLR-11."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-28 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-28"
+   with rd:name "BHM-HLR-28 State-of-Charge Training Gap Coverage"
+   with description "The Battery Health Monitor State-of-Charge Neural Network shall be trained with a training data set that does not contain a gap in the State-of-Charge values greater than 2% for the range defined in BHM-HLR-27."
+   with requirementType designConstraint
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "This requirement was derived from implementation decisions made to satisfy BHM-HLR-11"
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-35 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-35"
+   with rd:name "BHM-HLR-35 Input Filter"
+   with description "The Battery Health Monitor shall filter input data that is outside of the ranges defined in BHM-HLR-03, BHM-HLR-05, BHM-HLR-07, BHM-HLR-09, BHM-HLR-19, BHM-HLR-21, and BHM-HLR-23."
+   with requirementType functionalRequirement
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+
+BHM-HLR-02 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-02"
+   with rd:name "BHM-HLR-02 Temperature Input"
+   with description "The Battery Health Monitor shall receive temperature as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "Temperature is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-04 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-04"
+   with rd:name "BHM-HLR-04 Battery Terminal Voltage Input"
+   with description "The Battery Health Monitor shall receive battery terminal voltage measurements as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Battery terminal voltage is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-06 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-06"
+   with rd:name "BHM-HLR-06 Battery Output Current Input"
+   with description "The Battery Health Monitor shall receive battery output current measurements as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Battery output current is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-08 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-08"
+   with rd:name "BHM-HLR-08 Time Input"
+   with description "The Battery Health Monitor shall receive operating time since last charge as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Operating time is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-10 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-10"
+   with rd:name "BHM-HLR-10 Maintenance Required Output"
+   with description "The Battery Health Monitor shall provide Maintenance Required state as an output."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-05
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "A maintenance required signal is used to indicate when the battery needs to be replaced."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-12 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-12"
+   with rd:name "BHM-HLR-12 Charge Command Output"
+   with description "The Battery Health Monitor shall provide a charge command as an output."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-15
+   with architectureAllocation soc-nn-SW-COMP
+   with rationale "A charge command is used to indicate to the charge controller that the battery should be recharging from aircraft power."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-18 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-18"
+   with rd:name "BHM-HLR-18 Cycle Count Input"
+   with description "The Battery Health Monitor shall receive a count of the charge-discharge cycles for the current battery."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Cycle Count is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-20 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-20"
+   with rd:name "BHM-HLR-20 Load Voltage Input"
+   with description "The Battery Health Monitor shall receive voltage measurements at the load as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Load Voltage is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-22 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-22"
+   with rd:name "BHM-HLR-22 Load Current Input"
+   with description "The Battery Health Monitor shall receive the current measurements at the load as an input."
+   with requirementType interfaceRequirement
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Load Current is used by the SoH Neural Network."
+   with rd:derivedRequirement "Requirement".
+
+BHM-HLR-03 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-03"
+   with rd:name "BHM-HLR-03 Temperature Range"
+   with description "The Battery Health Monitor shall estimate state-of-charge for batteries operating from -15 degC to 55 degC."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-11
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Temperature range specified in ED-112A."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-05 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-05"
+   with rd:name "BHM-HLR-05 Battery Terminal Voltage Range"
+   with description "The Battery Health Monitor battery terminal voltage measurement input shall allow for voltage measurements from 0 Vdc to positive 32 Vdc."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Voltage range specified in ARINC 777-2 Section 3.3."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-07 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-07"
+   with rd:name "BHM-HLR-07 Battery Output Current Range"
+   with description "The Battery Health Monitor battery output current measurement input shall allow for current ranges from 0 A to 3 A."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Current range specified in ED-112A."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-09 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-09"
+   with rd:name "BHM-HLR-09 Time Range"
+   with description "The Battery Health Monitor time measurement input shall allow for time measurements from 0 seconds up to 4.3e+3 seconds."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Time Measurements should never be negative. ~3690 seconds was the highest recorded time during battery testing. An additional 15% factor was added to account for outliers."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-19 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-19"
+   with rd:name "BHM-HLR-19 Cycle Count Input Range"
+   with description "The Battery Health Monitor cycle count input shall allow for values of whole cycles from 0 to 200 cycles."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "Battery test data shows cycle counts up to 168. An additional 15% was added to account for outliers. Whole numbers are the only allowed values."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-21 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-21"
+   with rd:name "BHM-HLR-21 Load Voltage Input Range"
+   with description "The Battery Health Monitor load voltage measurement input shall allow for voltage measurements from 0 Vdc to positive 32 Vdc."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This range is derived from a parent requirement."
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-23 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-23"
+   with rd:name "BHM-HLR-23 Load Current Input Range"
+   with description "The Battery Health Monitor load current measurement input shall allow for current ranges from 0 A to 3 A."
+   with requirementType designConstraint
+   with Rq:satisfies RIPS-08
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+
+BHM-HLR-15 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-15"
+   with rd:name "BHM-HLR-15 Battery Terminal Voltage Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a voltage measurement is received outside of the range defined in BHM-HLR-05."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-16 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-16"
+   with rd:name "BHM-HLR-16 Temperature Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a temperature measurement is received outside of the range defined in BHM-HLR-03."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-17 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-17"
+   with rd:name "BHM-HLR-17 Battery Output Current Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a current measurement is received outside of the range defined in BHM-HLR-07."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-30 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-30"
+   with rd:name "BHM-HLR-30 Cycle Count Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a cycle count is received outside of the range defined in BHM-HLR-19."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-31 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-31"
+   with rd:name "BHM-HLR-31 Load Voltage Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a load voltage is received outside of the range defined in BHM-HLR-21."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-32 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-32"
+   with rd:name "BHM-HLR-32 Load Current Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a load current is received outside of the range defined in BHM-HLR-23."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soc-nn-SW-COMP
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+BHM-HLR-33 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-33"
+   with rd:name "BHM-HLR-33 Time Out of Range"
+   with description "The Battery Health Monitor shall indicate a failure if a time is received outside of the range defined in BHM-HLR-09."
+   with requirementType functionalRequirement
+   with Rq:mitigates Hzrd-A1 
+   with Rq:satisfies RIPS-10
+   with architectureAllocation soh-nn-SW-COMP
+   with rd:derivedRequirement "Requirement".
+
+BHM-HLR-29 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-29"
+   with rd:name "BHM-HLR-29 Battery Output Current Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Battery Output Current input data that contains at least one data point every 0.1 Amps for the entire range defined in BHM-HLR-07."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-34 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-34"
+   with rd:name "BHM-HLR-34 Temperature Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Temperature input data that contains at least one data point every 1 degree for the entire range defined in BHM-HLR-03."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-36 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-36"
+   with rd:name "BHM-HLR-36 Cycle Count Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Cycle Count input data that contains at least one data point every 1 integer count for the entire range defined in BHM-HLR-19."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-37 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-37"
+   with rd:name "BHM-HLR-37 Time Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Time input data that contains at least one data point every 20 seconds for the entire range defined in BHM-HLR-09."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-38 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-38"
+   with rd:name "BHM-HLR-38 Load Current Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Load Current input data that contains at least one data point every 0.1 Amps for the entire range defined in BHM-HLR-23."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-39 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-39"
+   with rd:name "BHM-HLR-39 Load Voltage Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Load Voltage input data that contains at least one data point every 0.1 Volt for the entire range defined in BHM-HLR-21."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+BHM-HLR-40 is a SoftwareHighLevelRequirement
+   with identifier "BHM-HLR-40"
+   with rd:name "BHM-HLR-40 Battery Terminal Voltage Qualification Data"
+   with description "The Batter Health Monitor State-of-Health Neural Network shall be qualified with Battery Terminal Voltage input data that contains at least one data point every 0.1 Volt for the entire range defined in BHM-HLR-05."
+   with requirementType designConstraint
+   with architectureAllocation soh-nn-SW-COMP
+   with rationale "This derived requirement is necessary to prove that the Neural Network implementation selected will perform as intended across the input ranges for which it will be used."
+   with rd:derivedRequirement "Derived Requirement".
+
+		
+  	

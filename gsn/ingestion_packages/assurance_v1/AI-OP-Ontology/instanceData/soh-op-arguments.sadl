@@ -1,0 +1,280 @@
+ uri "http://sadl.org/soh-op-arguments.sadl" alias soa.
+ 
+ import "http://sadl.org/OP.sadl".
+ import "http://sadl.org/FHA.sadl".
+ import "http://sadl.org/rips.sadl".
+ 
+
+
+ 
+ //-- Top-level OP arguments for the SOH NN Component
+
+ //-- Intent
+ soh-nn-INTENT-ARG is an Argument
+ 	with identifier "soh-nn-INTENT-ARG"
+	with op intent
+	with concerns soh-nn-SW-COMP
+	with conclusion "The soh-nn-SW-COMP holds Intent"
+	with justification "The soh-nn-REQS are correct and complete with respect to the Desired Behavior"
+	with premise soh-intent-p1
+	with premise soh-intent-p2
+	// No p3 for this DAL (TODO: Automate this in the future - Create templates?)	
+	with premise soh-intent-p4.
+
+ soh-intent-p1 is a Premise
+ 	with identifier "soh-intent-p1" 
+ 	with statement "The soh-nn-REQS correctly address all the data-dependent constraints and the data independent constraints as desired by the stakeholders"
+ 	with evidence ev-soh-intent-p1
+ 	with holds true.
+ 	
+ soh-intent-p2 is a Premise
+  	with identifier "soh-intent-p2" 
+ 	with statement "The soh-nn-QUAL-DATA-N and soh-nn-QUAL-DATA-ON will be used to measure the quality of the soh-nn-SW-COMP with respect to the data dependent constraints"
+ 	with evidence ev-soh-intent-p2
+ 	with holds false.
+ 
+ soh-intent-p4 is a Premise
+   	with identifier "soh-intent-p4" 
+ 	with statement "The soh-nn-INPUT-COND will address any off-nominal inputs to the soh-nn-MODEL"
+ 	with evidence ev-soh-intent-p4
+ 	with holds true.
+  
+ ev-soh-intent-p1 is an Evidence
+ 	with identifier "ev-soh-intent-p1"
+ 	with isSupportive true
+ 	with confirmedBy CameoReview
+ 	with detail "The HLR table is missing correctness and completeness attributes necessary to perform this review. (Resolved)"
+ 	with detail "The System Requirements table is missing correctness and completeness attributes necessary to perform this review. (Resolved)".
+
+
+ ev-soh-intent-p2 is an Evidence
+ 	with identifier "ev-soh-intent-p2"
+ 	with isSupportive false
+ 	with confirmedBy CameoReview
+ 	with detail "Need to create Test Cases in Cameo that shows we are using the Qual Data to verify each SoH-NN Constraint (Unresolved)".
+
+ 	
+ ev-soh-intent-p4 is an Evidence
+ 	with identifier "ev-soh-intent-p4"
+ 	with isSupportive true
+ 	with confirmedBy CameoReview
+ 	with detail "The HLR table is missing correctness and completeness attributes necessary to perform this review. (Resolved)"
+ 	with detail "The System Requirements table is missing correctness and completeness attributes necessary to perform this review. (Resolved)".
+ 	
+ 	
+
+ 	
+ // Correctness
+ soh-nn-CORRECTNESS-ARG is an Argument
+ 	with identifier "soh-nn-CORRECTNESS-ARG"
+	with op correctness
+	with concerns soh-nn-SW-COMP
+	with conclusion "The soh-nn-SW-COMP holds Correctness"
+	with justification "The soh-nn-SW-COMP is correct and complete with respect to the soh-nn-REQS, under the soh-nn-QUAL-DATA-N and the soh-nn-QUAL-DATA-ON"
+	// No p1 for this DAL (TODO: Automate this in the future)	
+	with premise soh-correctness-p2
+	with premise soh-correctness-p3
+	with premise soh-correctness-p4
+	with premise soh-correctness-p5. 
+
+ soh-correctness-p2 is a Premise
+ 	with identifier "soh-correctness-p2" 
+ 	with statement "The soh-nn-QUAL-DATA-N  is an accurate and sufficient representation of the quantity of interest throughout the foreseeable operating conditions"
+ 	with subPremise soh-correctness-p2-a
+ 	with subPremise soh-correctness-p2-b
+ 	with holds false.
+ 	
+ soh-correctness-p2-a is a Premise
+ 	with identifier "soh-correctness-p2-a" 
+ 	with statement "The soh-nn-QUAL-DATA-N lies completely within the expected ranges of the multivariate operational space as specified in the soh-nn-REQS"
+	with evidence ev-soh-correctness-p2-a
+ 	with holds false.
+ 	
+ ev-soh-correctness-p2-a is an Evidence
+ 	with identifier "ev-soh-correctness-p2-a"
+ 	with isSupportive false
+ 	with confirmedBy PythonAnalysis
+ 	with detail "100% data in Cycle Range (0  to 200)"
+ 	with detail "100% data in Time Range (0  to 3.6e+7 s)"
+ 	with detail "100% data in Voltage Range (0  to 40 Vdc)"
+ 	with detail "3.97% data in Current Measured Range (0  to 3 A)"
+ 	with detail "100% data in Temperature Meusured Range (-15  to 55 c)" 	
+ 	with detail "100% data in Current Load Range (0  to 3 A)"
+ 	with detail "100% data in VOltage Load Range (0  to 40 A)".
+ 	
+ soh-correctness-p2-b is a Premise
+ 	with identifier "soh-correctness-p2-b" 
+ 	with statement "The soh-nn-QUAL-DATA-N is sufficiently representative of the multivariate operational space as specified in the soh-nn-REQS"
+	with evidence ev-soh-correctness-p2-b
+ 	with holds false.
+
+ ev-soh-correctness-p2-b is an Evidence
+ 	with identifier "ev-soh-correctness-p2-b"
+ 	with isSupportive false
+ 	with confirmedBy PythonAnalysis
+ 	with detail "Single bin : [voltage measured: (0, 32)(0.1), current measured: (0, 3)(0.1), temperature measured: (-15, 55)(1), current load: (0, 3)(0.1), voltage load:(0, 32)(0.1)]"
+ 	with detail "No voltage measured between 0 and 0.1"
+ 	with detail "No current measured between 0.1 and 0.2"
+	with detail "No temperature measured between -15 and -14"
+	with detail "No current load between 0.1 and 0.2"
+	with detail "No voltage load between 0.1 and 0.2". 	
+ 	
+ soh-correctness-p3 is a Premise
+ 	with identifier "soh-correctness-p3" 
+ 	with statement "The soh-nn-SW-COMP adheres to the data dependent constraints set forth in the soh-nn-REQS when run against the soh-nn-QUAL-DATA-N"
+ 	with subPremise soh-correctness-p3-a
+ 	with subPremise soh-correctness-p3-b
+ 	with holds false.
+
+ soh-correctness-p3-a is a Premise
+ 	with identifier "soh-correctness-p3-a" 
+ 	with statement "The soh-nn-SW-COMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N"
+ 	with subPremise soh-correctness-p3-a-1
+ 	with subPremise soh-correctness-p3-a-2
+ 	with subPremise soh-correctness-p3-a-3 	 	
+ 	with holds false.
+
+
+ soh-correctness-p3-a-1 is a Premise
+ 	with identifier "soh-correctness-p3-a-1" 
+ 	with statement "The soh-nn-INPUT-COND approves 100% of the soh-nn-QUAL-DATA-N"
+	with evidence ev-soh-correctness-p3-a-1
+ 	with holds false.
+
+  ev-soh-correctness-p3-a-1 is an Evidence
+ 	with identifier "ev-soh-correctness-p3-a-1"
+ 	with isSupportive true
+ 	with confirmedBy MatlabAnalysis
+ 	with detail "100% of the data passed".
+
+ soh-correctness-p3-a-2 is a Premise
+ 	with identifier "soh-correctness-p3-a-2" 
+ 	with statement "The soh-nn-SW-COMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N approved by the soh-nn-INPUT-COND"
+	with evidence ev-soh-correctness-p3-a-2
+ 	with holds false.
+ 	
+
+  ev-soh-correctness-p3-a-2 is an Evidence
+ 	with identifier "ev-soh-correctness-p3-a-2"
+ 	with isSupportive false
+ 	with confirmedBy MatlabAnalysis
+ 	with detail "Only 30.460% of approved data points passed this criteria".
+
+ soh-correctness-p3-a-3 is a Premise
+ 	with identifier "soh-correctness-p3-a-3" 
+ 	with statement "The soh-nn-MODEL is robust within input perturbation 4% and output perturbation 2%) with respect to the soh-nn-QUAL-DATA-N"
+	with evidence ev-soh-correctness-p3-a-3
+ 	with holds false.
+
+  ev-soh-correctness-p3-a-3 is an Evidence
+ 	with identifier "ev-soh-correctness-p3-a-3"
+ 	with isSupportive false
+ 	with confirmedBy MarabouAnalysis
+ 	with detail "Only 98.683% of the data passed this criteria".
+
+ soh-correctness-p3-b is a Premise
+ 	with identifier "soh-correctness-p3-b" 
+ 	with statement "The soh-nn-SW-COMP-IMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N"
+ 	with evidence ev-soh-correctness-p3-b 	
+ 	with holds false. 	
+ 	
+ ev-soh-correctness-p3-b is an Evidence
+ 	with identifier "ev-soh-correctness-p3-b"
+ 	with isSupportive false
+ 	with confirmedBy SimulinkAnalysis
+ 	with detail "Only about 30% of the data points passed this criteria".
+
+ soh-correctness-p4 is a Premise
+ 	with identifier "soh-correctness-p4" 
+ 	with statement "The soh-nn-SW-COMP adheres to the data independent constraints set forth in the soh-nn-REQS"
+ 	with subPremise soh-correctness-p4-a
+ 	with holds false.
+
+ 	
+ soh-correctness-p4-a is a Premise
+ 	with identifier "soh-correctness-p4-a" 
+ 	with statement "The soh-nn-SW-COMP-IMP adheres to the data independent constraints set forth in the soh-nn-REQS"
+ 	with evidence ev-soh-correctness-p4-a
+ 	with holds false.
+ 	
+ ev-soh-correctness-p4-a is an Evidence
+ 	with identifier "ev-soh-correctness-p4-a"
+ 	with isSupportive false
+ 	with confirmedBy SimulinkAnalysis
+ 	with detail "BHM HLR 01 failed"
+ 	with detail "BHM HLR 03 failed"
+ 	with detail "BHM HLR 05 passed"
+ 	with detail "BHM HLR 07 passed"
+ 	with detail "BHM HLR 09 failed"
+ 	with detail "BHM HLR 15 passed"
+ 	with detail "BHM HLR 16 failed"
+ 	with detail "BHM HLR 17 passed"
+ 	with detail "BHM HLR 19 passed".
+ 	
+ soh-correctness-p5 is a Premise
+ 	with identifier "soh-correctness-p5" 
+ 	with statement "The soh-nn-INPUT-COND correctly addresses all the constraints set forth in the soh-nn-REQS for processing all off nominal input values to the the soh-nn-SW-COMP"
+ 	with subPremise soh-correctness-p5-a
+ 	with subPremise soh-correctness-p5-b 	
+ 	with holds true. 	 	
+
+ soh-correctness-p5-a is a Premise
+ 	with identifier "soh-correctness-p5-a" 
+ 	with statement "The soh-nn-INPUT-COND correctly flags 100% of the inputs in the soh-nn-QUAL-DATA-ON"
+ 	with evidence ev-soh-correctness-p5-a 	
+ 	with holds true. 	 	
+
+ ev-soh-correctness-p5-a is an Evidence
+ 	with identifier "ev-soh-correctness-p5-a"
+ 	with isSupportive true
+ 	with confirmedBy MatlabAnalysis
+ 	with detail "100% of the data was disapproved".
+
+ soh-correctness-p5-b is a Premise
+ 	with identifier "soh-correctness-p5-b" 
+ 	with statement "The soh-nn-INPUT-COND-IMP correctly flags 100% of the inputs in the soh-nn-QUAL-DATA-ON"
+ 	with evidence ev-soh-correctness-p5-b 	
+ 	with holds true. 	 	
+
+ ev-soh-correctness-p5-b is an Evidence
+ 	with identifier "ev-soh-correctness-p5-b"
+ 	with isSupportive true
+ 	with confirmedBy SimulinkAnalysis
+  	with detail "100% of the data was disapproved".
+
+ // Innocuity
+ soh-nn-INNOCUITY-ARG is an Argument
+ 	with identifier "soh-nn-INNOCUITY-ARG"
+	with op innocuity
+	with concerns soh-nn-SW-COMP
+	with conclusion "The soh-nn-SW-COMP holds Innocuity"
+	with justification "Any part of the soh-nn-SW-COMP not required by the soh-nn-REQS will not cause any unacceptable impact"
+	with premise soh-innocuity-p1
+	with premise soh-innocuity-p2.
+
+ soh-innocuity-p1 is a Premise
+ 	with identifier "soh-innocuity-p1" 
+ 	with statement "All soh-nn-FMS have been identified in a component level safety assessment of the soh-nn-SW-COMP"
+ 	with evidence ev-soh-innocuity-p1
+ 	with holds true.
+
+ soh-innocuity-p2 is a Premise
+ 	with identifier "soh-innocuity-p2" 
+ 	with statement "The soh-nn-REQS mitigate the effect of all the soh-nn-FMS"
+ 	with evidence ev-soh-innocuity-p2
+ 	with holds true.
+  
+ ev-soh-innocuity-p1 is an Evidence
+ 	with identifier "ev-soh-innocuity-p1"
+ 	with isSupportive true
+ 	with confirmedBy CameoReview
+ 	with detail "What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes. (Resolved)"
+ 	with detail "Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System-level Failure Conditions. This should be renamed and reformated to match the terms defined in out OP definitions. (Resolved)". 	
+
+ ev-soh-innocuity-p2 is an Evidence
+ 	with identifier "ev-soh-innocuity-p2"
+ 	with isSupportive true
+ 	with confirmedBy CameoReview
+ 	with detail "What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes. (Resolved)"
+ 	with detail "Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System-level Failure Conditions. This should be renamed and reformated to match the terms defined in out OP definitions. (Resolved)".
+ 	

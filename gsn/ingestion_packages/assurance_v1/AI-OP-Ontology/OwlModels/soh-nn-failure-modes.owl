@@ -1,0 +1,188 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://sadl.org/FHA.sadl#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:ripsreqsv2="http://sadl.org/rips-requirements-v2.sadl#"
+    xmlns:sohfm="http://sadl.org/soh-nn-failure-modes.sadl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:j.1="http://arcos.rack/HAZARD#"
+    xmlns:j.2="http://arcos.rack/PROV-S#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rips="http://sadl.org/rips.sadl#"
+    xmlns:j.3="http://sadl.org/OP.sadl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://sadl.org/soh-nn-failure-modes.sadl">
+    <owl:imports rdf:resource="http://sadl.org/rips.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/rips-requirements-v2.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'soh-nn-failure-modes.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <j.3:NNFailureModeSet rdf:about="http://sadl.org/rips.sadl#soh-nn-FMS">
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.4">
+        <j.0:name>SoH-NN Robustness failure</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-33"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-15"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-17"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-16"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-31"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-32"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-30"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#robustnessFailure"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.2:description>Common environmental noise/perturbations are not included in training data.</j.2:description>
+        <j.2:identifier>SOH-NN-FM-1.4</j.2:identifier>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.5">
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.2:identifier>SOH-NN-FM-1.5</j.2:identifier>
+        <j.0:name>SoH-NN Target leakage</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-38"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-39"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#targetLeakage"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-36"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-34"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-37"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-29"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-40"/>
+        <j.2:description>Unknown to the developers, the training data contain artifacts that improve AI performance, but those artifacts are not available in all operational environments.</j.2:description>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.2">
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-35"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-23"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-07"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-05"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-21"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-19"/>
+        <j.0:name>SoH-NN Out-of-distrobution</j.0:name>
+        <j.2:description>Changes in the nature of input data over time (e.g. sensor updates/calibration, processor/unit changes).</j.2:description>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-03"/>
+        <j.2:identifier>SOH-NN-FM-1.2</j.2:identifier>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#outOfDistribution"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-09"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.8">
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-38"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-36"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-34"/>
+        <j.0:name>SoH-NN Cascading model failure</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-39"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.2:identifier>SOH-NN-FM-1.8</j.2:identifier>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-37"/>
+        <j.2:description>SoC-NN causes changes to battery charging/discharging that impacts the health of the battery.</j.2:description>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#cascadingModelFailure"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-29"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-40"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.3">
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-40"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#trainingProductionSkew"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-38"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-19"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-23"/>
+        <j.2:description>Training Data does not cover the full operational space.</j.2:description>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-36"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-34"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-29"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-05"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-39"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-09"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-21"/>
+        <j.2:identifier>SOH-NN-FM-1.3</j.2:identifier>
+        <j.0:name>SoH-NN Training-production skew</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-03"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-37"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-07"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.1">
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-32"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-30"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#performanceBias"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-17"/>
+        <j.2:identifier>SOH-NN-FM-1.1</j.2:identifier>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-15"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-31"/>
+        <j.2:description>Distributional shifts in the nature of operational data change during the life of the product.</j.2:description>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-33"/>
+        <j.0:name>SoH-NN Performance bias</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-16"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.6">
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-17"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-33"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-15"/>
+        <j.2:description>The operational environment changes over time.</j.2:description>
+        <j.2:identifier>SOH-NN-FM-1.6</j.2:identifier>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-31"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-16"/>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#dataDrift"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-32"/>
+        <j.0:name>SoH-NN Data drift</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-30"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.7">
+        <j.0:name>SoH-NN Automated naivete</j.0:name>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-21"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-07"/>
+        <j.2:description>SoH-NN acts upon inputs without scrutinizing their validity.</j.2:description>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-03"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-35"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#automatedNaivete"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-23"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-09"/>
+        <j.2:identifier>SOH-NN-FM-1.7</j.2:identifier>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-05"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-19"/>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+    <j.3:failureMode>
+      <j.0:NNFailureMode rdf:about="http://sadl.org/soh-nn-failure-modes.sadl#SOH-NN-FM-1.9">
+        <j.2:description>A discrepancy between model target and true desired target leads the model to behave in undesired ways.</j.2:description>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-29"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-34"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-39"/>
+        <j.2:identifier>SOH-NN-FM-1.9</j.2:identifier>
+        <j.0:failureModeType rdf:resource="http://sadl.org/FHA.sadl#rewardHacking"/>
+        <j.0:contributesTo rdf:resource="http://sadl.org/rips-fha.sadl#Hzrd-A1"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-40"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-38"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-37"/>
+        <j.0:mitigatedBy rdf:resource="http://sadl.org/rips-requirements-v2.sadl#BHM-HLR-36"/>
+        <j.0:name>SoH-NN Reward hacking</j.0:name>
+        <j.1:effect>Incorrect determination of maintenance required</j.1:effect>
+      </j.0:NNFailureMode>
+    </j.3:failureMode>
+  </j.3:NNFailureModeSet>
+</rdf:RDF>

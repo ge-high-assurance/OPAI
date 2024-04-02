@@ -1,0 +1,159 @@
+ uri "http://sadl.org/soh-nn-failure-modes.sadl" alias sohfm.
+ 
+ import "http://sadl.org/rips-requirements-v2.sadl".
+ import "http://sadl.org/rips.sadl".
+ 
+ 
+ 
+ //-- SOH-NN Failure Modes
+SOH-NN-FM-1.1 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.1"
+   with name "SoH-NN Performance bias"
+   with description "Distributional shifts in the nature of operational data change during the life of the product."
+   with failureModeType performanceBias
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.2 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.2"
+   with name "SoH-NN Out-of-distrobution"
+   with description "Changes in the nature of input data over time (e.g. sensor updates/calibration, processor/unit changes)."
+   with failureModeType outOfDistribution
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.3 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.3"
+   with name "SoH-NN Training-production skew"
+   with description "Training Data does not cover the full operational space."
+   with failureModeType trainingProductionSkew
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.4 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.4"
+   with name "SoH-NN Robustness failure"
+   with description "Common environmental noise/perturbations are not included in training data."
+   with failureModeType robustnessFailure
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.5 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.5"
+   with name "SoH-NN Target leakage"
+   with description "Unknown to the developers, the training data contain artifacts that improve AI performance, but those artifacts are not available in all operational environments."
+   with failureModeType targetLeakage
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.6 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.6"
+   with name "SoH-NN Data drift"
+   with description "The operational environment changes over time."
+   with failureModeType dataDrift
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.7 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.7"
+   with name "SoH-NN Automated naivete"
+   with description "SoH-NN acts upon inputs without scrutinizing their validity."
+   with failureModeType automatedNaivete
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.8 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.8"
+   with name "SoH-NN Cascading model failure"
+   with description "SoC-NN causes changes to battery charging/discharging that impacts the health of the battery."
+   with failureModeType cascadingModelFailure
+   with H:effect "Incorrect determination of maintenance required".
+SOH-NN-FM-1.9 is a NNFailureMode
+   with identifier "SOH-NN-FM-1.9"
+   with name "SoH-NN Reward hacking"
+   with description "A discrepancy between model target and true desired target leads the model to behave in undesired ways."
+   with failureModeType rewardHacking
+   with H:effect "Incorrect determination of maintenance required".
+   
+//-- Failure modes connected to Hazards and mitigations (HLRs)   
+SOH-NN-FM-1.7 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-35.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-03.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-05.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-07.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-09.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-19.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-21.
+SOH-NN-FM-1.7 mitigatedBy BHM-HLR-23.
+SOH-NN-FM-1.8 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-29.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-37.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-38.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-39.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-40.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-36.
+SOH-NN-FM-1.8 mitigatedBy BHM-HLR-34.
+SOH-NN-FM-1.6 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-15.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-17.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-16.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-30.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-31.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-32.
+SOH-NN-FM-1.6 mitigatedBy BHM-HLR-33.
+SOH-NN-FM-1.2 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-35.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-03.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-05.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-07.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-09.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-19.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-21.
+SOH-NN-FM-1.2 mitigatedBy BHM-HLR-23.
+SOH-NN-FM-1.1 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-15.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-16.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-17.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-30.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-31.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-33.
+SOH-NN-FM-1.1 mitigatedBy BHM-HLR-32.
+SOH-NN-FM-1.9 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-29.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-37.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-38.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-39.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-40.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-34.
+SOH-NN-FM-1.9 mitigatedBy BHM-HLR-36.
+SOH-NN-FM-1.4 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-15.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-16.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-17.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-30.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-31.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-32.
+SOH-NN-FM-1.4 mitigatedBy BHM-HLR-33.
+SOH-NN-FM-1.5 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-29.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-37.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-38.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-39.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-40.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-34.
+SOH-NN-FM-1.5 mitigatedBy BHM-HLR-36.
+SOH-NN-FM-1.3 contributesTo Hzrd-A1. 
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-29.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-37.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-38.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-39.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-40.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-34.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-36.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-23.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-21.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-19.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-09.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-07.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-05.
+SOH-NN-FM-1.3 mitigatedBy BHM-HLR-03.
+
+
+//-- Connect the failure modes to the SOH-NN Software Component
+soh-nn-FMS has failureMode SOH-NN-FM-1.1.
+soh-nn-FMS has failureMode SOH-NN-FM-1.2.
+soh-nn-FMS has failureMode SOH-NN-FM-1.3.
+soh-nn-FMS has failureMode SOH-NN-FM-1.4.
+soh-nn-FMS has failureMode SOH-NN-FM-1.5.
+soh-nn-FMS has failureMode SOH-NN-FM-1.6.
+soh-nn-FMS has failureMode SOH-NN-FM-1.7.
+soh-nn-FMS has failureMode SOH-NN-FM-1.8.
+soh-nn-FMS has failureMode SOH-NN-FM-1.9.
+
+

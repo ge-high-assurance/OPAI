@@ -1,0 +1,14 @@
+name: 'FAA AI ML ingestion package'
+footprint:
+  model-graphs:
+    - http://rack001/model
+  data-graphs:
+    - http://rack001/data
+
+steps:
+  - model: RACK-Ontology/OwlModels/import.yaml
+  - model: AI-OP-Ontology/OwlModels/import.yaml  
+  
+  - nodegroups: nodegroups
+  
+  

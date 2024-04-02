@@ -1,0 +1,97 @@
+ //Author: Saswata paul
+ 
+ // This sadl file contains additional ontology beyond the RACK core needed to specify the RIPS system design 
+ 
+ 
+ uri "http://sadl.org/DESIGN.sadl" alias rd.
+ 
+ import "http://arcos.rack/PROV-S".
+ import "http://arcos.rack/SYSTEM".
+ import "http://arcos.rack/SECURITY".
+ import "http://arcos.rack/SOFTWARE".
+ import "http://arcos.rack/HARDWARE".
+ import "http://arcos.rack/REQUIREMENTS".
+ import "http://arcos.rack/REVIEW".
+ import "http://arcos.rack/TESTING".
+ import "http://arcos.rack/HAZARD".
+ import "http://arcos.rack/ANALYSIS".
+ import "http://arcos.rack/PROCESS".
+ import "http://arcos.rack/AGENTS".
+ import "http://arcos.rack/CONFIDENCE".
+ import "http://sadl.org/FHA.sadl".
+ import "http://sadl.org/OP.sadl".
+ 
+ 
+
+//-- Different levels of requirements
+ SystemLevelRequirement (note "System Level Requirement") is a type of REQUIREMENT
+ 	described by rd:satisfiedBy with values of type REQUIREMENT // redundant. Will use "satisfies" to show upward traceability
+ 	described by rd:derivedFrom with values of type string // Should we enumerate this in the future? 
+ 	described by rd:source with values of type string. // Should we enumerate this in the future?
+ 
+ SoftwareHighLevelRequirement (note "Software High Level Requirement") is a type of REQUIREMENT.
+ 
+ SoftwareLowLevelRequirement (note "Software Low Level Requirement") is a type of REQUIREMENT. 
+  					
+ //-- Additional properties on the RACK REQUIREMENT class 
+ rd:name describes REQUIREMENT with values of type string.
+ architectureAllocation describes REQUIREMENT with values of type THING. 
+ rd:derivedRequirement (note "Using string to easily ingest cameo data") describes REQUIREMENT with values of type string. 
+ rationale describes REQUIREMENT with values of type string. 
+ requirementType describes REQUIREMENT with a single value of type RequirementType.
+
+ 
+
+ 
+  //-- Other classes needed to express system design
+ Correctness (note "Correctness of a REQUIREMENt (taken from Cameo Class Properties)") is a type of THING.
+
+ Completeness (note "Completeness of a REQUIREMENt (taken from Cameo Class Properties)") is a type of THING.					
+										
+ RequirementType (note "The type of requirements") is a type of THING
+ 	must be one of {functionalRequirement,
+ 					designConstraint,
+ 					interfaceRequirement,
+ 					safetyRequirement,
+ 					performanceRequirement,
+ 					usabilityRequirement,
+ 					physicalRequirement
+ 					}.		
+ 					
+ CertificationReference (note "Certification References used in a System Design") is a type of THING
+ 	must be one of {TSO-C124c (note "For Flight Data Recorder Equipment"),
+					TSO-C155b (note "For Recorder Independent Power Supply"),
+					ARINC-777-2 (note "For Recorder Independent Power Supply"),
+					ED-112A (note "For Minimum Operational Performance Specification For Crash Protected Airborne Recorder Systems"),
+					DO-160G (note "For Environmental Conditions and Test Procedures for Airborne Equipment"),
+					SAE-ARP-4761 (note "For Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne System and Equipment"),
+					RTCA-DO178C (note "For Software Considerations in Airborne Systems and Equipment Certification")
+					}. 
+ 					
+ 
+ Parameter (note "The input or output to a SYSTEM") is a type of THING
+ 	must be one of {MaintainanceRequired,
+ 					MeasuredTemperature,
+ 					LoadMeasurements,
+ 					MeasuredCurrent,
+ 					MeasuredVoltage,
+ 					ChargeControllerComm,
+ 					BHMComm,
+ 					SwitchCommand,
+ 					BatteryPower,
+ 					ReportFault,
+ 					BackupActive,
+ 					BateryPower,
+					SwitchCommand,
+					SupplyPowerToRecorder,
+					ReceivePowerFromAircraft
+					}.
+					
+ parValue describes Parameter with a single value of type Value.									
+	
+ Value (note "The values that can be taken by parameters") is a type of THING
+ 	described by probability with a single value of type string,
+ 	described by magnitude with a single value of type string.	 
+ input describes SYSTEM with values of type Parameter.
+ output describes SYSTEM with values of type Parameter.
+ 							

@@ -1,0 +1,341 @@
+GOALS gauss{
+
+
+goal gop
+{ //Start of gop
+uuid:"5c645e35-56fd-4baa-bf95-10171a89bc16";
+summary:'''The SoH Subcomponent satisfies OPs''';
+strategy sop
+{ //Start of sop
+uuid:"e62d8dac-47db-4b63-9579-fa821efc0c6b";
+summary:'''Argument: By Proving Intent, Correctness, and Innocuity.''';
+goal gsohnninnocuityarg
+{ //Start of gsohnninnocuityarg
+uuid:"6e37ade5-16b7-4cd4-aad5-221fa9c8c219";
+summary:'''The soh-nn-SW-COMP holds Innocuity''';
+strategy ssohnninnocuityarg
+{ //Start of ssohnninnocuityarg
+uuid:"17b695c5-1d4d-4e99-875e-054dd5086139";
+summary:'''Argument: By Checking that all Premises Hold''';
+goal gsohinnocuityp2
+{ //Start of gsohinnocuityp2
+uuid:"ca4d2981-4150-4f8a-84de-f1039ef0d165";
+summary:'''The soh-nn-REQS mitigate the effect of all the soh-nn-FMS''';
+strategy ssohinnocuityp2
+{ //Start of ssohinnocuityp2
+uuid:"58c61669-a7a0-49d4-8e89-0e6d173859dd";
+summary:'''Argument: By Cameo Review''';
+solution solevsohinnocuityp2
+{ //Start of solevsohinnocuityp2
+uuid:"331369dd-3f23-4a8f-a092-1c4a045e2917";
+summary:'''Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System-level Failure Conditions. This should be renamed and reformated to match the terms defined in out OP definitions. (Resolved)
+What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes. (Resolved)
+''';
+
+} //End of ssohinnocuityp2
+} //End of gsohinnocuityp2
+goal gsohinnocuityp1
+{ //Start of gsohinnocuityp1
+uuid:"ad1a1a1f-6770-4bb0-a18f-97a75e2cabf8";
+summary:'''All soh-nn-FMS have been identified in a component level safety assessment of the soh-nn-SW-COMP''';
+strategy ssohinnocuityp1
+{ //Start of ssohinnocuityp1
+uuid:"a7f010ac-0563-4713-9224-c22711aee5ad";
+summary:'''Argument: By Cameo Review''';
+solution solevsohinnocuityp1
+{ //Start of solevsohinnocuityp1
+uuid:"ec224e82-beca-4f85-a62d-1288701ffee6";
+summary:'''Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System-level Failure Conditions. This should be renamed and reformated to match the terms defined in out OP definitions. (Resolved)
+What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes. (Resolved)
+''';
+
+} //End of ssohinnocuityp1
+} //End of gsohinnocuityp1
+} //End of ssohnninnocuityarg
+} //End of gsohnninnocuityarg
+goal gsohnnintentarg
+{ //Start of gsohnnintentarg
+uuid:"e691de31-7f7d-42fc-b7fa-f2ca0b88f2b9";
+summary:'''The soh-nn-SW-COMP holds Intent''';
+strategy ssohnnintentarg
+{ //Start of ssohnnintentarg
+uuid:"e450746f-3992-4856-ba53-72db0bb9ecb1";
+summary:'''Argument: By Checking that all Premises Hold''';
+goal gsohintentp4
+{ //Start of gsohintentp4
+uuid:"f17b8eab-a8c0-405b-8133-9512943cc973";
+summary:'''The soh-nn-INPUT-COND will address any off-nominal inputs to the soh-nn-MODEL''';
+strategy ssohintentp4
+{ //Start of ssohintentp4
+uuid:"11be6d68-416d-4121-acb1-4ca35a682f09";
+summary:'''Argument: By Cameo Review''';
+solution solevsohintentp4
+{ //Start of solevsohintentp4
+uuid:"8804c441-5aa4-44f3-8d4f-bdb3f49a6158";
+summary:'''The System Requirements table is missing correctness and completeness attributes necessary to perform this review. (Resolved)
+The HLR table is missing correctness and completeness attributes necessary to perform this review. (Resolved)
+''';
+
+} //End of ssohintentp4
+} //End of gsohintentp4
+goal gsohintentp2
+{ //Start of gsohintentp2
+uuid:"90f16de9-adc5-40f3-bbd6-06cf6a9bd7ec";
+summary:'''The soh-nn-QUAL-DATA-N and soh-nn-QUAL-DATA-ON will be used to measure the quality of the soh-nn-SW-COMP with respect to the data dependent constraints''';
+strategy ssohintentp2
+{ //Start of ssohintentp2
+uuid:"ff2360df-dc00-4b07-abe5-ca3168d92bf8";
+summary:'''Argument: By Cameo Review''';
+solution solevsohintentp2
+{ //Start of solevsohintentp2
+uuid:"6192e947-748e-4a95-b2bf-b1068e71b619";
+summary:'''Need to create Test Cases in Cameo that shows we are using the Qual Data to verify each SoH-NN Constraint (Unresolved)
+''';
+
+} //End of ssohintentp2
+} //End of gsohintentp2
+goal gsohintentp1
+{ //Start of gsohintentp1
+uuid:"fa9a7315-2eb2-4d56-9959-bec6c66a508b";
+summary:'''The soh-nn-REQS correctly address all the data-dependent constraints and the data independent constraints as desired by the stakeholders''';
+strategy ssohintentp1
+{ //Start of ssohintentp1
+uuid:"2dfd28cf-4d78-4eba-9825-c247b04da3d5";
+summary:'''Argument: By Cameo Review''';
+solution solevsohintentp1
+{ //Start of solevsohintentp1
+uuid:"d1e7c86d-45b2-4d61-8b51-32b7f4044479";
+summary:'''The System Requirements table is missing correctness and completeness attributes necessary to perform this review. (Resolved)
+The HLR table is missing correctness and completeness attributes necessary to perform this review. (Resolved)
+''';
+
+} //End of ssohintentp1
+} //End of gsohintentp1
+} //End of ssohnnintentarg
+} //End of gsohnnintentarg
+goal gsohnncorrectnessarg
+{ //Start of gsohnncorrectnessarg
+uuid:"5ccdce9c-1093-4a4a-8f23-2470e23e2109";
+summary:'''The soh-nn-SW-COMP holds Correctness''';
+strategy ssohnncorrectnessarg
+{ //Start of ssohnncorrectnessarg
+uuid:"5ec37df6-ea31-47b1-974c-cfcd91aacf3e";
+summary:'''Argument: By Checking that all Premises Hold''';
+goal gsohcorrectnessp2
+{ //Start of gsohcorrectnessp2
+uuid:"d0f67972-ad7c-4052-96c9-a5cd9c93fedd";
+summary:'''The soh-nn-QUAL-DATA-N  is an accurate and sufficient representation of the quantity of interest throughout the foreseeable operating conditions''';
+strategy ssohcorrectnessp2
+{ //Start of ssohcorrectnessp2
+uuid:"8c01d1ba-8aaf-4098-8b36-bc396734e595";
+summary:'''Argument: By Checking that all Sub-Premises Hold''';
+goal gsohcorrectnessp2b
+{ //Start of gsohcorrectnessp2b
+uuid:"807ec3e3-77b2-4cc4-b14f-d3236e558239";
+summary:'''The soh-nn-QUAL-DATA-N is sufficiently representative of the multivariate operational space as specified in the soh-nn-REQS''';
+strategy ssohcorrectnessp2b
+{ //Start of ssohcorrectnessp2b
+uuid:"43b26640-cda8-4ac2-a9fb-f0255cedc63f";
+summary:'''Argument: By Python Analysis''';
+solution solevsohcorrectnessp2b
+{ //Start of solevsohcorrectnessp2b
+uuid:"9c166e78-835b-4f9e-a9e6-76ab8a6bd313";
+summary:'''Single bin : [voltage measured: (0, 32)(0.1), current measured: (0, 3)(0.1), temperature measured: (-15, 55)(1), current load: (0, 3)(0.1), voltage load:(0, 32)(0.1)]
+No current load between 0.1 and 0.2
+No temperature measured between -15 and -14
+No voltage measured between 0 and 0.1
+No current measured between 0.1 and 0.2
+No voltage load between 0.1 and 0.2
+''';
+
+} //End of ssohcorrectnessp2b
+} //End of gsohcorrectnessp2b
+goal gsohcorrectnessp2a
+{ //Start of gsohcorrectnessp2a
+uuid:"b37209ff-5f5a-42ab-93cd-f0c669e45507";
+summary:'''The soh-nn-QUAL-DATA-N lies completely within the expected ranges of the multivariate operational space as specified in the soh-nn-REQS''';
+strategy ssohcorrectnessp2a
+{ //Start of ssohcorrectnessp2a
+uuid:"f81c42f8-42d7-4d03-881b-ba3526cca3b6";
+summary:'''Argument: By Python Analysis''';
+solution solevsohcorrectnessp2a
+{ //Start of solevsohcorrectnessp2a
+uuid:"cb1b036b-68e6-40c1-acf7-7953dbca98a6";
+summary:'''100% data in Time Range (0  to 3.6e+7 s)
+100% data in VOltage Load Range (0  to 40 A)
+3.97% data in Current Measured Range (0  to 3 A)
+100% data in Cycle Range (0  to 200)
+100% data in Current Load Range (0  to 3 A)
+100% data in Voltage Range (0  to 40 Vdc)
+100% data in Temperature Meusured Range (-15  to 55 c)
+''';
+
+} //End of ssohcorrectnessp2a
+} //End of gsohcorrectnessp2a
+} //End of ssohcorrectnessp2
+} //End of gsohcorrectnessp2
+goal gsohcorrectnessp3
+{ //Start of gsohcorrectnessp3
+uuid:"2f244eac-6379-4594-89d5-2c3f4778c2d7";
+summary:'''The soh-nn-SW-COMP adheres to the data dependent constraints set forth in the soh-nn-REQS when run against the soh-nn-QUAL-DATA-N''';
+strategy ssohcorrectnessp3
+{ //Start of ssohcorrectnessp3
+uuid:"7fa9d6ad-7d56-4f85-9390-62bb4909d606";
+summary:'''Argument: By Checking that all Sub-Premises Hold''';
+goal gsohcorrectnessp3b
+{ //Start of gsohcorrectnessp3b
+uuid:"b38fcf09-da32-45a8-bcc6-b5e731989f7d";
+summary:'''The soh-nn-SW-COMP-IMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N''';
+strategy ssohcorrectnessp3b
+{ //Start of ssohcorrectnessp3b
+uuid:"ea7afc48-3e15-4f5a-ab25-e9d82fe13a8a";
+summary:'''Argument: By Simulink Analysis''';
+solution solevsohcorrectnessp3b
+{ //Start of solevsohcorrectnessp3b
+uuid:"c3d9eba4-584b-43bc-be9d-93285d80d17b";
+summary:'''Only about 30% of the data points passed this criteria
+''';
+
+} //End of ssohcorrectnessp3b
+} //End of gsohcorrectnessp3b
+goal gsohcorrectnessp3a
+{ //Start of gsohcorrectnessp3a
+uuid:"6c106319-1287-44fe-9c99-7817103df9af";
+summary:'''The soh-nn-SW-COMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N''';
+strategy ssohcorrectnessp3a
+{ //Start of ssohcorrectnessp3a
+uuid:"a7dd0862-0539-469e-b2d2-e5b1e23f1ed6";
+summary:'''Argument: By Checking that all Sub-Premises Hold''';
+goal gsohcorrectnessp3a3
+{ //Start of gsohcorrectnessp3a3
+uuid:"0e9af8f0-e574-4bc8-aab5-47a19f1f5d9a";
+summary:'''The soh-nn-MODEL is robust within input perturbation 4% and output perturbation 2%) with respect to the soh-nn-QUAL-DATA-N''';
+strategy ssohcorrectnessp3a3
+{ //Start of ssohcorrectnessp3a3
+uuid:"4b551314-0d32-42f0-903a-e18d989187d7";
+summary:'''Argument: By Marabou Analysis''';
+solution solevsohcorrectnessp3a3
+{ //Start of solevsohcorrectnessp3a3
+uuid:"5d7d568b-51a0-46f7-84f8-98fcd566f189";
+summary:'''Only 98.683% of the data passed this criteria
+''';
+
+} //End of ssohcorrectnessp3a3
+} //End of gsohcorrectnessp3a3
+goal gsohcorrectnessp3a2
+{ //Start of gsohcorrectnessp3a2
+uuid:"db2c7221-a62a-47c1-8b19-bc13f21a22cc";
+summary:'''The soh-nn-SW-COMP generates correct outputs (within an error margin of +-2%) for at least 99% of the soh-nn-QUAL-DATA-N approved by the soh-nn-INPUT-COND''';
+strategy ssohcorrectnessp3a2
+{ //Start of ssohcorrectnessp3a2
+uuid:"bb15d215-ac88-4a39-9f85-514f989d0ac1";
+summary:'''Argument: By Matlab Analysis''';
+solution solevsohcorrectnessp3a2
+{ //Start of solevsohcorrectnessp3a2
+uuid:"ecc296d1-8155-4d65-af37-dfaa7b0a91b0";
+summary:'''Only 30.460% of approved data points passed this criteria
+''';
+
+} //End of ssohcorrectnessp3a2
+} //End of gsohcorrectnessp3a2
+goal gsohcorrectnessp3a1
+{ //Start of gsohcorrectnessp3a1
+uuid:"6aef8c23-2327-493a-a3de-3631c5473083";
+summary:'''The soh-nn-INPUT-COND approves 100% of the soh-nn-QUAL-DATA-N''';
+strategy ssohcorrectnessp3a1
+{ //Start of ssohcorrectnessp3a1
+uuid:"32bf08a7-278f-4c4c-9d8e-d6f0548334b0";
+summary:'''Argument: By Matlab Analysis''';
+solution solevsohcorrectnessp3a1
+{ //Start of solevsohcorrectnessp3a1
+uuid:"91e3e1a5-192c-4daa-af04-bebcb17bb9a1";
+summary:'''100% of the data passed
+''';
+
+} //End of ssohcorrectnessp3a1
+} //End of gsohcorrectnessp3a1
+} //End of ssohcorrectnessp3a
+} //End of gsohcorrectnessp3a
+} //End of ssohcorrectnessp3
+} //End of gsohcorrectnessp3
+goal gsohcorrectnessp4
+{ //Start of gsohcorrectnessp4
+uuid:"382595dd-27d2-43c1-9c35-dc44cc3c290d";
+summary:'''The soh-nn-SW-COMP adheres to the data independent constraints set forth in the soh-nn-REQS''';
+strategy ssohcorrectnessp4
+{ //Start of ssohcorrectnessp4
+uuid:"90c670af-6029-4796-8aed-7c8c42d1514f";
+summary:'''Argument: By Checking that all Sub-Premises Hold''';
+goal gsohcorrectnessp4a
+{ //Start of gsohcorrectnessp4a
+uuid:"3ed674a0-c8f1-4913-8120-4da7eb054945";
+summary:'''The soh-nn-SW-COMP-IMP adheres to the data independent constraints set forth in the soh-nn-REQS''';
+strategy ssohcorrectnessp4a
+{ //Start of ssohcorrectnessp4a
+uuid:"6ffb0cf1-31e3-41c6-b071-dfb4fd358d77";
+summary:'''Argument: By Simulink Analysis''';
+solution solevsohcorrectnessp4a
+{ //Start of solevsohcorrectnessp4a
+uuid:"d834bdba-476c-45d7-9872-5808a9a7d957";
+summary:'''BHM HLR 05 passed
+BHM HLR 17 passed
+BHM HLR 19 passed
+BHM HLR 09 failed
+BHM HLR 01 failed
+BHM HLR 15 passed
+BHM HLR 16 failed
+BHM HLR 03 failed
+BHM HLR 07 passed
+''';
+
+} //End of ssohcorrectnessp4a
+} //End of gsohcorrectnessp4a
+} //End of ssohcorrectnessp4
+} //End of gsohcorrectnessp4
+goal gsohcorrectnessp5
+{ //Start of gsohcorrectnessp5
+uuid:"10ce5c69-aec9-401f-9591-ff0bc650fdb8";
+summary:'''The soh-nn-INPUT-COND correctly addresses all the constraints set forth in the soh-nn-REQS for processing all off nominal input values to the the soh-nn-SW-COMP''';
+strategy ssohcorrectnessp5
+{ //Start of ssohcorrectnessp5
+uuid:"0793f9dc-46fd-4233-8980-a3748967bb59";
+summary:'''Argument: By Checking that all Sub-Premises Hold''';
+goal gsohcorrectnessp5b
+{ //Start of gsohcorrectnessp5b
+uuid:"8bd8970e-0044-4574-b135-989e3d5db179";
+summary:'''The soh-nn-INPUT-COND-IMP correctly flags 100% of the inputs in the soh-nn-QUAL-DATA-ON''';
+strategy ssohcorrectnessp5b
+{ //Start of ssohcorrectnessp5b
+uuid:"3e00e764-ce1c-401e-8d7c-5d1b66dda47f";
+summary:'''Argument: By Simulink Analysis''';
+solution solevsohcorrectnessp5b
+{ //Start of solevsohcorrectnessp5b
+uuid:"3cc23ddb-a0d6-48c9-ac2b-ca5d64b2b32a";
+summary:'''100% of the data was disapproved
+''';
+
+} //End of ssohcorrectnessp5b
+} //End of gsohcorrectnessp5b
+goal gsohcorrectnessp5a
+{ //Start of gsohcorrectnessp5a
+uuid:"e310a79b-60d2-422e-9e5b-6cd241bf31cd";
+summary:'''The soh-nn-INPUT-COND correctly flags 100% of the inputs in the soh-nn-QUAL-DATA-ON''';
+strategy ssohcorrectnessp5a
+{ //Start of ssohcorrectnessp5a
+uuid:"cd1f210d-c7ed-4c86-a122-c2b7621c3763";
+summary:'''Argument: By Matlab Analysis''';
+solution solevsohcorrectnessp5a
+{ //Start of solevsohcorrectnessp5a
+uuid:"983daec4-8950-4317-aa11-0f07702a66dc";
+summary:'''100% of the data was disapproved
+''';
+
+} //End of ssohcorrectnessp5a
+} //End of gsohcorrectnessp5a
+} //End of ssohcorrectnessp5
+} //End of gsohcorrectnessp5
+} //End of ssohnncorrectnessarg
+} //End of gsohnncorrectnessarg
+} //End of sop
+} //End of gop
+}

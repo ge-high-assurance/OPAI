@@ -1,0 +1,38 @@
+//-- Author: Saswata Paul
+//-- An instance of hazard assessment for the RIPS system
+
+
+ uri "http://sadl.org/rips-fha.sadl" alias ripsfha.
+ 
+ import "http://sadl.org/FHA.sadl".
+ import "http://sadl.org/rips.sadl". 	
+  	
+
+ //-- Hazards 
+ Hzrd-A1 is a HAZARD
+ 	with identifier "Hzrd-A1"
+ 	with description "Loss of ability to provide backup power"
+ 	with eventPhase ALL
+ 	with H:effect "Unable to record aircraft state and performance parameters" 
+ 	with severityClassification Minor
+ 	with minimumRequiredDal LevelD
+ 	with classificationJustification "TSO-C155b section 3.b(2) classifies this as a minor failure condition"
+ 	with verificationMethod FHA
+ 	with H:source Recorder-independent-power-supply
+ 	with affects Flight-data-recorder.
+ 	
+ 	
+ Hzrd-B1 is a HAZARD
+ 	with identifier "Hzrd-B1"
+ 	with description "Backup power provided when not required" 	with eventPhase ALL
+ 	with H:effect "Erroneously provided power may result in the inability to record aircraft state and performance parameters" 
+ 	with severityClassification Minor
+ 	with minimumRequiredDal LevelD
+ 	with classificationJustification "TSO-C155b section 3.b(1) classifies this as a minor failure condition"
+ 	with verificationMethod FHA
+ 	with H:source Recorder-independent-power-supply
+ 	with affects Flight-data-recorder.
+ 
+ 
+ 
+ 

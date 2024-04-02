@@ -1,0 +1,99 @@
+ /* Copyright (c) 2020, General Electric Company, Galois, Inc.
+ *
+ * All Rights Reserved
+ *
+ * This material is based upon work supported by the Defense Advanced Research
+ * Projects Agency (DARPA) under Contract No. FA8750-20-C-0203.
+ *
+ * Any opinions, findings and conclusions or recommendations expressed in this
+ * material are those of the author(s) and do not necessarily reflect the views
+ * of the Defense Advanced Research Projects Agency (DARPA).
+ */
+ 
+ //-- This is a formal data model to express OP arguments in RACK-ingestable form
+ //-- Inspired by the Friendly Argument Notation
+ //-- Author: Saswata Paul
+
+ uri "http://sadl.org/OP.sadl" alias op.
+ 
+ import "http://sadl.org/FHA.sadl". 
+
+
+//--  OP Terminologies
+NNSwComponent is a type of SWCOMPONENT
+	described by model with a single value of type NNModel
+	described by inputConditioner with a single value of type InpCond
+	described by implementation with a single value of type NNSwCompImp
+	described by inputConditionerImplementation with a single value of type InpCondImp
+	described by devData with a single value of type DataSet
+	described by qualDataNominal with a single value of type DataSet
+	described by qualDataOffNominal with a single value of type DataSet
+	described by nnRequirements with values of type RequirementSet.
+
+NNModel is a type of ENTITY.
+
+InpCond is a type of ENTITY.
+
+InpCondImp is a type of ENTITY.
+
+NNSwCompImp is a type of ENTITY.
+
+NNRequirement is a type of REQUIREMENT.
+
+RequirementSet is a type of COLLECTION
+	described by requirement with values of type REQUIREMENT.
+
+DataSet is a type of ENTITY.
+
+ModelDevelopmentActivity is a type of ACTIVITY.
+ModelQualificationActivity is a type of ACTIVITY.
+
+NNFailureModeSet is a type of COLLECTION
+	described by failureMode with values of type NNFailureMode.
+
+
+//-- OP Arguments 	
+satisfiesOPs describes SWCOMPONENT with a single value of type boolean.
+intentOP describes SWCOMPONENT with a single value of type boolean.
+correctnessOP describes SWCOMPONENT with a single value of type boolean.
+innocuityOP describes SWCOMPONENT with a single value of type boolean.
+
+OverarchingProperty is a type of ENTITY
+	must be one of {intent, correctness, innocuity}.
+
+Argument is a type of ENTITY
+	described by op with a single value of type OverarchingProperty
+	described by concerns with a single value of type SWCOMPONENT
+	described by conclusion with a single value of type string
+	described by justification with a single value of type string
+	described by premise with values of type Premise.
+	
+Premise is a type of ENTITY
+	described by statement with values of type string
+	described by subPremise with values of type Premise
+	described by evidence with values of type Evidence
+	described by holds with a single value of type boolean.
+	
+Evidence is a type of ENTITY
+	described by detail with values of type string
+	described by isSupportive with a single value of type boolean
+	described by confirmedBy with a single value of type EvidenceActivity. 
+			                                           
+			                                           
+//-- Different types of Evidence generation activities
+//-- Note: using enumerated type to differentiate evidence from different tools instead of using separate classes to simplify query and logic
+					
+EvidenceActivity is a type of THING
+	must be one of {CameoReview,
+					MarabouAnalysis,
+					SimulinkAnalysis,
+					MatlabAnalysis,
+					PythonAnalysis}.
+					
+	
+
+
+
+ 	
+ 	
+ 	

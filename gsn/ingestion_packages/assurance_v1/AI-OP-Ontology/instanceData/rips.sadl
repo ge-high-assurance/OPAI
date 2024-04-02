@@ -1,0 +1,114 @@
+ //Author: Saswata paul
+ 
+ // This sadl file contains the RIPS system and its components 
+ 
+ uri "http://sadl.org/rips.sadl" alias rips.
+ 
+ import "http://sadl.org/OP.sadl".
+ import "http://arcos.rack/PROV-S".
+ import "http://arcos.rack/DOCUMENT".
+ import "http://arcos.rack/SYSTEM".
+ import "http://arcos.rack/SECURITY".
+ import "http://arcos.rack/SOFTWARE".
+ import "http://arcos.rack/HARDWARE".
+ import "http://arcos.rack/REQUIREMENTS".
+ import "http://arcos.rack/REVIEW".
+ import "http://arcos.rack/TESTING".
+ import "http://arcos.rack/HAZARD".
+ import "http://arcos.rack/ANALYSIS".
+ import "http://arcos.rack/PROCESS".
+ import "http://arcos.rack/AGENTS".
+ import "http://arcos.rack/CONFIDENCE".
+ import "http://sadl.org/DESIGN.sadl". 
+ 
+ 
+ //-- The system and components involved, and their functions
+ 
+ Flight-data-recorder (note "The flight data recorder") is a SYSTEM
+ 	with identifier "Flight-data-recorder".
+ 
+ Recorder-independent-power-supply (note "Recorder independent power supply") is a SYSTEM
+ 	with identifier "Recorder-independent-power-supply"
+ 	with function Backup-power.
+
+ Battery-Health-Monitor (note "The Battery Health Monitor Component of the RIPS") is a SYSTEM
+ 	with identifier "Battery-Health-Monitor"
+ 	with function Charge-command
+ 	with function Maintenance-indication.	
+
+
+ //-- Functions
+ 
+ Backup-power (note "Provide backup power to the Flight Data Recorder") is a FUNCTION
+ 	with identifier "Backup-power"
+ 	with description "Provide backup power to the Flight Data Recorder".	
+ 
+ Charge-command (note "Provide 'full recharge' command") is a FUNCTION
+ 	with identifier "Charge-command"
+ 	with description "The BHM will estimate the state of charge of the battery and command a full recharge if the state of charge (SOC) of the battery has reached 30% or less of the nominal charge capacity".	
+ 
+ Maintenance-indication (note "Provide 'maintenance required' indication") is a FUNCTION
+ 	with identifier "Maintenance-indication"
+ 	with description "The BHM will indicate that maintenance is required when the state of health (SOH) of the battery is 70% or less".	
+ 
+ 
+ //-- Instantiation of the elements for the SOH NN Component
+ soh-nn-REQS is a RequirementSet
+ 	with identifier "soh-nn-REQS"
+ 	with description "The requirements for the State of Health NN Component of the RIPS BHM". 
+
+ soh-nn-FMS is a NNFailureModeSet
+ 	with identifier "soh-nn-FMS"
+ 	with description "The identified failure modes of the State of Health NN Component of the RIPS BHM". 
+ 
+ soh-nn-IMP is a NNSwCompImp
+  	with identifier "soh-nn-IMP"
+ 	with description "The simulink implementation of the State of Health NN Component of the RIPS BHM".
+ 
+ soh-nn-INPUT-COND is a InpCond
+  	with identifier "soh-nn-INPUT-COND"
+ 	with description "The input conditioner for the State of Health NN Component of the RIPS BHM".
+
+ soh-nn-INPUT-COND-IMP is a InpCondImp
+  	with identifier "soh-nn-INPUT-COND-IMP"
+ 	with description "The input conditioner implementation for the State of Health NN Component of the RIPS BHM".
+ 
+ soh-nn-MODEL is a NNModel
+  	with identifier "soh-nn-MODEL"
+ 	with description "The neural network model for the State of Health NN Component of the RIPS BHM".
+ 	
+ soh-nn-DEV-DATA is a DataSet
+  	with identifier "soh-nn-DEV-DATA"
+ 	with description "The development data for the State of Health NN Component of the RIPS BHM".
+
+ soh-nn-QUAL-DATA-N (note "nominal qualification data") is a DataSet
+  	with identifier "soh-nn-QUAL-DATA-N"
+ 	with description "The nominal qualification data for the State of Health NN Component of the RIPS BHM".
+
+ soh-nn-QUAL-DATA-ON (note "off nominal qualification data") is a DataSet
+  	with identifier "soh-nn-QUAL-DATA-ON"
+ 	with description "The off-nominal qualification data for the State of Health NN Component of the RIPS BHM".
+
+ soh-nn-SW-COMP is a NNSwComponent
+  	with identifier "soh-nn-SW-COMP"
+ 	with description "The State of Health NN Component of the RIPS BHM"
+	with model soh-nn-MODEL
+	with inputConditioner  soh-nn-INPUT-COND
+	with implementation  soh-nn-IMP
+	with inputConditionerImplementation  soh-nn-INPUT-COND-IMP
+	with devData soh-nn-DEV-DATA
+	with qualDataNominal soh-nn-QUAL-DATA-N
+	with qualDataOffNominal soh-nn-QUAL-DATA-ON
+	with nnRequirements soh-nn-REQS.
+ 
+ 
+ 
+  //-- Instantiation of the elements for the SOH NN Component (Incomplete for now since we have only studied soh)
+ soc-nn-SW-COMP is a NNSwComponent
+  	with identifier "soc-nn-SW-COMP".
+  	
+  	
+  	
+
+  	
+  	

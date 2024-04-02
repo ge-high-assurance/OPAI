@@ -1,0 +1,1015 @@
+<svg width="1400px" height="701px"
+ viewBox="0.00 0.00 4587.76 2298.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 2294.1)">
+<title>ASSURANCE_CASE</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-2294.1 4583.76,-2294.1 4583.76,4 -4,4"/>
+<!-- G_OP -->
+<g id="node1" class="node">
+<title>G_OP</title>
+<g id="a_node1"><a xlink:title="The SoH Subcomponent satisfies&#10;OPs">
+<polygon fill="none" stroke="red" stroke-width="3" points="1379.4,-2282.4 1192.91,-2282.4 1192.91,-2215.6 1379.4,-2215.6 1379.4,-2282.4"/>
+<text text-anchor="middle" x="1286.15" y="-2269.6" font-family="Times,serif" font-size="14.00">G_OP</text>
+<text text-anchor="middle" x="1286.15" y="-2236.8" font-family="Times,serif" font-size="14.00">The SoH Subcomponent satisfies</text>
+<text text-anchor="middle" x="1286.15" y="-2220" font-family="Times,serif" font-size="14.00">OPs</text>
+</a>
+</g>
+</g>
+<!-- S_OP -->
+<g id="node2" class="node">
+<title>S_OP</title>
+<g id="a_node2"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="1623.44,-2152.7 1086.89,-2152.7 948.87,-2053.3 1485.42,-2053.3 1623.44,-2152.7"/>
+<text text-anchor="middle" x="1286.15" y="-2115.2" font-family="Times,serif" font-size="14.00">S_OP</text>
+<text text-anchor="middle" x="1286.15" y="-2082.4" font-family="Times,serif" font-size="14.00">Argument: By Proving Intent, Correctness, and Innocuity.</text>
+</a>
+</g>
+</g>
+<!-- G_OP&#45;&gt;S_OP -->
+<g id="edge1" class="edge">
+<title>G_OP&#45;&gt;S_OP</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-2215.68C1286.15,-2202.91 1286.15,-2187.72 1286.15,-2172.72"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-2172.63 1286.15,-2152.63 1279.15,-2172.63 1293.15,-2172.63"/>
+</g>
+<!-- G_soh_nn_INNOCUITY_ARG -->
+<g id="node3" class="node">
+<title>G_soh_nn_INNOCUITY_ARG</title>
+<g id="a_node3"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP holds Innoc&#10;uity">
+<polygon fill="none" stroke="green" stroke-width="3" points="908.23,-1990.4 706.08,-1990.4 706.08,-1923.6 908.23,-1923.6 908.23,-1990.4"/>
+<text text-anchor="middle" x="807.15" y="-1977.6" font-family="Times,serif" font-size="14.00">G_soh_nn_INNOCUITY_ARG</text>
+<text text-anchor="middle" x="807.15" y="-1944.8" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP holds Innoc</text>
+<text text-anchor="middle" x="807.15" y="-1928" font-family="Times,serif" font-size="14.00">uity</text>
+</a>
+</g>
+</g>
+<!-- S_OP&#45;&gt;G_soh_nn_INNOCUITY_ARG -->
+<g id="edge2" class="edge">
+<title>S_OP&#45;&gt;G_soh_nn_INNOCUITY_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1124.32,-2053.35C1060.03,-2034.02 987.36,-2012.17 927.82,-1994.28"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="929.74,-1987.54 908.57,-1988.49 925.71,-2000.95 929.74,-1987.54"/>
+</g>
+<!-- G_soh_nn_INTENT_ARG -->
+<g id="node11" class="node">
+<title>G_soh_nn_INTENT_ARG</title>
+<g id="a_node11"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP holds Inten&#10;t">
+<polygon fill="none" stroke="red" stroke-width="3" points="1386.12,-1990.4 1186.19,-1990.4 1186.19,-1923.6 1386.12,-1923.6 1386.12,-1990.4"/>
+<text text-anchor="middle" x="1286.15" y="-1977.6" font-family="Times,serif" font-size="14.00">G_soh_nn_INTENT_ARG</text>
+<text text-anchor="middle" x="1286.15" y="-1944.8" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP holds Inten</text>
+<text text-anchor="middle" x="1286.15" y="-1928" font-family="Times,serif" font-size="14.00">t</text>
+</a>
+</g>
+</g>
+<!-- S_OP&#45;&gt;G_soh_nn_INTENT_ARG -->
+<g id="edge3" class="edge">
+<title>S_OP&#45;&gt;G_soh_nn_INTENT_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-2053.25C1286.15,-2039.49 1286.15,-2024.45 1286.15,-2010.48"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-2010.39 1286.15,-1990.39 1279.15,-2010.39 1293.15,-2010.39"/>
+</g>
+<!-- G_soh_nn_CORRECTNESS_ARG -->
+<g id="node22" class="node">
+<title>G_soh_nn_CORRECTNESS_ARG</title>
+<g id="a_node22"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP holds Corre&#10;ctness">
+<polygon fill="none" stroke="red" stroke-width="3" points="2241.22,-1990.4 2039.09,-1990.4 2039.09,-1923.6 2241.22,-1923.6 2241.22,-1990.4"/>
+<text text-anchor="middle" x="2140.15" y="-1977.6" font-family="Times,serif" font-size="14.00">G_soh_nn_CORRECTNESS_ARG</text>
+<text text-anchor="middle" x="2140.15" y="-1944.8" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP holds Corre</text>
+<text text-anchor="middle" x="2140.15" y="-1928" font-family="Times,serif" font-size="14.00">ctness</text>
+</a>
+</g>
+</g>
+<!-- S_OP&#45;&gt;G_soh_nn_CORRECTNESS_ARG -->
+<g id="edge4" class="edge">
+<title>S_OP&#45;&gt;G_soh_nn_CORRECTNESS_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1502.48,-2065.52C1666.17,-2037.92 1884.96,-2001.03 2019.04,-1978.42"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2020.45,-1985.28 2039.01,-1975.06 2018.12,-1971.48 2020.45,-1985.28"/>
+</g>
+<!-- S_soh_nn_INNOCUITY_ARG -->
+<g id="node4" class="node">
+<title>S_soh_nn_INNOCUITY_ARG</title>
+<g id="a_node4"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="821,-1860.7 383.78,-1860.7 271.31,-1761.3 708.53,-1761.3 821,-1860.7"/>
+<text text-anchor="middle" x="546.15" y="-1823.2" font-family="Times,serif" font-size="14.00">S_soh_nn_INNOCUITY_ARG</text>
+<text text-anchor="middle" x="546.15" y="-1790.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_nn_INNOCUITY_ARG&#45;&gt;S_soh_nn_INNOCUITY_ARG -->
+<g id="edge5" class="edge">
+<title>G_soh_nn_INNOCUITY_ARG&#45;&gt;S_soh_nn_INNOCUITY_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M748.58,-1923.68C720.04,-1907.94 684.83,-1888.51 651.82,-1870.3"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="655.18,-1864.16 634.29,-1860.63 648.42,-1876.42 655.18,-1864.16"/>
+</g>
+<!-- G_soh_innocuity_p2 -->
+<g id="node5" class="node">
+<title>G_soh_innocuity_p2</title>
+<g id="a_node5"><a xlink:title="The soh&#45;nn&#45;REQS mitigate the e&#10;ffect of all the soh&#45;nn&#45;FMS">
+<polygon fill="none" stroke="green" stroke-width="3" points="351.67,-1657.4 168.64,-1657.4 168.64,-1590.6 351.67,-1590.6 351.67,-1657.4"/>
+<text text-anchor="middle" x="260.15" y="-1644.6" font-family="Times,serif" font-size="14.00">G_soh_innocuity_p2</text>
+<text text-anchor="middle" x="260.15" y="-1611.8" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;REQS mitigate the e</text>
+<text text-anchor="middle" x="260.15" y="-1595" font-family="Times,serif" font-size="14.00">ffect of all the soh&#45;nn&#45;FMS</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_INNOCUITY_ARG&#45;&gt;G_soh_innocuity_p2 -->
+<g id="edge6" class="edge">
+<title>S_soh_nn_INNOCUITY_ARG&#45;&gt;G_soh_innocuity_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M471.01,-1761.39C426.35,-1732.51 370.21,-1696.19 327.08,-1668.29"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="330.65,-1662.27 310.06,-1657.28 323.05,-1674.02 330.65,-1662.27"/>
+</g>
+<!-- G_soh_innocuity_p1 -->
+<g id="node8" class="node">
+<title>G_soh_innocuity_p1</title>
+<g id="a_node8"><a xlink:title="All soh&#45;nn&#45;FMS have been ident&#10;ified in a component level saf&#10;ety assessment of the soh&#45;nn&#45;S&#10;W&#45;COMP">
+<polygon fill="none" stroke="green" stroke-width="3" points="637.67,-1674 454.64,-1674 454.64,-1574 637.67,-1574 637.67,-1674"/>
+<text text-anchor="middle" x="546.15" y="-1661.4" font-family="Times,serif" font-size="14.00">G_soh_innocuity_p1</text>
+<text text-anchor="middle" x="546.15" y="-1628.6" font-family="Times,serif" font-size="14.00">All soh&#45;nn&#45;FMS have been ident</text>
+<text text-anchor="middle" x="546.15" y="-1611.8" font-family="Times,serif" font-size="14.00">ified in a component level saf</text>
+<text text-anchor="middle" x="546.15" y="-1595" font-family="Times,serif" font-size="14.00">ety assessment of the soh&#45;nn&#45;S</text>
+<text text-anchor="middle" x="546.15" y="-1578.2" font-family="Times,serif" font-size="14.00">W&#45;COMP</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_INNOCUITY_ARG&#45;&gt;G_soh_innocuity_p1 -->
+<g id="edge7" class="edge">
+<title>S_soh_nn_INNOCUITY_ARG&#45;&gt;G_soh_innocuity_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M546.15,-1761.39C546.15,-1740.93 546.15,-1716.72 546.15,-1694.43"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="553.15,-1694.25 546.15,-1674.25 539.15,-1694.25 553.15,-1694.25"/>
+</g>
+<!-- S_soh_innocuity_p2 -->
+<g id="node6" class="node">
+<title>S_soh_innocuity_p2</title>
+<g id="a_node6"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="352.46,-1485.7 72,-1485.7 -0.15,-1386.3 280.31,-1386.3 352.46,-1485.7"/>
+<text text-anchor="middle" x="176.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_innocuity_p2</text>
+<text text-anchor="middle" x="176.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Cameo Review</text>
+</a>
+</g>
+</g>
+<!-- G_soh_innocuity_p2&#45;&gt;S_soh_innocuity_p2 -->
+<g id="edge8" class="edge">
+<title>G_soh_innocuity_p2&#45;&gt;S_soh_innocuity_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M245.52,-1590.6C234.8,-1566.87 219.87,-1533.8 206.61,-1504.43"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="212.8,-1501.14 198.19,-1485.79 200.04,-1506.9 212.8,-1501.14"/>
+</g>
+<!-- SOL_ev_soh_innocuity_p2 -->
+<g id="node7" class="node">
+<title>SOL_ev_soh_innocuity_p2</title>
+<g id="a_node7"><a xlink:title="Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System_level Failure Conditions_ This should be renamed and reformated to match the terms defined in out OP definitions_ (Resolved)&#10;What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes_ (Resolved)&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="176.15" cy="-1197" rx="108.77" ry="108.77"/>
+<text text-anchor="middle" x="176.15" y="-1200.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_innocuity_p2</text>
+</a>
+</g>
+</g>
+<!-- S_soh_innocuity_p2&#45;&gt;SOL_ev_soh_innocuity_p2 -->
+<g id="edge9" class="edge">
+<title>S_soh_innocuity_p2&#45;&gt;SOL_ev_soh_innocuity_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M176.15,-1386.18C176.15,-1368.43 176.15,-1347.44 176.15,-1326.03"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="183.15,-1325.9 176.15,-1305.9 169.15,-1325.91 183.15,-1325.9"/>
+</g>
+<!-- S_soh_innocuity_p1 -->
+<g id="node9" class="node">
+<title>S_soh_innocuity_p1</title>
+<g id="a_node9"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="722.46,-1485.7 442,-1485.7 369.85,-1386.3 650.31,-1386.3 722.46,-1485.7"/>
+<text text-anchor="middle" x="546.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_innocuity_p1</text>
+<text text-anchor="middle" x="546.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Cameo Review</text>
+</a>
+</g>
+</g>
+<!-- G_soh_innocuity_p1&#45;&gt;S_soh_innocuity_p1 -->
+<g id="edge10" class="edge">
+<title>G_soh_innocuity_p1&#45;&gt;S_soh_innocuity_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M546.15,-1573.64C546.15,-1552.9 546.15,-1528.42 546.15,-1505.94"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="553.15,-1505.62 546.15,-1485.62 539.15,-1505.62 553.15,-1505.62"/>
+</g>
+<!-- SOL_ev_soh_innocuity_p1 -->
+<g id="node10" class="node">
+<title>SOL_ev_soh_innocuity_p1</title>
+<g id="a_node10"><a xlink:title="Safety Related Elements is really a list of failure modes from the Neural Networks and how they contribute to System_level Failure Conditions_ This should be renamed and reformated to match the terms defined in out OP definitions_ (Resolved)&#10;What data driven failure modes would cause this condition to occur? These should link back to a generic failure mode sourced from the research paper containing generic AI failure modes_ (Resolved)&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="546.15" cy="-1197" rx="108.77" ry="108.77"/>
+<text text-anchor="middle" x="546.15" y="-1200.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_innocuity_p1</text>
+</a>
+</g>
+</g>
+<!-- S_soh_innocuity_p1&#45;&gt;SOL_ev_soh_innocuity_p1 -->
+<g id="edge11" class="edge">
+<title>S_soh_innocuity_p1&#45;&gt;SOL_ev_soh_innocuity_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M546.15,-1386.18C546.15,-1368.43 546.15,-1347.44 546.15,-1326.03"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="553.15,-1325.9 546.15,-1305.9 539.15,-1325.91 553.15,-1325.9"/>
+</g>
+<!-- S_soh_nn_INTENT_ARG -->
+<g id="node12" class="node">
+<title>S_soh_nn_INTENT_ARG</title>
+<g id="a_node12"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="1561,-1860.7 1123.78,-1860.7 1011.31,-1761.3 1448.53,-1761.3 1561,-1860.7"/>
+<text text-anchor="middle" x="1286.15" y="-1823.2" font-family="Times,serif" font-size="14.00">S_soh_nn_INTENT_ARG</text>
+<text text-anchor="middle" x="1286.15" y="-1790.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_nn_INTENT_ARG&#45;&gt;S_soh_nn_INTENT_ARG -->
+<g id="edge12" class="edge">
+<title>G_soh_nn_INTENT_ARG&#45;&gt;S_soh_nn_INTENT_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-1923.68C1286.15,-1910.91 1286.15,-1895.72 1286.15,-1880.72"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-1880.63 1286.15,-1860.63 1279.15,-1880.63 1293.15,-1880.63"/>
+</g>
+<!-- G_soh_intent_p4 -->
+<g id="node13" class="node">
+<title>G_soh_intent_p4</title>
+<g id="a_node13"><a xlink:title="The soh&#45;nn&#45;INPUT&#45;COND will add&#10;ress any off&#45;nominal inputs to&#10;the soh&#45;nn&#45;MODEL">
+<polygon fill="none" stroke="green" stroke-width="3" points="1089.21,-1665.7 887.1,-1665.7 887.1,-1582.3 1089.21,-1582.3 1089.21,-1665.7"/>
+<text text-anchor="middle" x="988.15" y="-1653" font-family="Times,serif" font-size="14.00">G_soh_intent_p4</text>
+<text text-anchor="middle" x="988.15" y="-1620.2" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;INPUT&#45;COND will add</text>
+<text text-anchor="middle" x="988.15" y="-1603.4" font-family="Times,serif" font-size="14.00">ress any off&#45;nominal inputs to</text>
+<text text-anchor="middle" x="988.15" y="-1586.6" font-family="Times,serif" font-size="14.00">the soh&#45;nn&#45;MODEL</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p4 -->
+<g id="edge13" class="edge">
+<title>S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p4</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1207.86,-1761.39C1165.72,-1735.24 1113.77,-1702.98 1070.96,-1676.41"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1074.52,-1670.38 1053.84,-1665.78 1067.14,-1682.27 1074.52,-1670.38"/>
+</g>
+<!-- G_soh_intent_p2 -->
+<g id="node16" class="node">
+<title>G_soh_intent_p2</title>
+<g id="a_node16"><a xlink:title="The soh&#45;nn&#45;QUAL&#45;DATA&#45;N and soh&#10;&#45;nn&#45;QUAL&#45;DATA&#45;ON will be used &#10;to measure the quality of the &#10;soh&#45;nn&#45;SW&#45;COMP with respect to&#10;the data dependent constraint&#10;s">
+<polygon fill="none" stroke="red" stroke-width="3" points="1392.02,-1690.6 1180.29,-1690.6 1180.29,-1557.4 1392.02,-1557.4 1392.02,-1690.6"/>
+<text text-anchor="middle" x="1286.15" y="-1678.2" font-family="Times,serif" font-size="14.00">G_soh_intent_p2</text>
+<text text-anchor="middle" x="1286.15" y="-1645.4" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;QUAL&#45;DATA&#45;N and soh</text>
+<text text-anchor="middle" x="1286.15" y="-1628.6" font-family="Times,serif" font-size="14.00">&#45;nn&#45;QUAL&#45;DATA&#45;ON will be used </text>
+<text text-anchor="middle" x="1286.15" y="-1611.8" font-family="Times,serif" font-size="14.00">to measure the quality of the </text>
+<text text-anchor="middle" x="1286.15" y="-1595" font-family="Times,serif" font-size="14.00">soh&#45;nn&#45;SW&#45;COMP with respect to</text>
+<text text-anchor="middle" x="1286.15" y="-1578.2" font-family="Times,serif" font-size="14.00">the data dependent constraint</text>
+<text text-anchor="middle" x="1286.15" y="-1561.4" font-family="Times,serif" font-size="14.00">s</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p2 -->
+<g id="edge14" class="edge">
+<title>S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-1761.39C1286.15,-1745.85 1286.15,-1728.15 1286.15,-1710.78"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-1710.67 1286.15,-1690.67 1279.15,-1710.67 1293.15,-1710.67"/>
+</g>
+<!-- G_soh_intent_p1 -->
+<g id="node19" class="node">
+<title>G_soh_intent_p1</title>
+<g id="a_node19"><a xlink:title="The soh&#45;nn&#45;REQS correctly addr&#10;ess all the data&#45;dependent con&#10;straints and the data independ&#10;ent constraints as desired by &#10;the stakeholders">
+<polygon fill="none" stroke="green" stroke-width="3" points="1673.09,-1682.3 1487.22,-1682.3 1487.22,-1565.7 1673.09,-1565.7 1673.09,-1682.3"/>
+<text text-anchor="middle" x="1580.15" y="-1669.8" font-family="Times,serif" font-size="14.00">G_soh_intent_p1</text>
+<text text-anchor="middle" x="1580.15" y="-1637" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;REQS correctly addr</text>
+<text text-anchor="middle" x="1580.15" y="-1620.2" font-family="Times,serif" font-size="14.00">ess all the data&#45;dependent con</text>
+<text text-anchor="middle" x="1580.15" y="-1603.4" font-family="Times,serif" font-size="14.00">straints and the data independ</text>
+<text text-anchor="middle" x="1580.15" y="-1586.6" font-family="Times,serif" font-size="14.00">ent constraints as desired by </text>
+<text text-anchor="middle" x="1580.15" y="-1569.8" font-family="Times,serif" font-size="14.00">the stakeholders</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p1 -->
+<g id="edge15" class="edge">
+<title>S_soh_nn_INTENT_ARG&#45;&gt;G_soh_intent_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1363.4,-1761.39C1396.52,-1740.56 1435.78,-1715.85 1471.73,-1693.23"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1475.87,-1698.89 1489.07,-1682.31 1468.42,-1687.04 1475.87,-1698.89"/>
+</g>
+<!-- S_soh_intent_p4 -->
+<g id="node14" class="node">
+<title>S_soh_intent_p4</title>
+<g id="a_node14"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="1092.46,-1485.7 812,-1485.7 739.85,-1386.3 1020.31,-1386.3 1092.46,-1485.7"/>
+<text text-anchor="middle" x="916.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_intent_p4</text>
+<text text-anchor="middle" x="916.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Cameo Review</text>
+</a>
+</g>
+</g>
+<!-- G_soh_intent_p4&#45;&gt;S_soh_intent_p4 -->
+<g id="edge16" class="edge">
+<title>G_soh_intent_p4&#45;&gt;S_soh_intent_p4</title>
+<path fill="none" stroke="black" stroke-width="2" d="M972.35,-1582.18C963.54,-1559.4 952.33,-1530.45 942.25,-1504.4"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="948.73,-1501.76 934.98,-1485.64 935.67,-1506.82 948.73,-1501.76"/>
+</g>
+<!-- SOL_ev_soh_intent_p4 -->
+<g id="node15" class="node">
+<title>SOL_ev_soh_intent_p4</title>
+<g id="a_node15"><a xlink:title="The System Requirements table is missing correctness and completeness attributes necessary to perform this review_ (Resolved)&#10;The HLR table is missing correctness and completeness attributes necessary to perform this review_ (Resolved)&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="916.15" cy="-1197" rx="94.07" ry="94.07"/>
+<text text-anchor="middle" x="916.15" y="-1200.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_intent_p4</text>
+</a>
+</g>
+</g>
+<!-- S_soh_intent_p4&#45;&gt;SOL_ev_soh_intent_p4 -->
+<g id="edge17" class="edge">
+<title>S_soh_intent_p4&#45;&gt;SOL_ev_soh_intent_p4</title>
+<path fill="none" stroke="black" stroke-width="2" d="M916.15,-1386.18C916.15,-1364.37 916.15,-1337.67 916.15,-1311.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="923.15,-1311.32 916.15,-1291.32 909.15,-1311.32 923.15,-1311.32"/>
+</g>
+<!-- S_soh_intent_p2 -->
+<g id="node17" class="node">
+<title>S_soh_intent_p2</title>
+<g id="a_node17"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="1462.46,-1485.7 1182,-1485.7 1109.85,-1386.3 1390.31,-1386.3 1462.46,-1485.7"/>
+<text text-anchor="middle" x="1286.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_intent_p2</text>
+<text text-anchor="middle" x="1286.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Cameo Review</text>
+</a>
+</g>
+</g>
+<!-- G_soh_intent_p2&#45;&gt;S_soh_intent_p2 -->
+<g id="edge18" class="edge">
+<title>G_soh_intent_p2&#45;&gt;S_soh_intent_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-1557.16C1286.15,-1540.54 1286.15,-1522.64 1286.15,-1505.87"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-1505.78 1286.15,-1485.78 1279.15,-1505.78 1293.15,-1505.78"/>
+</g>
+<!-- SOL_ev_soh_intent_p2 -->
+<g id="node18" class="node">
+<title>SOL_ev_soh_intent_p2</title>
+<g id="a_node18"><a xlink:title="Need to create Test Cases in Cameo that shows we are using the Qual Data to verify each SoH_NN Constraint (Unresolved)&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="1286.15" cy="-1197" rx="94.07" ry="94.07"/>
+<text text-anchor="middle" x="1286.15" y="-1200.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_intent_p2</text>
+</a>
+</g>
+</g>
+<!-- S_soh_intent_p2&#45;&gt;SOL_ev_soh_intent_p2 -->
+<g id="edge19" class="edge">
+<title>S_soh_intent_p2&#45;&gt;SOL_ev_soh_intent_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1286.15,-1386.18C1286.15,-1364.37 1286.15,-1337.67 1286.15,-1311.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1293.15,-1311.32 1286.15,-1291.32 1279.15,-1311.32 1293.15,-1311.32"/>
+</g>
+<!-- S_soh_intent_p1 -->
+<g id="node20" class="node">
+<title>S_soh_intent_p1</title>
+<g id="a_node20"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="1832.46,-1485.7 1552,-1485.7 1479.85,-1386.3 1760.31,-1386.3 1832.46,-1485.7"/>
+<text text-anchor="middle" x="1656.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_intent_p1</text>
+<text text-anchor="middle" x="1656.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Cameo Review</text>
+</a>
+</g>
+</g>
+<!-- G_soh_intent_p1&#45;&gt;S_soh_intent_p1 -->
+<g id="edge20" class="edge">
+<title>G_soh_intent_p1&#45;&gt;S_soh_intent_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1603.58,-1565.68C1611.51,-1546.26 1620.44,-1524.4 1628.66,-1504.29"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1635.18,-1506.83 1636.27,-1485.67 1622.22,-1501.54 1635.18,-1506.83"/>
+</g>
+<!-- SOL_ev_soh_intent_p1 -->
+<g id="node21" class="node">
+<title>SOL_ev_soh_intent_p1</title>
+<g id="a_node21"><a xlink:title="The System Requirements table is missing correctness and completeness attributes necessary to perform this review_ (Resolved)&#10;The HLR table is missing correctness and completeness attributes necessary to perform this review_ (Resolved)&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="1656.15" cy="-1197" rx="94.07" ry="94.07"/>
+<text text-anchor="middle" x="1656.15" y="-1200.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_intent_p1</text>
+</a>
+</g>
+</g>
+<!-- S_soh_intent_p1&#45;&gt;SOL_ev_soh_intent_p1 -->
+<g id="edge21" class="edge">
+<title>S_soh_intent_p1&#45;&gt;SOL_ev_soh_intent_p1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1656.15,-1386.18C1656.15,-1364.37 1656.15,-1337.67 1656.15,-1311.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1663.15,-1311.32 1656.15,-1291.32 1649.15,-1311.32 1663.15,-1311.32"/>
+</g>
+<!-- S_soh_nn_CORRECTNESS_ARG -->
+<g id="node23" class="node">
+<title>S_soh_nn_CORRECTNESS_ARG</title>
+<g id="a_node23"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3050,-1860.7 2612.78,-1860.7 2500.31,-1761.3 2937.53,-1761.3 3050,-1860.7"/>
+<text text-anchor="middle" x="2775.15" y="-1823.2" font-family="Times,serif" font-size="14.00">S_soh_nn_CORRECTNESS_ARG</text>
+<text text-anchor="middle" x="2775.15" y="-1790.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_nn_CORRECTNESS_ARG&#45;&gt;S_soh_nn_CORRECTNESS_ARG -->
+<g id="edge22" class="edge">
+<title>G_soh_nn_CORRECTNESS_ARG&#45;&gt;S_soh_nn_CORRECTNESS_ARG</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2241.47,-1933.02C2332.98,-1912.27 2470.12,-1881.17 2582.47,-1855.7"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2584.1,-1862.5 2602.06,-1851.25 2581.01,-1848.85 2584.1,-1862.5"/>
+</g>
+<!-- G_soh_correctness_p2 -->
+<g id="node24" class="node">
+<title>G_soh_correctness_p2</title>
+<g id="a_node24"><a xlink:title="The soh&#45;nn&#45;QUAL&#45;DATA&#45;N is an a&#10;ccurate and sufficient represe&#10;ntation of the quantity of int&#10;erest throughout the foreseeab&#10;le operating conditions">
+<polygon fill="none" stroke="red" stroke-width="3" points="2456.62,-1682.3 2251.68,-1682.3 2251.68,-1565.7 2456.62,-1565.7 2456.62,-1682.3"/>
+<text text-anchor="middle" x="2354.15" y="-1669.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p2</text>
+<text text-anchor="middle" x="2354.15" y="-1637" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;QUAL&#45;DATA&#45;N is an a</text>
+<text text-anchor="middle" x="2354.15" y="-1620.2" font-family="Times,serif" font-size="14.00">ccurate and sufficient represe</text>
+<text text-anchor="middle" x="2354.15" y="-1603.4" font-family="Times,serif" font-size="14.00">ntation of the quantity of int</text>
+<text text-anchor="middle" x="2354.15" y="-1586.6" font-family="Times,serif" font-size="14.00">erest throughout the foreseeab</text>
+<text text-anchor="middle" x="2354.15" y="-1569.8" font-family="Times,serif" font-size="14.00">le operating conditions</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p2 -->
+<g id="edge23" class="edge">
+<title>S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2664.54,-1761.39C2606.27,-1735.79 2534.7,-1704.34 2474.98,-1678.1"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2477.57,-1671.59 2456.45,-1669.95 2471.94,-1684.41 2477.57,-1671.59"/>
+</g>
+<!-- G_soh_correctness_p3 -->
+<g id="node32" class="node">
+<title>G_soh_correctness_p3</title>
+<g id="a_node32"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP adheres to &#10;the data dependent constraints&#10;set forth in the soh&#45;nn&#45;REQS &#10;when run against the soh&#45;nn&#45;QU&#10;AL&#45;DATA&#45;N">
+<polygon fill="none" stroke="red" stroke-width="3" points="2873.66,-1682.3 2676.65,-1682.3 2676.65,-1565.7 2873.66,-1565.7 2873.66,-1682.3"/>
+<text text-anchor="middle" x="2775.15" y="-1669.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3</text>
+<text text-anchor="middle" x="2775.15" y="-1637" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP adheres to </text>
+<text text-anchor="middle" x="2775.15" y="-1620.2" font-family="Times,serif" font-size="14.00">the data dependent constraints</text>
+<text text-anchor="middle" x="2775.15" y="-1603.4" font-family="Times,serif" font-size="14.00">set forth in the soh&#45;nn&#45;REQS </text>
+<text text-anchor="middle" x="2775.15" y="-1586.6" font-family="Times,serif" font-size="14.00">when run against the soh&#45;nn&#45;QU</text>
+<text text-anchor="middle" x="2775.15" y="-1569.8" font-family="Times,serif" font-size="14.00">AL&#45;DATA&#45;N</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p3 -->
+<g id="edge24" class="edge">
+<title>S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p3</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2775.15,-1761.39C2775.15,-1743.44 2775.15,-1722.61 2775.15,-1702.71"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2782.15,-1702.48 2775.15,-1682.48 2768.15,-1702.48 2782.15,-1702.48"/>
+</g>
+<!-- G_soh_correctness_p4 -->
+<g id="node48" class="node">
+<title>G_soh_correctness_p4</title>
+<g id="a_node48"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP adheres to &#10;the data independent constrain&#10;ts set forth in the soh&#45;nn&#45;REQ&#10;S">
+<polygon fill="none" stroke="red" stroke-width="3" points="3292.66,-1674 3095.65,-1674 3095.65,-1574 3292.66,-1574 3292.66,-1674"/>
+<text text-anchor="middle" x="3194.15" y="-1661.4" font-family="Times,serif" font-size="14.00">G_soh_correctness_p4</text>
+<text text-anchor="middle" x="3194.15" y="-1628.6" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP adheres to </text>
+<text text-anchor="middle" x="3194.15" y="-1611.8" font-family="Times,serif" font-size="14.00">the data independent constrain</text>
+<text text-anchor="middle" x="3194.15" y="-1595" font-family="Times,serif" font-size="14.00">ts set forth in the soh&#45;nn&#45;REQ</text>
+<text text-anchor="middle" x="3194.15" y="-1578.2" font-family="Times,serif" font-size="14.00">S</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p4 -->
+<g id="edge25" class="edge">
+<title>S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p4</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2885.24,-1761.39C2944.22,-1735.35 3016.89,-1703.27 3076.92,-1676.76"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3080.06,-1683.03 3095.53,-1668.55 3074.41,-1670.22 3080.06,-1683.03"/>
+</g>
+<!-- G_soh_correctness_p5 -->
+<g id="node53" class="node">
+<title>G_soh_correctness_p5</title>
+<g id="a_node53"><a xlink:title="The soh&#45;nn&#45;INPUT&#45;COND correctl&#10;y addresses all the constraint&#10;s set forth in the soh&#45;nn&#45;REQS&#10;for processing all off nomina&#10;l input values to the the soh&#45;&#10;nn&#45;SW&#45;COMP">
+<polygon fill="none" stroke="green" stroke-width="3" points="3815.96,-1690.6 3616.35,-1690.6 3616.35,-1557.4 3815.96,-1557.4 3815.96,-1690.6"/>
+<text text-anchor="middle" x="3716.15" y="-1678.2" font-family="Times,serif" font-size="14.00">G_soh_correctness_p5</text>
+<text text-anchor="middle" x="3716.15" y="-1645.4" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;INPUT&#45;COND correctl</text>
+<text text-anchor="middle" x="3716.15" y="-1628.6" font-family="Times,serif" font-size="14.00">y addresses all the constraint</text>
+<text text-anchor="middle" x="3716.15" y="-1611.8" font-family="Times,serif" font-size="14.00">s set forth in the soh&#45;nn&#45;REQS</text>
+<text text-anchor="middle" x="3716.15" y="-1595" font-family="Times,serif" font-size="14.00">for processing all off nomina</text>
+<text text-anchor="middle" x="3716.15" y="-1578.2" font-family="Times,serif" font-size="14.00">l input values to the the soh&#45;</text>
+<text text-anchor="middle" x="3716.15" y="-1561.4" font-family="Times,serif" font-size="14.00">nn&#45;SW&#45;COMP</text>
+</a>
+</g>
+</g>
+<!-- S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p5 -->
+<g id="edge26" class="edge">
+<title>S_soh_nn_CORRECTNESS_ARG&#45;&gt;G_soh_correctness_p5</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2953.26,-1774.99C3141.74,-1737.93 3433.95,-1680.48 3596.58,-1648.51"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3597.96,-1655.37 3616.23,-1644.64 3595.26,-1641.63 3597.96,-1655.37"/>
+</g>
+<!-- S_soh_correctness_p2 -->
+<g id="node25" class="node">
+<title>S_soh_correctness_p2</title>
+<g id="a_node25"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="2454.33,-1485.7 1973.63,-1485.7 1849.98,-1386.3 2330.67,-1386.3 2454.33,-1485.7"/>
+<text text-anchor="middle" x="2152.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p2</text>
+<text text-anchor="middle" x="2152.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Sub&#45;Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p2&#45;&gt;S_soh_correctness_p2 -->
+<g id="edge27" class="edge">
+<title>G_soh_correctness_p2&#45;&gt;S_soh_correctness_p2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2291.9,-1565.68C2269.08,-1544.66 2243.14,-1520.78 2219.87,-1499.35"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2224.47,-1494.07 2205.01,-1485.67 2214.98,-1504.37 2224.47,-1494.07"/>
+</g>
+<!-- G_soh_correctness_p2_b -->
+<g id="node26" class="node">
+<title>G_soh_correctness_p2_b</title>
+<g id="a_node26"><a xlink:title="The soh&#45;nn&#45;QUAL&#45;DATA&#45;N is suff&#10;iciently representative of the&#10;multivariate operational spac&#10;e as specified in the soh&#45;nn&#45;R&#10;EQS">
+<polygon fill="none" stroke="red" stroke-width="3" points="2001.96,-1255.3 1798.35,-1255.3 1798.35,-1138.7 2001.96,-1138.7 2001.96,-1255.3"/>
+<text text-anchor="middle" x="1900.15" y="-1242.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p2_b</text>
+<text text-anchor="middle" x="1900.15" y="-1210" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;QUAL&#45;DATA&#45;N is suff</text>
+<text text-anchor="middle" x="1900.15" y="-1193.2" font-family="Times,serif" font-size="14.00">iciently representative of the</text>
+<text text-anchor="middle" x="1900.15" y="-1176.4" font-family="Times,serif" font-size="14.00">multivariate operational spac</text>
+<text text-anchor="middle" x="1900.15" y="-1159.6" font-family="Times,serif" font-size="14.00">e as specified in the soh&#45;nn&#45;R</text>
+<text text-anchor="middle" x="1900.15" y="-1142.8" font-family="Times,serif" font-size="14.00">EQS</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p2&#45;&gt;G_soh_correctness_p2_b -->
+<g id="edge28" class="edge">
+<title>S_soh_correctness_p2&#45;&gt;G_soh_correctness_p2_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2100.25,-1386.18C2064.39,-1352.46 2016.13,-1307.07 1975.99,-1269.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1980.69,-1264.13 1961.32,-1255.53 1971.1,-1274.33 1980.69,-1264.13"/>
+</g>
+<!-- G_soh_correctness_p2_a -->
+<g id="node29" class="node">
+<title>G_soh_correctness_p2_a</title>
+<g id="a_node29"><a xlink:title="The soh&#45;nn&#45;QUAL&#45;DATA&#45;N lies co&#10;mpletely within the expected r&#10;anges of the multivariate oper&#10;ational space as specified in &#10;the soh&#45;nn&#45;REQS">
+<polygon fill="none" stroke="red" stroke-width="3" points="2254.51,-1255.3 2049.79,-1255.3 2049.79,-1138.7 2254.51,-1138.7 2254.51,-1255.3"/>
+<text text-anchor="middle" x="2152.15" y="-1242.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p2_a</text>
+<text text-anchor="middle" x="2152.15" y="-1210" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;QUAL&#45;DATA&#45;N lies co</text>
+<text text-anchor="middle" x="2152.15" y="-1193.2" font-family="Times,serif" font-size="14.00">mpletely within the expected r</text>
+<text text-anchor="middle" x="2152.15" y="-1176.4" font-family="Times,serif" font-size="14.00">anges of the multivariate oper</text>
+<text text-anchor="middle" x="2152.15" y="-1159.6" font-family="Times,serif" font-size="14.00">ational space as specified in </text>
+<text text-anchor="middle" x="2152.15" y="-1142.8" font-family="Times,serif" font-size="14.00">the soh&#45;nn&#45;REQS</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p2&#45;&gt;G_soh_correctness_p2_a -->
+<g id="edge29" class="edge">
+<title>S_soh_correctness_p2&#45;&gt;G_soh_correctness_p2_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2152.15,-1386.18C2152.15,-1354.32 2152.15,-1312.03 2152.15,-1275.61"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2159.15,-1275.53 2152.15,-1255.53 2145.15,-1275.53 2159.15,-1275.53"/>
+</g>
+<!-- S_soh_correctness_p2_b -->
+<g id="node27" class="node">
+<title>S_soh_correctness_p2_b</title>
+<g id="a_node27"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="1951.91,-1007.7 1661.18,-1007.7 1586.4,-908.3 1877.12,-908.3 1951.91,-1007.7"/>
+<text text-anchor="middle" x="1769.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p2_b</text>
+<text text-anchor="middle" x="1769.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Python Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p2_b&#45;&gt;S_soh_correctness_p2_b -->
+<g id="edge30" class="edge">
+<title>G_soh_correctness_p2_b&#45;&gt;S_soh_correctness_p2_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1868.44,-1138.63C1849.61,-1104.56 1825.66,-1061.22 1805.99,-1025.64"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1811.95,-1021.95 1796.15,-1007.84 1799.7,-1028.73 1811.95,-1021.95"/>
+</g>
+<!-- SOL_ev_soh_correctness_p2_b -->
+<g id="node28" class="node">
+<title>SOL_ev_soh_correctness_p2_b</title>
+<g id="a_node28"><a xlink:title="Single bin : [voltage measured: (0, 32)(0_1), current measured: (0, 3)(0_1), temperature measured: (_15, 55)(1), current load: (0, 3)(0_1), voltage load:(0, 32)(0_1)]&#10;No current load between 0_1 and 0_2&#10;No temperature measured between _15 and _14&#10;No voltage measured between 0 and 0_1&#10;No current measured between 0_1 and 0_2&#10;No voltage load between 0_1 and 0_2&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="1769.15" cy="-698" rx="125.82" ry="125.82"/>
+<text text-anchor="middle" x="1769.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p2_b</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p2_b&#45;&gt;SOL_ev_soh_correctness_p2_b -->
+<g id="edge31" class="edge">
+<title>S_soh_correctness_p2_b&#45;&gt;SOL_ev_soh_correctness_p2_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1769.15,-908.17C1769.15,-889.58 1769.15,-867.32 1769.15,-844.35"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1776.15,-844.06 1769.15,-824.06 1762.15,-844.06 1776.15,-844.06"/>
+</g>
+<!-- S_soh_correctness_p2_a -->
+<g id="node30" class="node">
+<title>S_soh_correctness_p2_a</title>
+<g id="a_node30"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="2334.91,-1007.7 2044.18,-1007.7 1969.4,-908.3 2260.12,-908.3 2334.91,-1007.7"/>
+<text text-anchor="middle" x="2152.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p2_a</text>
+<text text-anchor="middle" x="2152.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Python Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p2_a&#45;&gt;S_soh_correctness_p2_a -->
+<g id="edge32" class="edge">
+<title>G_soh_correctness_p2_a&#45;&gt;S_soh_correctness_p2_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2152.15,-1138.63C2152.15,-1105.35 2152.15,-1063.2 2152.15,-1028.1"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2159.15,-1027.84 2152.15,-1007.84 2145.15,-1027.84 2159.15,-1027.84"/>
+</g>
+<!-- SOL_ev_soh_correctness_p2_a -->
+<g id="node31" class="node">
+<title>SOL_ev_soh_correctness_p2_a</title>
+<g id="a_node31"><a xlink:title="100% data in Time Range (0 &#160;to 3_6e+7 s)&#10;100% data in VOltage Load Range (0 &#160;to 40 A)&#10;3_97% data in Current Measured Range (0 &#160;to 3 A)&#10;100% data in Cycle Range (0 &#160;to 200)&#10;100% data in Current Load Range (0 &#160;to 3 A)&#10;100% data in Voltage Range (0 &#160;to 40 Vdc)&#10;100% data in Temperature Meusured Range (_15 &#160;to 55 c)&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="2152.15" cy="-698" rx="125.2" ry="125.2"/>
+<text text-anchor="middle" x="2152.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p2_a</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p2_a&#45;&gt;SOL_ev_soh_correctness_p2_a -->
+<g id="edge33" class="edge">
+<title>S_soh_correctness_p2_a&#45;&gt;SOL_ev_soh_correctness_p2_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2152.15,-908.17C2152.15,-889.37 2152.15,-866.82 2152.15,-843.58"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2159.15,-843.51 2152.15,-823.51 2145.15,-843.51 2159.15,-843.51"/>
+</g>
+<!-- S_soh_correctness_p3 -->
+<g id="node33" class="node">
+<title>S_soh_correctness_p3</title>
+<g id="a_node33"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3077.33,-1485.7 2596.63,-1485.7 2472.98,-1386.3 2953.67,-1386.3 3077.33,-1485.7"/>
+<text text-anchor="middle" x="2775.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3</text>
+<text text-anchor="middle" x="2775.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Sub&#45;Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3&#45;&gt;S_soh_correctness_p3 -->
+<g id="edge34" class="edge">
+<title>G_soh_correctness_p3&#45;&gt;S_soh_correctness_p3</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2775.15,-1565.68C2775.15,-1546.76 2775.15,-1525.53 2775.15,-1505.85"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2782.15,-1505.67 2775.15,-1485.67 2768.15,-1505.67 2782.15,-1505.67"/>
+</g>
+<!-- G_soh_correctness_p3_b -->
+<g id="node34" class="node">
+<title>G_soh_correctness_p3_b</title>
+<g id="a_node34"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP&#45;IMP generat&#10;es correct outputs (within an &#10;error margin of +&#45;2%) for at l&#10;east 99% of the soh&#45;nn&#45;QUAL&#45;DA&#10;TA&#45;N">
+<polygon fill="none" stroke="red" stroke-width="3" points="2723.76,-1255.3 2516.55,-1255.3 2516.55,-1138.7 2723.76,-1138.7 2723.76,-1255.3"/>
+<text text-anchor="middle" x="2620.15" y="-1242.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3_b</text>
+<text text-anchor="middle" x="2620.15" y="-1210" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP&#45;IMP generat</text>
+<text text-anchor="middle" x="2620.15" y="-1193.2" font-family="Times,serif" font-size="14.00">es correct outputs (within an </text>
+<text text-anchor="middle" x="2620.15" y="-1176.4" font-family="Times,serif" font-size="14.00">error margin of +&#45;2%) for at l</text>
+<text text-anchor="middle" x="2620.15" y="-1159.6" font-family="Times,serif" font-size="14.00">east 99% of the soh&#45;nn&#45;QUAL&#45;DA</text>
+<text text-anchor="middle" x="2620.15" y="-1142.8" font-family="Times,serif" font-size="14.00">TA&#45;N</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3&#45;&gt;G_soh_correctness_p3_b -->
+<g id="edge35" class="edge">
+<title>S_soh_correctness_p3&#45;&gt;G_soh_correctness_p3_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2743.23,-1386.18C2721.76,-1353.35 2693.05,-1309.46 2668.76,-1272.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2674.58,-1268.43 2657.78,-1255.53 2662.87,-1276.1 2674.58,-1268.43"/>
+</g>
+<!-- G_soh_correctness_p3_a -->
+<g id="node37" class="node">
+<title>G_soh_correctness_p3_a</title>
+<g id="a_node37"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP generates c&#10;orrect outputs (within an erro&#10;r margin of +&#45;2%) for at least&#10;99% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;N&#10;">
+<polygon fill="none" stroke="red" stroke-width="3" points="3020.52,-1247 2815.79,-1247 2815.79,-1147 3020.52,-1147 3020.52,-1247"/>
+<text text-anchor="middle" x="2918.15" y="-1234.4" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3_a</text>
+<text text-anchor="middle" x="2918.15" y="-1201.6" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP generates c</text>
+<text text-anchor="middle" x="2918.15" y="-1184.8" font-family="Times,serif" font-size="14.00">orrect outputs (within an erro</text>
+<text text-anchor="middle" x="2918.15" y="-1168" font-family="Times,serif" font-size="14.00">r margin of +&#45;2%) for at least</text>
+<text text-anchor="middle" x="2918.15" y="-1151.2" font-family="Times,serif" font-size="14.00">99% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;N</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3&#45;&gt;G_soh_correctness_p3_a -->
+<g id="edge36" class="edge">
+<title>S_soh_correctness_p3&#45;&gt;G_soh_correctness_p3_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2804.61,-1386.18C2825.83,-1351.01 2854.72,-1303.13 2878.05,-1264.47"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2884.15,-1267.9 2888.49,-1247.16 2872.16,-1260.67 2884.15,-1267.9"/>
+</g>
+<!-- S_soh_correctness_p3_b -->
+<g id="node35" class="node">
+<title>S_soh_correctness_p3_b</title>
+<g id="a_node35"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="2742.11,-1007.7 2431.98,-1007.7 2352.19,-908.3 2662.33,-908.3 2742.11,-1007.7"/>
+<text text-anchor="middle" x="2547.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3_b</text>
+<text text-anchor="middle" x="2547.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Simulink Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3_b&#45;&gt;S_soh_correctness_p3_b -->
+<g id="edge37" class="edge">
+<title>G_soh_correctness_p3_b&#45;&gt;S_soh_correctness_p3_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2602.48,-1138.63C2592.14,-1105.03 2579.01,-1062.41 2568.14,-1027.12"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2574.77,-1024.89 2562.2,-1007.84 2561.39,-1029.01 2574.77,-1024.89"/>
+</g>
+<!-- SOL_ev_soh_correctness_p3_b -->
+<g id="node36" class="node">
+<title>SOL_ev_soh_correctness_p3_b</title>
+<g id="a_node36"><a xlink:title="Only about 30% of the data points passed this criteria&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="2547.15" cy="-698" rx="125.82" ry="125.82"/>
+<text text-anchor="middle" x="2547.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p3_b</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_b&#45;&gt;SOL_ev_soh_correctness_p3_b -->
+<g id="edge38" class="edge">
+<title>S_soh_correctness_p3_b&#45;&gt;SOL_ev_soh_correctness_p3_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2547.15,-908.17C2547.15,-889.58 2547.15,-867.32 2547.15,-844.35"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2554.15,-844.06 2547.15,-824.06 2540.15,-844.06 2554.15,-844.06"/>
+</g>
+<!-- S_soh_correctness_p3_a -->
+<g id="node38" class="node">
+<title>S_soh_correctness_p3_a</title>
+<g id="a_node38"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3364.33,-1007.7 2883.63,-1007.7 2759.98,-908.3 3240.67,-908.3 3364.33,-1007.7"/>
+<text text-anchor="middle" x="3062.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3_a</text>
+<text text-anchor="middle" x="3062.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Sub&#45;Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3_a&#45;&gt;S_soh_correctness_p3_a -->
+<g id="edge39" class="edge">
+<title>G_soh_correctness_p3_a&#45;&gt;S_soh_correctness_p3_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2947.99,-1146.89C2969.45,-1111.58 2998.61,-1063.58 3022.09,-1024.93"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3028.2,-1028.36 3032.6,-1007.64 3016.23,-1021.1 3028.2,-1028.36"/>
+</g>
+<!-- G_soh_correctness_p3_a_3 -->
+<g id="node39" class="node">
+<title>G_soh_correctness_p3_a_3</title>
+<g id="a_node39"><a xlink:title="The soh&#45;nn&#45;MODEL is robust wit&#10;hin input perturbation 4% and &#10;output perturbation 2%) with r&#10;espect to the soh&#45;nn&#45;QUAL&#45;DATA&#10;&#45;N">
+<polygon fill="none" stroke="red" stroke-width="3" points="2915.3,-756.3 2717.01,-756.3 2717.01,-639.7 2915.3,-639.7 2915.3,-756.3"/>
+<text text-anchor="middle" x="2816.15" y="-743.8" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3_a_3</text>
+<text text-anchor="middle" x="2816.15" y="-711" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;MODEL is robust wit</text>
+<text text-anchor="middle" x="2816.15" y="-694.2" font-family="Times,serif" font-size="14.00">hin input perturbation 4% and </text>
+<text text-anchor="middle" x="2816.15" y="-677.4" font-family="Times,serif" font-size="14.00">output perturbation 2%) with r</text>
+<text text-anchor="middle" x="2816.15" y="-660.6" font-family="Times,serif" font-size="14.00">espect to the soh&#45;nn&#45;QUAL&#45;DATA</text>
+<text text-anchor="middle" x="2816.15" y="-643.8" font-family="Times,serif" font-size="14.00">&#45;N</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_3 -->
+<g id="edge40" class="edge">
+<title>S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_3</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3015.59,-908.17C2978.76,-869.53 2926.76,-815 2885.1,-771.31"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2889.99,-766.29 2871.12,-756.65 2879.85,-775.95 2889.99,-766.29"/>
+</g>
+<!-- G_soh_correctness_p3_a_2 -->
+<g id="node42" class="node">
+<title>G_soh_correctness_p3_a_2</title>
+<g id="a_node42"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP generates c&#10;orrect outputs (within an erro&#10;r margin of +&#45;2%) for at least&#10;99% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;N&#10;approved by the soh&#45;nn&#45;INPUT&#45;&#10;COND">
+<polygon fill="none" stroke="red" stroke-width="3" points="3164.52,-764.6 2959.79,-764.6 2959.79,-631.4 3164.52,-631.4 3164.52,-764.6"/>
+<text text-anchor="middle" x="3062.15" y="-752.2" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3_a_2</text>
+<text text-anchor="middle" x="3062.15" y="-719.4" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP generates c</text>
+<text text-anchor="middle" x="3062.15" y="-702.6" font-family="Times,serif" font-size="14.00">orrect outputs (within an erro</text>
+<text text-anchor="middle" x="3062.15" y="-685.8" font-family="Times,serif" font-size="14.00">r margin of +&#45;2%) for at least</text>
+<text text-anchor="middle" x="3062.15" y="-669" font-family="Times,serif" font-size="14.00">99% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;N</text>
+<text text-anchor="middle" x="3062.15" y="-652.2" font-family="Times,serif" font-size="14.00">approved by the soh&#45;nn&#45;INPUT&#45;</text>
+<text text-anchor="middle" x="3062.15" y="-635.4" font-family="Times,serif" font-size="14.00">COND</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_2 -->
+<g id="edge41" class="edge">
+<title>S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3062.15,-908.17C3062.15,-873.43 3062.15,-825.83 3062.15,-784.82"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3069.15,-784.69 3062.15,-764.69 3055.15,-784.69 3069.15,-784.69"/>
+</g>
+<!-- G_soh_correctness_p3_a_1 -->
+<g id="node45" class="node">
+<title>G_soh_correctness_p3_a_1</title>
+<g id="a_node45"><a xlink:title="The soh&#45;nn&#45;INPUT&#45;COND approves&#10;100% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;&#10;N">
+<polygon fill="none" stroke="green" stroke-width="3" points="3411.75,-739.7 3204.56,-739.7 3204.56,-656.3 3411.75,-656.3 3411.75,-739.7"/>
+<text text-anchor="middle" x="3308.15" y="-727" font-family="Times,serif" font-size="14.00">G_soh_correctness_p3_a_1</text>
+<text text-anchor="middle" x="3308.15" y="-694.2" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;INPUT&#45;COND approves</text>
+<text text-anchor="middle" x="3308.15" y="-677.4" font-family="Times,serif" font-size="14.00">100% of the soh&#45;nn&#45;QUAL&#45;DATA&#45;</text>
+<text text-anchor="middle" x="3308.15" y="-660.6" font-family="Times,serif" font-size="14.00">N</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_1 -->
+<g id="edge42" class="edge">
+<title>S_soh_correctness_p3_a&#45;&gt;G_soh_correctness_p3_a_1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3108.71,-908.17C3150.39,-864.46 3211.46,-800.41 3255.03,-754.72"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3260.34,-759.29 3269.08,-739.98 3250.21,-749.63 3260.34,-759.29"/>
+</g>
+<!-- S_soh_correctness_p3_a_3 -->
+<g id="node40" class="node">
+<title>S_soh_correctness_p3_a_3</title>
+<g id="a_node40"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="2860.93,-487.7 2552.67,-487.7 2473.37,-388.3 2781.63,-388.3 2860.93,-487.7"/>
+<text text-anchor="middle" x="2667.15" y="-450.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3_a_3</text>
+<text text-anchor="middle" x="2667.15" y="-417.4" font-family="Times,serif" font-size="14.00">Argument: By Marabou Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3_a_3&#45;&gt;S_soh_correctness_p3_a_3 -->
+<g id="edge43" class="edge">
+<title>G_soh_correctness_p3_a_3&#45;&gt;S_soh_correctness_p3_a_3</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2782.9,-639.42C2759.96,-599.7 2729.41,-546.8 2705.45,-505.32"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2711.36,-501.55 2695.3,-487.73 2699.24,-508.55 2711.36,-501.55"/>
+</g>
+<!-- SOL_ev_soh_correctness_p3_a_3 -->
+<g id="node41" class="node">
+<title>SOL_ev_soh_correctness_p3_a_3</title>
+<g id="a_node41"><a xlink:title="Only 98_683% of the data passed this criteria&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="2667.15" cy="-166" rx="135" ry="135"/>
+<text text-anchor="middle" x="2667.15" y="-169.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p3_a_3</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a_3&#45;&gt;SOL_ev_soh_correctness_p3_a_3 -->
+<g id="edge44" class="edge">
+<title>S_soh_correctness_p3_a_3&#45;&gt;SOL_ev_soh_correctness_p3_a_3</title>
+<path fill="none" stroke="black" stroke-width="2" d="M2667.15,-388.11C2667.15,-368.93 2667.15,-345.78 2667.15,-321.78"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="2674.15,-321.48 2667.15,-301.48 2660.15,-321.48 2674.15,-321.48"/>
+</g>
+<!-- S_soh_correctness_p3_a_2 -->
+<g id="node43" class="node">
+<title>S_soh_correctness_p3_a_2</title>
+<g id="a_node43"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3244.88,-487.7 2954.21,-487.7 2879.43,-388.3 3170.1,-388.3 3244.88,-487.7"/>
+<text text-anchor="middle" x="3062.15" y="-450.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3_a_2</text>
+<text text-anchor="middle" x="3062.15" y="-417.4" font-family="Times,serif" font-size="14.00">Argument: By Matlab Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3_a_2&#45;&gt;S_soh_correctness_p3_a_2 -->
+<g id="edge45" class="edge">
+<title>G_soh_correctness_p3_a_2&#45;&gt;S_soh_correctness_p3_a_2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3062.15,-631.23C3062.15,-593.56 3062.15,-546.35 3062.15,-508.13"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3069.15,-507.95 3062.15,-487.95 3055.15,-507.95 3069.15,-507.95"/>
+</g>
+<!-- SOL_ev_soh_correctness_p3_a_2 -->
+<g id="node44" class="node">
+<title>SOL_ev_soh_correctness_p3_a_2</title>
+<g id="a_node44"><a xlink:title="Only 30_460% of approved data points passed this criteria&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="3062.15" cy="-166" rx="135" ry="135"/>
+<text text-anchor="middle" x="3062.15" y="-169.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p3_a_2</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a_2&#45;&gt;SOL_ev_soh_correctness_p3_a_2 -->
+<g id="edge46" class="edge">
+<title>S_soh_correctness_p3_a_2&#45;&gt;SOL_ev_soh_correctness_p3_a_2</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3062.15,-388.11C3062.15,-368.93 3062.15,-345.78 3062.15,-321.78"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3069.15,-321.48 3062.15,-301.48 3055.15,-321.48 3069.15,-321.48"/>
+</g>
+<!-- S_soh_correctness_p3_a_1 -->
+<g id="node46" class="node">
+<title>S_soh_correctness_p3_a_1</title>
+<g id="a_node46"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="3627.88,-487.7 3337.21,-487.7 3262.43,-388.3 3553.1,-388.3 3627.88,-487.7"/>
+<text text-anchor="middle" x="3445.15" y="-450.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p3_a_1</text>
+<text text-anchor="middle" x="3445.15" y="-417.4" font-family="Times,serif" font-size="14.00">Argument: By Matlab Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p3_a_1&#45;&gt;S_soh_correctness_p3_a_1 -->
+<g id="edge47" class="edge">
+<title>G_soh_correctness_p3_a_1&#45;&gt;S_soh_correctness_p3_a_1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3329.86,-656.12C3351.36,-615.64 3384.63,-552.98 3409.91,-505.36"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3416.15,-508.55 3419.34,-487.61 3403.78,-501.99 3416.15,-508.55"/>
+</g>
+<!-- SOL_ev_soh_correctness_p3_a_1 -->
+<g id="node47" class="node">
+<title>SOL_ev_soh_correctness_p3_a_1</title>
+<g id="a_node47"><a xlink:title="100% of the data passed&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="3445.15" cy="-166" rx="135" ry="135"/>
+<text text-anchor="middle" x="3445.15" y="-169.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p3_a_1</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p3_a_1&#45;&gt;SOL_ev_soh_correctness_p3_a_1 -->
+<g id="edge48" class="edge">
+<title>S_soh_correctness_p3_a_1&#45;&gt;SOL_ev_soh_correctness_p3_a_1</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3445.15,-388.11C3445.15,-368.93 3445.15,-345.78 3445.15,-321.78"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3452.15,-321.48 3445.15,-301.48 3438.15,-321.48 3452.15,-321.48"/>
+</g>
+<!-- S_soh_correctness_p4 -->
+<g id="node49" class="node">
+<title>S_soh_correctness_p4</title>
+<g id="a_node49"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3700.33,-1485.7 3219.63,-1485.7 3095.98,-1386.3 3576.67,-1386.3 3700.33,-1485.7"/>
+<text text-anchor="middle" x="3398.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p4</text>
+<text text-anchor="middle" x="3398.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Sub&#45;Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p4&#45;&gt;S_soh_correctness_p4 -->
+<g id="edge49" class="edge">
+<title>G_soh_correctness_p4&#45;&gt;S_soh_correctness_p4</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3248.02,-1573.89C3273.1,-1551.02 3303.22,-1523.55 3329.88,-1499.25"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3334.63,-1504.39 3344.69,-1485.74 3325.2,-1494.04 3334.63,-1504.39"/>
+</g>
+<!-- G_soh_correctness_p4_a -->
+<g id="node50" class="node">
+<title>G_soh_correctness_p4_a</title>
+<g id="a_node50"><a xlink:title="The soh&#45;nn&#45;SW&#45;COMP&#45;IMP adheres&#10;to the data independent const&#10;raints set forth in the soh&#45;nn&#10;&#45;REQS">
+<polygon fill="none" stroke="red" stroke-width="3" points="3592.81,-1247 3383.5,-1247 3383.5,-1147 3592.81,-1147 3592.81,-1247"/>
+<text text-anchor="middle" x="3488.15" y="-1234.4" font-family="Times,serif" font-size="14.00">G_soh_correctness_p4_a</text>
+<text text-anchor="middle" x="3488.15" y="-1201.6" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;SW&#45;COMP&#45;IMP adheres</text>
+<text text-anchor="middle" x="3488.15" y="-1184.8" font-family="Times,serif" font-size="14.00">to the data independent const</text>
+<text text-anchor="middle" x="3488.15" y="-1168" font-family="Times,serif" font-size="14.00">raints set forth in the soh&#45;nn</text>
+<text text-anchor="middle" x="3488.15" y="-1151.2" font-family="Times,serif" font-size="14.00">&#45;REQS</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p4&#45;&gt;G_soh_correctness_p4_a -->
+<g id="edge50" class="edge">
+<title>S_soh_correctness_p4&#45;&gt;G_soh_correctness_p4_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3416.69,-1386.18C3429.87,-1351.48 3447.74,-1304.43 3462.31,-1266.05"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3468.93,-1268.35 3469.48,-1247.16 3455.84,-1263.37 3468.93,-1268.35"/>
+</g>
+<!-- S_soh_correctness_p4_a -->
+<g id="node51" class="node">
+<title>S_soh_correctness_p4_a</title>
+<g id="a_node51"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="red" stroke-width="3" points="3772.11,-1007.7 3461.98,-1007.7 3382.19,-908.3 3692.33,-908.3 3772.11,-1007.7"/>
+<text text-anchor="middle" x="3577.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p4_a</text>
+<text text-anchor="middle" x="3577.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Simulink Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p4_a&#45;&gt;S_soh_correctness_p4_a -->
+<g id="edge51" class="edge">
+<title>G_soh_correctness_p4_a&#45;&gt;S_soh_correctness_p4_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3506.6,-1146.89C3519.68,-1112.06 3537.39,-1064.88 3551.8,-1026.51"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3558.41,-1028.82 3558.89,-1007.64 3545.31,-1023.9 3558.41,-1028.82"/>
+</g>
+<!-- SOL_ev_soh_correctness_p4_a -->
+<g id="node52" class="node">
+<title>SOL_ev_soh_correctness_p4_a</title>
+<g id="a_node52"><a xlink:title="BHM HLR 05 passed&#10;BHM HLR 17 passed&#10;BHM HLR 19 passed&#10;BHM HLR 09 failed&#10;BHM HLR 01 failed&#10;BHM HLR 15 passed&#10;BHM HLR 16 failed&#10;BHM HLR 03 failed&#10;BHM HLR 07 passed&#10;">
+<ellipse fill="none" stroke="red" stroke-width="3" cx="3577.15" cy="-698" rx="125.2" ry="125.2"/>
+<text text-anchor="middle" x="3577.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p4_a</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p4_a&#45;&gt;SOL_ev_soh_correctness_p4_a -->
+<g id="edge52" class="edge">
+<title>S_soh_correctness_p4_a&#45;&gt;SOL_ev_soh_correctness_p4_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3577.15,-908.17C3577.15,-889.37 3577.15,-866.82 3577.15,-843.58"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3584.15,-843.51 3577.15,-823.51 3570.15,-843.51 3584.15,-843.51"/>
+</g>
+<!-- S_soh_correctness_p5 -->
+<g id="node54" class="node">
+<title>S_soh_correctness_p5</title>
+<g id="a_node54"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="4323.33,-1485.7 3842.63,-1485.7 3718.98,-1386.3 4199.67,-1386.3 4323.33,-1485.7"/>
+<text text-anchor="middle" x="4021.15" y="-1448.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p5</text>
+<text text-anchor="middle" x="4021.15" y="-1415.4" font-family="Times,serif" font-size="14.00">Argument: By Checking that all Sub&#45;Premises Hold</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p5&#45;&gt;S_soh_correctness_p5 -->
+<g id="edge53" class="edge">
+<title>G_soh_correctness_p5&#45;&gt;S_soh_correctness_p5</title>
+<path fill="none" stroke="black" stroke-width="2" d="M3816.02,-1562.1C3850.8,-1540.89 3889.74,-1517.14 3924.27,-1496.08"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="3927.92,-1502.05 3941.36,-1485.66 3920.64,-1490.1 3927.92,-1502.05"/>
+</g>
+<!-- G_soh_correctness_p5_b -->
+<g id="node55" class="node">
+<title>G_soh_correctness_p5_b</title>
+<g id="a_node55"><a xlink:title="The soh&#45;nn&#45;INPUT&#45;COND&#45;IMP corr&#10;ectly flags 100% of the inputs&#10;in the soh&#45;nn&#45;QUAL&#45;DATA&#45;ON">
+<polygon fill="none" stroke="green" stroke-width="3" points="4115.8,-1238.7 3906.51,-1238.7 3906.51,-1155.3 4115.8,-1155.3 4115.8,-1238.7"/>
+<text text-anchor="middle" x="4011.15" y="-1226" font-family="Times,serif" font-size="14.00">G_soh_correctness_p5_b</text>
+<text text-anchor="middle" x="4011.15" y="-1193.2" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;INPUT&#45;COND&#45;IMP corr</text>
+<text text-anchor="middle" x="4011.15" y="-1176.4" font-family="Times,serif" font-size="14.00">ectly flags 100% of the inputs</text>
+<text text-anchor="middle" x="4011.15" y="-1159.6" font-family="Times,serif" font-size="14.00">in the soh&#45;nn&#45;QUAL&#45;DATA&#45;ON</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p5&#45;&gt;G_soh_correctness_p5_b -->
+<g id="edge54" class="edge">
+<title>S_soh_correctness_p5&#45;&gt;G_soh_correctness_p5_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4019.09,-1386.18C4017.54,-1349.31 4015.39,-1298.48 4013.73,-1258.94"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4020.72,-1258.55 4012.88,-1238.87 4006.73,-1259.14 4020.72,-1258.55"/>
+</g>
+<!-- G_soh_correctness_p5_a -->
+<g id="node58" class="node">
+<title>G_soh_correctness_p5_a</title>
+<g id="a_node58"><a xlink:title="The soh&#45;nn&#45;INPUT&#45;COND correctl&#10;y flags 100% of the inputs in &#10;the soh&#45;nn&#45;QUAL&#45;DATA&#45;ON">
+<polygon fill="none" stroke="green" stroke-width="3" points="4418.96,-1238.7 4219.35,-1238.7 4219.35,-1155.3 4418.96,-1155.3 4418.96,-1238.7"/>
+<text text-anchor="middle" x="4319.15" y="-1226" font-family="Times,serif" font-size="14.00">G_soh_correctness_p5_a</text>
+<text text-anchor="middle" x="4319.15" y="-1193.2" font-family="Times,serif" font-size="14.00">The soh&#45;nn&#45;INPUT&#45;COND correctl</text>
+<text text-anchor="middle" x="4319.15" y="-1176.4" font-family="Times,serif" font-size="14.00">y flags 100% of the inputs in </text>
+<text text-anchor="middle" x="4319.15" y="-1159.6" font-family="Times,serif" font-size="14.00">the soh&#45;nn&#45;QUAL&#45;DATA&#45;ON</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p5&#45;&gt;G_soh_correctness_p5_a -->
+<g id="edge55" class="edge">
+<title>S_soh_correctness_p5&#45;&gt;G_soh_correctness_p5_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4082.54,-1386.18C4131.89,-1346.93 4201.13,-1291.86 4251.96,-1251.44"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4256.47,-1256.79 4267.77,-1238.87 4247.76,-1245.84 4256.47,-1256.79"/>
+</g>
+<!-- S_soh_correctness_p5_b -->
+<g id="node56" class="node">
+<title>S_soh_correctness_p5_b</title>
+<g id="a_node56"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="4197.11,-1007.7 3886.98,-1007.7 3807.19,-908.3 4117.33,-908.3 4197.11,-1007.7"/>
+<text text-anchor="middle" x="4002.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p5_b</text>
+<text text-anchor="middle" x="4002.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Simulink Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p5_b&#45;&gt;S_soh_correctness_p5_b -->
+<g id="edge56" class="edge">
+<title>G_soh_correctness_p5_b&#45;&gt;S_soh_correctness_p5_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4009.61,-1155.26C4008.28,-1120.35 4006.34,-1069.33 4004.78,-1028.06"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4011.76,-1027.52 4004.01,-1007.8 3997.77,-1028.06 4011.76,-1027.52"/>
+</g>
+<!-- SOL_ev_soh_correctness_p5_b -->
+<g id="node57" class="node">
+<title>SOL_ev_soh_correctness_p5_b</title>
+<g id="a_node57"><a xlink:title="100% of the data was disapproved&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="4002.15" cy="-698" rx="125.82" ry="125.82"/>
+<text text-anchor="middle" x="4002.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p5_b</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p5_b&#45;&gt;SOL_ev_soh_correctness_p5_b -->
+<g id="edge57" class="edge">
+<title>S_soh_correctness_p5_b&#45;&gt;SOL_ev_soh_correctness_p5_b</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4002.15,-908.17C4002.15,-889.58 4002.15,-867.32 4002.15,-844.35"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4009.15,-844.06 4002.15,-824.06 3995.15,-844.06 4009.15,-844.06"/>
+</g>
+<!-- S_soh_correctness_p5_a -->
+<g id="node59" class="node">
+<title>S_soh_correctness_p5_a</title>
+<g id="a_node59"><a xlink:title="No additional information is available">
+<polygon fill="none" stroke="green" stroke-width="3" points="4579.88,-1007.7 4289.21,-1007.7 4214.43,-908.3 4505.1,-908.3 4579.88,-1007.7"/>
+<text text-anchor="middle" x="4397.15" y="-970.2" font-family="Times,serif" font-size="14.00">S_soh_correctness_p5_a</text>
+<text text-anchor="middle" x="4397.15" y="-937.4" font-family="Times,serif" font-size="14.00">Argument: By Matlab Analysis</text>
+</a>
+</g>
+</g>
+<!-- G_soh_correctness_p5_a&#45;&gt;S_soh_correctness_p5_a -->
+<g id="edge58" class="edge">
+<title>G_soh_correctness_p5_a&#45;&gt;S_soh_correctness_p5_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4332.56,-1155.26C4344.16,-1120.03 4361.15,-1068.4 4374.8,-1026.93"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4381.49,-1028.99 4381.09,-1007.8 4368.19,-1024.61 4381.49,-1028.99"/>
+</g>
+<!-- SOL_ev_soh_correctness_p5_a -->
+<g id="node60" class="node">
+<title>SOL_ev_soh_correctness_p5_a</title>
+<g id="a_node60"><a xlink:title="100% of the data was disapproved&#10;">
+<ellipse fill="none" stroke="green" stroke-width="3" cx="4397.15" cy="-698" rx="125.2" ry="125.2"/>
+<text text-anchor="middle" x="4397.15" y="-701.8" font-family="Times,serif" font-size="14.00">SOL_ev_soh_correctness_p5_a</text>
+</a>
+</g>
+</g>
+<!-- S_soh_correctness_p5_a&#45;&gt;SOL_ev_soh_correctness_p5_a -->
+<g id="edge59" class="edge">
+<title>S_soh_correctness_p5_a&#45;&gt;SOL_ev_soh_correctness_p5_a</title>
+<path fill="none" stroke="black" stroke-width="2" d="M4397.15,-908.17C4397.15,-889.37 4397.15,-866.82 4397.15,-843.58"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="4404.15,-843.51 4397.15,-823.51 4390.15,-843.51 4404.15,-843.51"/>
+</g>
+</g>
+</svg>
