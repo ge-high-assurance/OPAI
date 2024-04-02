@@ -4,7 +4,7 @@
 
 
 ### Prerequsites:
-1. The RITE tool release available at https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1
+1. The prototype RITE tool release with the OP-based GSN functionality available at https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1
 2. RACK docker (find tutorial [here](https://github.com/ge-high-assurance/RACK/wiki/02-Run-a-RACK-Box-container))
 3. The ingestion package provided at https://github.com/ge-high-assurance/OPAI/tree/main/gsn/ingestion_packages/assurance_v1
 4. Java 17
