@@ -1,16 +1,17 @@
 # OPAI (Overarching Properties for the Assurance of AI/ML)
 ## This repository contains results from the FAA funded program - Safety Assurance in Complex Aerospace Digital Systems that include AI/ML
 
-### Layout
+### Repository Layout
 - gsn: Contains the GSN artifacts produced in the program
 - SADL: comtains the SADL data models developed in the program
 - ML: contains data, code, and ML models used in the program
 - tools: contains code for all tools developed
 
-##### An Overarching Properties-Based GSN Synthesis and Navigation Tool Prototype is Available [HERE](https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1) 
+### Tools
+- An Overarching Properties-Based GSN Synthesis and Navigation Tool Prototype is Available [HERE](https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1) 
 
 
-### Related Publications:
+### Related Publications
 - [Paul, S., Prince, D., Iyer, N., Durling, M., Visnevski, N., Meng, B., Varanasi, S.C., Siu, K., McMillan, C. and Meiners, M., 2023, October. Towards the Certification of Neural Networks using Overarching Properties: An Avionics Case Study. In 2023 IEEE/AIAA 42nd Digital Avionics Systems Conference (DASC) (pp. 1-10). IEEE.](https://ieeexplore.ieee.org/abstract/document/10311280)
 - [Paul, S., Prince, D., Iyer, N., Durling, M., Visnevski, N. and Meng, B., 2023. Assurance of Machine Learning-Based Aerospace Systems: Towards an Overarching Properties-Driven Approach (No. DOT/FAA/TC-23/54). United States. Department of Transportation. Federal Aviation Administration. William J. Hughes Technical Center.](https://rosap.ntl.bts.gov/view/dot/68923)
 
