@@ -1,0 +1,193 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fha="http://sadl.org/FHA.sadl#"
+    xmlns:Ag="http://arcos.rack/AGENTS#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:CONFIDENCE="http://arcos.rack/CONFIDENCE#"
+    xmlns:Pr="http://arcos.rack/PROCESS#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:Rv="http://arcos.rack/REVIEW#"
+    xmlns:D="http://arcos.rack/DOCUMENT#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:Rq="http://arcos.rack/REQUIREMENTS#"
+    xmlns:H="http://arcos.rack/HAZARD#"
+    xmlns:sw="http://arcos.rack/SOFTWARE#"
+    xmlns:provs="http://arcos.rack/PROV-S#"
+    xmlns:sys="http://arcos.rack/SYSTEM#"
+    xmlns:An="http://arcos.rack/ANALYSIS#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:hw="http://arcos.rack/HARDWARE#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:tst="http://arcos.rack/TESTING#">
+  <owl:Ontology rdf:about="http://sadl.org/FHA.sadl">
+    <owl:imports rdf:resource="http://arcos.rack/SOFTWARE"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROCESS"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://arcos.rack/TESTING"/>
+    <owl:imports rdf:resource="http://arcos.rack/HARDWARE"/>
+    <owl:imports rdf:resource="http://arcos.rack/SYSTEM"/>
+    <owl:imports rdf:resource="http://arcos.rack/REVIEW"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <owl:imports rdf:resource="http://arcos.rack/PROV-S"/>
+    <owl:imports rdf:resource="http://arcos.rack/HAZARD"/>
+    <owl:imports rdf:resource="http://arcos.rack/DOCUMENT"/>
+    <owl:imports rdf:resource="http://arcos.rack/ANALYSIS"/>
+    <owl:imports rdf:resource="http://arcos.rack/AGENTS"/>
+    <owl:imports rdf:resource="http://arcos.rack/REQUIREMENTS"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'FHA.sadl' and should not be directly edited.</rdfs:comment>
+    <owl:imports rdf:resource="http://arcos.rack/CONFIDENCE"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://sadl.org/FHA.sadl#DesignAssuranceLevel">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <fha:DesignAssuranceLevel rdf:about="http://sadl.org/FHA.sadl#LevelA">
+            <rdfs:comment xml:lang="en">Level A</rdfs:comment>
+          </fha:DesignAssuranceLevel>
+          <fha:DesignAssuranceLevel rdf:about="http://sadl.org/FHA.sadl#LevelB">
+            <rdfs:comment xml:lang="en">Level B</rdfs:comment>
+          </fha:DesignAssuranceLevel>
+          <fha:DesignAssuranceLevel rdf:about="http://sadl.org/FHA.sadl#LevelC">
+            <rdfs:comment xml:lang="en">Level C</rdfs:comment>
+          </fha:DesignAssuranceLevel>
+          <fha:DesignAssuranceLevel rdf:about="http://sadl.org/FHA.sadl#LevelD">
+            <rdfs:comment xml:lang="en">Level D</rdfs:comment>
+          </fha:DesignAssuranceLevel>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The minimum Design Assurance Level</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/FHA.sadl#Phase">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#ALL">
+            <rdfs:comment xml:lang="en">All phases</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#STD">
+            <rdfs:comment xml:lang="en">Standing</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#PBT">
+            <rdfs:comment xml:lang="en">Pushback/Towing</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#TXI">
+            <rdfs:comment xml:lang="en">Taxi</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#TOF">
+            <rdfs:comment xml:lang="en">TakeOff</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#ICL">
+            <rdfs:comment xml:lang="en">Initial climb</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#ENR">
+            <rdfs:comment xml:lang="en">En-route (Cruise)</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#APR">
+            <rdfs:comment xml:lang="en">Approach</rdfs:comment>
+          </fha:Phase>
+          <fha:Phase rdf:about="http://sadl.org/FHA.sadl#LDG">
+            <rdfs:comment xml:lang="en">Landing</rdfs:comment>
+          </fha:Phase>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The flight phase</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/FHA.sadl#Severity">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <fha:Severity rdf:about="http://sadl.org/FHA.sadl#Negligible">
+            <rdfs:comment xml:lang="en">No safety effect: failure conditions that would not affect the operational capability of the airplane or increase crew workload</rdfs:comment>
+          </fha:Severity>
+          <fha:Severity rdf:about="http://sadl.org/FHA.sadl#Minor">
+            <rdfs:comment xml:lang="en">Failure conditions that would not significantly reduce airplane safety and involve crew actions that are within their capabilities.</rdfs:comment>
+          </fha:Severity>
+          <fha:Severity rdf:about="http://sadl.org/FHA.sadl#Major">
+            <rdfs:comment xml:lang="en">Failure conditions that would reduce the capability of the airplane or the ability of the crew to cope with adverse operating conditions to the extent that there would be a significant reduction in safety margins or functional capabilities.</rdfs:comment>
+          </fha:Severity>
+          <fha:Severity rdf:about="http://sadl.org/FHA.sadl#Hazardous">
+            <rdfs:comment xml:lang="en">Failure conditions that would reduce the capability of the airplane or the ability of the crew to cope with adverse operating conditions</rdfs:comment>
+          </fha:Severity>
+          <fha:Severity rdf:about="http://sadl.org/FHA.sadl#Catastrophic">
+            <rdfs:comment xml:lang="en">Failure conditions that are expected to result in multiple fatalities of the occupants, or incapacitation or fatal injury to a flight crewmember normally with the loss of the airplane.</rdfs:comment>
+          </fha:Severity>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">Severity Types taken from FAA Circular AC No: 23.1309-lE</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#THING"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sadl.org/FHA.sadl#VerificationMethod">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#FHA">
+            <rdfs:comment xml:lang="en">Functional Hazard Assessment</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#FTA">
+            <rdfs:comment xml:lang="en">Fault Tree Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#DD">
+            <rdfs:comment xml:lang="en">Dependency Diagram</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#MA">
+            <rdfs:comment xml:lang="en">Markov Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#FMEA">
+            <rdfs:comment xml:lang="en">Failure Modes and Effects Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#FMES">
+            <rdfs:comment xml:lang="en">Failure Modes and Effects Summary</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#ZSA">
+            <rdfs:comment xml:lang="en">Zonal Safety Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#CMA">
+            <rdfs:comment xml:lang="en">Common Mode Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#PRA">
+            <rdfs:comment xml:lang="en">Particular Risk Analysis</rdfs:comment>
+          </fha:VerificationMethod>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The method used for verifying a component</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ACTIVITY"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://sadl.org/FHA.sadl#minimumRequiredDal">
+    <rdfs:comment xml:lang="en">The minimal DAL required for such a hazard</rdfs:comment>
+    <rdfs:range rdf:resource="http://sadl.org/FHA.sadl#DesignAssuranceLevel"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/FHA.sadl#verificationMethod">
+    <rdfs:comment xml:lang="en">The verification method used to verify that the hazard has been mitigated</rdfs:comment>
+    <rdfs:range rdf:resource="http://sadl.org/FHA.sadl#VerificationMethod"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/FHA.sadl#affects">
+    <rdfs:comment xml:lang="en">The system affected by the hazard</rdfs:comment>
+    <rdfs:range rdf:resource="http://arcos.rack/SYSTEM#SYSTEM"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/FHA.sadl#eventPhase">
+    <rdfs:comment xml:lang="en">The event phase</rdfs:comment>
+    <rdfs:range rdf:resource="http://sadl.org/FHA.sadl#Phase"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://sadl.org/FHA.sadl#severityClassification">
+    <rdfs:comment xml:lang="en">The severity classification of the hazard</rdfs:comment>
+    <rdfs:range rdf:resource="http://sadl.org/FHA.sadl#Severity"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://sadl.org/FHA.sadl#classificationJustification">
+    <rdfs:comment xml:lang="en">Justification of severity classification</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://arcos.rack/HAZARD#HAZARD"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
