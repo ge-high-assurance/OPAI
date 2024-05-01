@@ -3,12 +3,12 @@
 
 ### Repository Layout
 - [gsn](https://github.com/ge-high-assurance/OPAI/tree/main/gsn): Contains the GSN artifacts produced in the program
-- [ML](https://github.com/ge-high-assurance/OPAI/tree/main/ML): contains data, code, and ML models used in the program
-- [SADL](https://github.com/ge-high-assurance/OPAI/tree/main/SADL): comtains the SADL data models developed in the program
-- [tools](https://github.com/ge-high-assurance/OPAI/tree/main/tools): contains code for all tools developed
+- [ML](https://github.com/ge-high-assurance/OPAI/tree/main/ML): Contains data, code, and ML models used in the program
+- [SADL](https://github.com/ge-high-assurance/OPAI/tree/main/SADL): Contains the SADL data models developed in the program
+- [tools](https://github.com/ge-high-assurance/OPAI/tree/main/tools): Contains code for all tools developed
 
 ### Tools
-- An Overarching Properties-Based GSN Synthesis and Navigation Tool Prototype is Available [HERE](https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1) 
+- An Overarching Properties-based GSN synthesis and navigation tool prototype is available [here](https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1) 
 
 
 ### Related Publications
