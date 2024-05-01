@@ -3,8 +3,8 @@
 
 ### Repository Layout
 - [gsn](https://github.com/ge-high-assurance/OPAI/tree/main/gsn): Contains the GSN artifacts produced in the program
-- [SADL](https://github.com/ge-high-assurance/OPAI/tree/main/SADL): comtains the SADL data models developed in the program
 - [ML](https://github.com/ge-high-assurance/OPAI/tree/main/ML): contains data, code, and ML models used in the program
+- [SADL](https://github.com/ge-high-assurance/OPAI/tree/main/SADL): comtains the SADL data models developed in the program
 - [tools](https://github.com/ge-high-assurance/OPAI/tree/main/tools): contains code for all tools developed
 
 ### Tools
