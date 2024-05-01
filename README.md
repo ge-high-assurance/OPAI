@@ -2,10 +2,10 @@
 ## This repository contains results from the FAA funded program - Safety Assurance in Complex Aerospace Digital Systems that include AI/ML
 
 ### Repository Layout
-- gsn: Contains the GSN artifacts produced in the program
-- SADL: comtains the SADL data models developed in the program
-- ML: contains data, code, and ML models used in the program
-- tools: contains code for all tools developed
+- [gsn](https://github.com/ge-high-assurance/OPAI/tree/main/gsn): Contains the GSN artifacts produced in the program
+- [SADL](https://github.com/ge-high-assurance/OPAI/tree/main/SADL): comtains the SADL data models developed in the program
+- [ML](https://github.com/ge-high-assurance/OPAI/tree/main/ML): contains data, code, and ML models used in the program
+- [tools](https://github.com/ge-high-assurance/OPAI/tree/main/tools): contains code for all tools developed
 
 ### Tools
 - An Overarching Properties-Based GSN Synthesis and Navigation Tool Prototype is Available [HERE](https://github.com/ge-high-assurance/OPAI/releases/tag/gsn_v1) 
