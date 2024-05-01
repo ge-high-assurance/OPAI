@@ -1,4 +1,4 @@
-# OPAI (Overarching Properties for the Assurance of AI/ML)
+# OPAI (Overarching Properties for AI)
 ## This repository contains results from the FAA funded program - Safety Assurance in Complex Aerospace Digital Systems that include AI/ML
 
 ### Repository Layout
