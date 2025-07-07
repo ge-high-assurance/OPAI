@@ -41,7 +41,8 @@
 					FMES (note "Failure Modes and Effects Summary"),
 					ZSA (note "Zonal Safety Analysis"),
 					CMA (note "Common Mode Analysis"),
-					PRA (note "Particular Risk Analysis")}.
+					PRA (note "Particular Risk Analysis"),
+					PSSA (note "Preliminary System Safety Assessment")}.
 					 
  Phase (note "The flight phase") is a type of THING
  	must be one of {ALL (note "All phases"),

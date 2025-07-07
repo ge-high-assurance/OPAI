@@ -1,0 +1,36 @@
+ uri "http://sadl.org/aaara-requirements.sadl" alias ar.
+ 
+ 
+  
+ import "http://sadl.org/aaara-fha.sadl".
+ 
+ 
+ Sys-Req-01 is a SystemLevelRequirement
+  with identifier "Sys-Req-01"
+  with description "The Runway Perception Sub-system shall compute the angle between the aircraft centerline and the runway centerline during approach and landing phases."
+  with requirementType functionalRequirement
+  with architectureAllocation RPS.
+  
+  
+ HLR-Req-01 is a SoftwareHighLevelRequirement
+  with identifier "HLR-Req-01"
+  with description "The ANN shall compute the angle between the aircraft centerline and the runway centerline during approach and landing phases when the ANN receives a filtered image."
+  with requirementType functionalRequirement
+  with architectureAllocation RPS.  
+  
+  
+  
+ LLR-Req-01 is a SoftwareLowLevelRequirement
+  with identifier "LLR-Req-01"
+  with description "The ANN training data shall include data augmentation that exercises all known non-adversarial input parameter variations that can affect the output of the model for the foreseeable operating conditions."
+  with requirementType functionalRequirement
+  with architectureAllocation RPS-ANN
+  with rd:derivedRequirement true.    
+  
+  
+ FMS-Sys-01 is a SystemLevelRequirement
+  with identifier "FMS-Sys-01"
+  with description "The FMS shall announce a lateral position determination failure, when lateral correction parameters from all three lateral correction inputs disagree for 10 consecutive cycles."
+  with requirementType functionalRequirement
+  with architectureAllocation FMS.    
+ 

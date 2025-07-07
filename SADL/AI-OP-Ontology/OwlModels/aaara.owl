@@ -1,0 +1,76 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rd="http://sadl.org/DESIGN.sadl#"
+    xmlns:j.0="http://arcos.rack/PROV-S#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:j.1="http://arcos.rack/SYSTEM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:aaara="http://sadl.org/aaara.sadl#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://sadl.org/aaara.sadl">
+    <owl:imports rdf:resource="http://sadl.org/DESIGN.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'aaara.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#RPS-ANN">
+    <j.1:partOf>
+      <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#RPS">
+        <j.1:function>
+          <j.1:FUNCTION rdf:about="http://sadl.org/aaara.sadl#provide-lateral-correction-params">
+            <j.0:description>provide lateral corrections parameters to aircraft control systems</j.0:description>
+            <j.0:identifier>provide-lateral-correction-params</j.0:identifier>
+            <rdfs:comment xml:lang="en">provide lateral corrections parameters to aircraft control systems</rdfs:comment>
+          </j.1:FUNCTION>
+        </j.1:function>
+        <j.1:function>
+          <j.1:FUNCTION rdf:about="http://sadl.org/aaara.sadl#compute-lateral-correction-params">
+            <j.0:description>compute lateral corrections parameters</j.0:description>
+            <j.0:identifier>compute-lateral-correction-params</j.0:identifier>
+            <rdfs:comment xml:lang="en">compute lateral corrections parameters</rdfs:comment>
+          </j.1:FUNCTION>
+        </j.1:function>
+        <j.1:partOf>
+          <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#AAARA">
+            <j.0:description>The AI-Assisted Autonomous Runway Alignment System</j.0:description>
+            <j.0:identifier>AAARA</j.0:identifier>
+            <rdfs:comment xml:lang="en">The AI-Assisted Autonomous Runway Alignment System</rdfs:comment>
+          </j.1:SYSTEM>
+        </j.1:partOf>
+        <j.0:description>The Runway Perception Subsystem</j.0:description>
+        <j.0:identifier>RPS</j.0:identifier>
+        <rdfs:comment xml:lang="en">The Runway Perception Subsystem</rdfs:comment>
+      </j.1:SYSTEM>
+    </j.1:partOf>
+    <j.0:description>The Runway Perception Subsystem ANN</j.0:description>
+    <j.0:identifier>RPS-ANN</j.0:identifier>
+    <rdfs:comment xml:lang="en">The Runway Perception Subsystem ANN</rdfs:comment>
+  </j.1:SYSTEM>
+  <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#AutoPilot">
+    <j.1:partOf rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <j.0:description>The Autopilot</j.0:description>
+    <j.0:identifier>AutoPilot</j.0:identifier>
+    <rdfs:comment xml:lang="en">The Autopilot</rdfs:comment>
+  </j.1:SYSTEM>
+  <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#FMS">
+    <j.1:partOf rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <j.0:description>The Flight Management System</j.0:description>
+    <j.0:identifier>FMS</j.0:identifier>
+    <rdfs:comment xml:lang="en">The Flight Management System</rdfs:comment>
+  </j.1:SYSTEM>
+  <j.1:SYSTEM rdf:about="http://sadl.org/aaara.sadl#RPS-IF">
+    <j.1:partOf rdf:resource="http://sadl.org/aaara.sadl#RPS"/>
+    <j.0:description>The Runway Perception Subsystem Input Filter</j.0:description>
+    <j.0:identifier>RPS-ANN</j.0:identifier>
+    <rdfs:comment xml:lang="en">The Runway Perception Subsystem Input-Filter</rdfs:comment>
+  </j.1:SYSTEM>
+  <j.1:FUNCTION rdf:about="http://sadl.org/aaara.sadl#runway-guide">
+    <j.0:description>guide an aircraft to the correct path in alignment with a runway</j.0:description>
+    <j.0:identifier>runway-guide</j.0:identifier>
+    <rdfs:comment xml:lang="en">guide an aircraft to the correct path in alignment with a runway</rdfs:comment>
+  </j.1:FUNCTION>
+</rdf:RDF>

@@ -1,0 +1,73 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fha="http://sadl.org/FHA.sadl#"
+    xmlns:j.0="http://sadl.org/DESIGN.sadl#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:aaara-fha="http://sadl.org/aaara-fha.sadl#"
+    xmlns:j.1="http://arcos.rack/HAZARD#"
+    xmlns:j.2="http://arcos.rack/PROV-S#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:aaara="http://sadl.org/aaara.sadl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://sadl.org/aaara-fha.sadl">
+    <owl:imports rdf:resource="http://sadl.org/aaara.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/FHA.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'aaara-fha.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <j.1:HAZARD rdf:about="http://sadl.org/aaara-fha.sadl#AARA-FC-01">
+    <fha:affects rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <j.1:effect>Loss of ability for the aircraft to perform safe landing</j.1:effect>
+    <fha:classificationJustification>Loss of ability for the aircraft to perform safe landing</fha:classificationJustification>
+    <fha:verificationMethod rdf:resource="http://sadl.org/FHA.sadl#PSSA"/>
+    <j.2:identifier>AARA-FC-01</j.2:identifier>
+    <j.0:name>Loss of Lateral Steering</j.0:name>
+    <fha:minimumRequiredDal rdf:resource="http://sadl.org/FHA.sadl#LevelA"/>
+    <j.2:description>Loss of ability for the aircraft to perform safe landing</j.2:description>
+    <fha:eventPhase rdf:resource="http://sadl.org/FHA.sadl#LDG"/>
+    <fha:severityClassification rdf:resource="http://sadl.org/FHA.sadl#Catastrophic"/>
+  </j.1:HAZARD>
+  <j.1:HAZARD rdf:about="http://sadl.org/aaara-fha.sadl#AARA-FC-02">
+    <j.2:description>Loss of ability for the aircraft to perform safe landing</j.2:description>
+    <j.0:name>Incorrect Lateral Steering</j.0:name>
+    <fha:affects rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <j.1:effect>Loss of ability for the aircraft to perform safe landing</j.1:effect>
+    <fha:eventPhase rdf:resource="http://sadl.org/FHA.sadl#LDG"/>
+    <j.2:identifier>AARA-FC-02</j.2:identifier>
+    <fha:severityClassification rdf:resource="http://sadl.org/FHA.sadl#Catastrophic"/>
+    <fha:classificationJustification>Loss of ability for the aircraft to perform safe landing</fha:classificationJustification>
+    <fha:verificationMethod rdf:resource="http://sadl.org/FHA.sadl#PSSA"/>
+    <fha:minimumRequiredDal rdf:resource="http://sadl.org/FHA.sadl#LevelA"/>
+  </j.1:HAZARD>
+  <j.1:HAZARD rdf:about="http://sadl.org/aaara-fha.sadl#RPS-FC-02">
+    <fha:minimumRequiredDal rdf:resource="http://sadl.org/FHA.sadl#LevelA"/>
+    <fha:verificationMethod rdf:resource="http://sadl.org/FHA.sadl#FHA"/>
+    <j.2:description>Hazardously Misleading Lateral Correction from the combined set of RPS/Camera systems</j.2:description>
+    <j.1:effect>Flight Management System operating during landing phase may determine an incorrect lateral path relative to the runway, resulting in an unsafe landing.</j.1:effect>
+    <fha:severityClassification rdf:resource="http://sadl.org/FHA.sadl#Catastrophic"/>
+    <j.0:name>Hazardously Misleading Lateral Correction Parameter</j.0:name>
+    <j.2:identifier>RPS-FC-02</j.2:identifier>
+    <j.1:source rdf:resource="http://sadl.org/aaara.sadl#RPS"/>
+    <fha:affects rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <fha:classificationJustification>The determination of hazardously misleading lateral correction from the combined set of RPS/Camera systems may result in the loss of ability to perform safe landing.</fha:classificationJustification>
+    <fha:eventPhase rdf:resource="http://sadl.org/FHA.sadl#LDG"/>
+  </j.1:HAZARD>
+  <j.1:HAZARD rdf:about="http://sadl.org/aaara-fha.sadl#RPS-FC-01">
+    <fha:eventPhase rdf:resource="http://sadl.org/FHA.sadl#LDG"/>
+    <fha:classificationJustification>Loss of Lateral Correction Data from all redundant RPS/Camera systems may result in loss of ability for the aircraft to perform safe landing.</fha:classificationJustification>
+    <j.2:identifier>RPS-FC-01</j.2:identifier>
+    <fha:affects rdf:resource="http://sadl.org/aaara.sadl#AAARA"/>
+    <fha:verificationMethod rdf:resource="http://sadl.org/FHA.sadl#FHA"/>
+    <j.1:source rdf:resource="http://sadl.org/aaara.sadl#RPS"/>
+    <fha:severityClassification rdf:resource="http://sadl.org/FHA.sadl#Catastrophic"/>
+    <j.2:description>Loss of Lateral Correction Data from all redundant RPS/Camera systems.</j.2:description>
+    <j.1:effect>Flight Management System operating during landing phase may fail to determine lateral path alignment to the runway, resulting in an unsafe landing.</j.1:effect>
+    <j.0:name>Loss of Lateral Correction Data</j.0:name>
+    <fha:minimumRequiredDal rdf:resource="http://sadl.org/FHA.sadl#LevelA"/>
+  </j.1:HAZARD>
+</rdf:RDF>

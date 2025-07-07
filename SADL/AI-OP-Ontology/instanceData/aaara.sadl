@@ -1,0 +1,54 @@
+//-- Author: Saswata Paul 
+ 
+ uri "http://sadl.org/aaara.sadl" alias aaara.
+ 
+ import "http://sadl.org/DESIGN.sadl". 
+ 
+   //-- The system and components involved, and their functions
+ AAARA (note "The AI-Assisted Autonomous Runway Alignment System") is a SYSTEM
+ 	with identifier "AAARA"
+ 	with description "The AI-Assisted Autonomous Runway Alignment System". 	
+ 	
+ RPS (note "The Runway Perception Subsystem") is a SYSTEM
+ 	with identifier "RPS"
+ 	with description "The Runway Perception Subsystem"
+ 	with partOf AAARA
+ 	with function compute-lateral-correction-params
+ 	with function provide-lateral-correction-params.
+ 	
+ RPS-ANN (note "The Runway Perception Subsystem ANN") is a SYSTEM
+ 	with identifier "RPS-ANN"
+ 	with description "The Runway Perception Subsystem ANN"
+ 	with partOf RPS. 	
+ 	
+
+ RPS-IF (note "The Runway Perception Subsystem Input-Filter") is a SYSTEM
+ 	with identifier "RPS-ANN"
+ 	with description "The Runway Perception Subsystem Input Filter"
+ 	with partOf RPS. 	
+
+ FMS (note "The Flight Management System") is a SYSTEM
+ 	with identifier "FMS"
+ 	with description "The Flight Management System"
+ 	with partOf AAARA. 	
+
+ AutoPilot (note "The Autopilot") is a SYSTEM
+ 	with identifier "AutoPilot"
+ 	with description "The Autopilot"
+ 	with partOf AAARA. 	
+
+ //-- Functions
+ runway-guide (note "guide an aircraft to the correct path in alignment with a runway") is a FUNCTION
+ 	with identifier "runway-guide"
+ 	with description "guide an aircraft to the correct path in alignment with a runway".
+ 
+ 	
+ compute-lateral-correction-params (note "compute lateral corrections parameters") is a FUNCTION
+ 	with identifier "compute-lateral-correction-params"
+ 	with description "compute lateral corrections parameters".
+ 	
+ provide-lateral-correction-params (note "provide lateral corrections parameters to aircraft control systems") is a FUNCTION
+ 	with identifier "provide-lateral-correction-params"
+ 	with description "provide lateral corrections parameters to aircraft control systems".
+ 
+ 

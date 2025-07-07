@@ -1,0 +1,46 @@
+<rdf:RDF
+    xmlns:aaara-fha="http://sadl.org/aaara-fha.sadl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://arcos.rack/PROV-S#"
+    xmlns:j.1="http://sadl.org/DESIGN.sadl#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ar="http://sadl.org/aaara-requirements.sadl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://sadl.org/aaara-requirements.sadl">
+    <owl:imports rdf:resource="http://sadl.org/aaara-fha.sadl"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'aaara-requirements.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <j.1:SystemLevelRequirement rdf:about="http://sadl.org/aaara-requirements.sadl#FMS-Sys-01">
+    <j.1:architectureAllocation rdf:resource="http://sadl.org/aaara.sadl#FMS"/>
+    <j.1:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>The FMS shall announce a lateral position determination failure, when lateral correction parameters from all three lateral correction inputs disagree for 10 consecutive cycles.</j.0:description>
+    <j.0:identifier>FMS-Sys-01</j.0:identifier>
+  </j.1:SystemLevelRequirement>
+  <j.1:SoftwareLowLevelRequirement rdf:about="http://sadl.org/aaara-requirements.sadl#LLR-Req-01">
+    <j.1:derivedRequirement rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:derivedRequirement>
+    <j.1:architectureAllocation rdf:resource="http://sadl.org/aaara.sadl#RPS-ANN"/>
+    <j.1:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>The ANN training data shall include data augmentation that exercises all known non-adversarial input parameter variations that can affect the output of the model for the foreseeable operating conditions.</j.0:description>
+    <j.0:identifier>LLR-Req-01</j.0:identifier>
+  </j.1:SoftwareLowLevelRequirement>
+  <j.1:SoftwareHighLevelRequirement rdf:about="http://sadl.org/aaara-requirements.sadl#HLR-Req-01">
+    <j.1:architectureAllocation rdf:resource="http://sadl.org/aaara.sadl#RPS"/>
+    <j.1:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>The ANN shall compute the angle between the aircraft centerline and the runway centerline during approach and landing phases when the ANN receives a filtered image.</j.0:description>
+    <j.0:identifier>HLR-Req-01</j.0:identifier>
+  </j.1:SoftwareHighLevelRequirement>
+  <j.1:SystemLevelRequirement rdf:about="http://sadl.org/aaara-requirements.sadl#Sys-Req-01">
+    <j.1:architectureAllocation rdf:resource="http://sadl.org/aaara.sadl#RPS"/>
+    <j.1:requirementType rdf:resource="http://sadl.org/DESIGN.sadl#functionalRequirement"/>
+    <j.0:description>The Runway Perception Sub-system shall compute the angle between the aircraft centerline and the runway centerline during approach and landing phases.</j.0:description>
+    <j.0:identifier>Sys-Req-01</j.0:identifier>
+  </j.1:SystemLevelRequirement>
+</rdf:RDF>

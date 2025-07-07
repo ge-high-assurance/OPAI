@@ -1,12 +1,11 @@
- //Author: Saswata paul
+//Author: Saswata paul
  
- // This sadl file contains additional ontology beyond the RACK core needed to specify the RIPS system design 
+ // This sadl file contains additional ontology beyond the RACK core needed to specify system design 
  
  
  uri "http://sadl.org/DESIGN.sadl" alias rd.
  
  import "http://arcos.rack/PROV-S".
- import "http://arcos.rack/DOCUMENT".
  import "http://arcos.rack/SYSTEM".
  import "http://arcos.rack/SOFTWARE".
  import "http://arcos.rack/HARDWARE".
@@ -18,21 +17,30 @@
  import "http://arcos.rack/PROCESS".
  import "http://arcos.rack/AGENTS".
  import "http://arcos.rack/CONFIDENCE".
- import "http://sadl.org/FHA.sadl".
  
  
 
- //-- Different types of requirements
+//-- Different levels of requirements
  SystemLevelRequirement (note "System Level Requirement") is a type of REQUIREMENT
- 	described by rd:satisfiedBy with values of type REQUIREMENT
+ 	described by rd:satisfiedBy with values of type REQUIREMENT // redundant. Will use "satisfies" to show upward traceability
+ 	described by rd:derivedFrom with values of type string // Should we enumerate this in the future? 
  	described by rd:source with values of type string. // Should we enumerate this in the future?
  
  SoftwareHighLevelRequirement (note "Software High Level Requirement") is a type of REQUIREMENT.
- SoftwareLowLevelRequirement (note "Software Low Level Requirement") is a type of REQUIREMENT. 
-
-  
  
- //-- Other classes needed to express system design
+ SoftwareLowLevelRequirement (note "Software Low Level Requirement") is a type of REQUIREMENT. 
+  					
+ //-- Additional properties on the RACK REQUIREMENT class 
+ rd:name describes REQUIREMENT with values of type string.
+ architectureAllocation describes REQUIREMENT with values of type THING. 
+ rd:derivedRequirement describes REQUIREMENT with values of type boolean. 
+ rationale describes REQUIREMENT with values of type string. 
+ requirementType describes REQUIREMENT with a single value of type RequirementType.
+
+ 
+
+ 
+  //-- Other classes needed to express system design
  Correctness (note "Correctness of a REQUIREMENt (taken from Cameo Class Properties)") is a type of THING.
 
  Completeness (note "Completeness of a REQUIREMENt (taken from Cameo Class Properties)") is a type of THING.					
@@ -81,22 +89,5 @@
  Value (note "The values that can be taken by parameters") is a type of THING
  	described by probability with a single value of type string,
  	described by magnitude with a single value of type string.	 
- 					
- 				
- 					
- //-- Additional properties on RACK core classes 
- architectureAllocation describes REQUIREMENT with values of type THING. 
- Rq:derivedRequirementIndicator (note "Use True for derived requirement and false otherwise") describes REQUIREMENT with values of type boolean. 
- rationale describes REQUIREMENT with values of type string. 
- requirementType describes REQUIREMENT with a single value of type RequirementType.
- correctness describes REQUIREMENT with values of type Correctness.
- correctnessFailComments describes REQUIREMENT with values of type string. 
- completetness describes REQUIREMENT with values of type Completeness.
- completenessFailComments describes REQUIREMENT with values of type string.
- verificationRationale describes REQUIREMENT with a single value of type string.
- Rq:verificationMethod describes REQUIREMENT with a single value of type VerificationMethod.
- 
- 
  input describes SYSTEM with values of type Parameter.
  output describes SYSTEM with values of type Parameter.
- 							

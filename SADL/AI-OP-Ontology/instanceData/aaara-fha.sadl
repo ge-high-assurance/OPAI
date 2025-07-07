@@ -1,0 +1,62 @@
+//-- Author: Saswata Paul
+//-- An instance of hazard assessment for the AI-Assisted Autonomous Runway Alignment (AAARA) system
+ 
+ 
+ uri "http://sadl.org/aaara-fha.sadl" alias aaara-fha.
+  
+ import "http://sadl.org/FHA.sadl".
+ import "http://sadl.org/aaara.sadl". 
+  
+  //-- Failure Condition 
+ AARA-FC-01 is a HAZARD
+ 	with identifier "AARA-FC-01"
+ 	with name "Loss of Lateral Steering"
+ 	with description "Loss of ability for the aircraft to perform safe landing"
+ 	with eventPhase LDG
+ 	with H:effect "Loss of ability for the aircraft to perform safe landing" 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with classificationJustification "Loss of ability for the aircraft to perform safe landing"
+ 	with verificationMethod PSSA 
+ 	with affects AAARA.
+ 	
+ 	
+ AARA-FC-02 is a HAZARD
+ 	with identifier "AARA-FC-02"
+ 	with name "Incorrect Lateral Steering"
+ 	with description "Loss of ability for the aircraft to perform safe landing"
+ 	with eventPhase LDG
+ 	with H:effect "Loss of ability for the aircraft to perform safe landing" 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with classificationJustification "Loss of ability for the aircraft to perform safe landing"
+ 	with verificationMethod PSSA 
+ 	with affects AAARA.
+
+
+ RPS-FC-01 is a HAZARD
+ 	with identifier "RPS-FC-01"
+ 	with name "Loss of Lateral Correction Data"
+ 	with description "Loss of Lateral Correction Data from all redundant RPS/Camera systems."
+ 	with eventPhase LDG
+ 	with H:effect "Flight Management System operating during landing phase may fail to determine lateral path alignment to the runway, resulting in an unsafe landing." 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with classificationJustification "Loss of Lateral Correction Data from all redundant RPS/Camera systems may result in loss of ability for the aircraft to perform safe landing."
+ 	with verificationMethod FHA 
+ 	with H:source RPS
+ 	with affects AAARA.
+ 	
+ 	
+ RPS-FC-02 is a HAZARD
+ 	with identifier "RPS-FC-02"
+ 	with name "Hazardously Misleading Lateral Correction Parameter"
+ 	with description "Hazardously Misleading Lateral Correction from the combined set of RPS/Camera systems"
+ 	with eventPhase LDG
+ 	with H:effect "Flight Management System operating during landing phase may determine an incorrect lateral path relative to the runway, resulting in an unsafe landing." 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with classificationJustification "The determination of hazardously misleading lateral correction from the combined set of RPS/Camera systems may result in the loss of ability to perform safe landing."
+ 	with verificationMethod FHA 
+ 	with H:source RPS
+ 	with affects AAARA.

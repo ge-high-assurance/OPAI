@@ -154,6 +154,9 @@
           <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#PRA">
             <rdfs:comment xml:lang="en">Particular Risk Analysis</rdfs:comment>
           </fha:VerificationMethod>
+          <fha:VerificationMethod rdf:about="http://sadl.org/FHA.sadl#PSSA">
+            <rdfs:comment xml:lang="en">Preliminary System Safety Assessment</rdfs:comment>
+          </fha:VerificationMethod>
         </owl:oneOf>
       </owl:Class>
     </owl:equivalentClass>
