@@ -60,3 +60,27 @@
  	with verificationMethod FHA 
  	with H:source RPS
  	with affects AAARA.
+
+ 	
+ ANN-FC-1_1 is a HAZARD
+ 	with identifier "ANN-FC-1_1"
+ 	with name "ANN Robustness Failure"
+ 	with description "Common environmental noise/perturbations not included in training data Scenario: An image recognition system incorrectly classifies images that are subtly distorted (e.g., through noise/tilt/stretching)"
+ 	with eventPhase LDG
+ 	with H:effect "ANN produces incorrect lateral correction parameters" 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with H:source RPS-ANN
+ 	with affects RPS. 	
+ 	
+ ANN-FC-1_2 is a HAZARD
+ 	with identifier "ANN-FC-1_2"
+ 	with name "ANN Out of Distribution"
+ 	with description "Changes in the nature of input data over time (e.g. sensor updates/calibration, processor/unit changes)."
+ 	with eventPhase LDG
+ 	with H:effect "Input filter filters out out-of-distribution input data and ANN fails to produce an output" 
+ 	with severityClassification Catastrophic
+ 	with minimumRequiredDal LevelA
+ 	with H:source RPS-ANN
+ 	with affects RPS. 	
+ 	
